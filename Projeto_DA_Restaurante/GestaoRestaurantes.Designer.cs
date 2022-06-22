@@ -60,9 +60,10 @@
             // 
             // btnHome
             // 
-            this.btnHome.Location = new System.Drawing.Point(12, 494);
+            this.btnHome.Location = new System.Drawing.Point(16, 608);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(87, 36);
+            this.btnHome.Size = new System.Drawing.Size(116, 44);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -70,9 +71,10 @@
             // 
             // btnCriarRestauranteView
             // 
-            this.btnCriarRestauranteView.Location = new System.Drawing.Point(342, 81);
+            this.btnCriarRestauranteView.Location = new System.Drawing.Point(456, 100);
+            this.btnCriarRestauranteView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCriarRestauranteView.Name = "btnCriarRestauranteView";
-            this.btnCriarRestauranteView.Size = new System.Drawing.Size(87, 36);
+            this.btnCriarRestauranteView.Size = new System.Drawing.Size(116, 44);
             this.btnCriarRestauranteView.TabIndex = 1;
             this.btnCriarRestauranteView.Text = "Criar";
             this.btnCriarRestauranteView.UseVisualStyleBackColor = true;
@@ -80,9 +82,10 @@
             // 
             // btnAbrirRestaurante
             // 
-            this.btnAbrirRestaurante.Location = new System.Drawing.Point(435, 81);
+            this.btnAbrirRestaurante.Location = new System.Drawing.Point(580, 100);
+            this.btnAbrirRestaurante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAbrirRestaurante.Name = "btnAbrirRestaurante";
-            this.btnAbrirRestaurante.Size = new System.Drawing.Size(87, 36);
+            this.btnAbrirRestaurante.Size = new System.Drawing.Size(116, 44);
             this.btnAbrirRestaurante.TabIndex = 3;
             this.btnAbrirRestaurante.Text = "Abrir";
             this.btnAbrirRestaurante.UseVisualStyleBackColor = true;
@@ -118,9 +121,11 @@
             // groupBox1
             // 
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(56, 142);
+            this.groupBox1.Location = new System.Drawing.Point(75, 175);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(445, 311);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(593, 383);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Categorias";
@@ -128,9 +133,11 @@
             // groupBox2
             // 
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(532, 142);
+            this.groupBox2.Location = new System.Drawing.Point(709, 175);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(459, 334);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(612, 411);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Metodos Pagamento";
@@ -140,9 +147,10 @@
             this.comboBox1.DataSource = this.restauranteSetBindingSource;
             this.comboBox1.DisplayMember = "Nome";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(151, 90);
+            this.comboBox1.Location = new System.Drawing.Point(201, 111);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 21);
+            this.comboBox1.Size = new System.Drawing.Size(245, 24);
             this.comboBox1.TabIndex = 8;
             // 
             // restauranteSetBindingSource
@@ -163,9 +171,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 85);
+            this.label1.Location = new System.Drawing.Point(35, 105);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 24);
+            this.label1.Size = new System.Drawing.Size(160, 29);
             this.label1.TabIndex = 9;
             this.label1.Text = "Restaurantes:";
             // 
@@ -204,9 +213,9 @@
             // 
             // GestaoRestaurantes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 550);
+            this.ClientSize = new System.Drawing.Size(1348, 677);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox2);
@@ -214,6 +223,7 @@
             this.Controls.Add(this.btnAbrirRestaurante);
             this.Controls.Add(this.btnCriarRestauranteView);
             this.Controls.Add(this.btnHome);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GestaoRestaurantes";
             this.Text = "GestaoRestaurantes";
             this.Load += new System.EventHandler(this.GestaoRestaurantes_Load);
