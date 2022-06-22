@@ -22,5 +22,14 @@ namespace Projeto_DA_Restaurante
 
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CriarRestaurante_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

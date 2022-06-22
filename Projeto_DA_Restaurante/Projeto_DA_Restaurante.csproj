@@ -55,17 +55,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdicionarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarItem.Designer.cs">
+      <DependentUpon>AdicionarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssociarCliente.Designer.cs">
+      <DependentUpon>AssociarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociarTrabalhadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssociarTrabalhadores.Designer.cs">
+      <DependentUpon>AssociarTrabalhadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Categoria.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
-    <Compile Include="CriarClientes.cs">
+    <Compile Include="AssociarMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CriarClientes.Designer.cs">
-      <DependentUpon>CriarClientes.cs</DependentUpon>
+    <Compile Include="AssociarMenu.Designer.cs">
+      <DependentUpon>AssociarMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CriarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CriarPedido.Designer.cs">
+      <DependentUpon>CriarPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="CriarPrato.cs">
       <SubType>Form</SubType>
@@ -79,14 +103,14 @@
     <Compile Include="CriarRestaurante.Designer.cs">
       <DependentUpon>CriarRestaurante.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditarCliente.Designer.cs">
-      <DependentUpon>EditarCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Estado.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FinalizarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalizarPedido.Designer.cs">
+      <DependentUpon>FinalizarPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="GestaoRestaurantes.cs">
       <SubType>Form</SubType>
@@ -174,8 +198,20 @@
     <Compile Include="Utilizadores.Designer.cs">
       <DependentUpon>Utilizadores.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CriarClientes.resx">
-      <DependentUpon>CriarClientes.cs</DependentUpon>
+    <EmbeddedResource Include="AdicionarItem.resx">
+      <DependentUpon>AdicionarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociarCliente.resx">
+      <DependentUpon>AssociarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociarMenu.resx">
+      <DependentUpon>AssociarMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociarTrabalhadores.resx">
+      <DependentUpon>AssociarTrabalhadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CriarPedido.resx">
+      <DependentUpon>CriarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CriarPrato.resx">
       <DependentUpon>CriarPrato.cs</DependentUpon>
@@ -183,8 +219,8 @@
     <EmbeddedResource Include="CriarRestaurante.resx">
       <DependentUpon>CriarRestaurante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarCliente.resx">
-      <DependentUpon>EditarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="FinalizarPedido.resx">
+      <DependentUpon>FinalizarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestaoRestaurantes.resx">
       <DependentUpon>GestaoRestaurantes.cs</DependentUpon>

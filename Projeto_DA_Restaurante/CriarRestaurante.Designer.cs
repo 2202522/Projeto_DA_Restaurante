@@ -43,29 +43,27 @@
             // 
             // txbNomeRestaurante
             // 
-            this.txbNomeRestaurante.Location = new System.Drawing.Point(186, 123);
-            this.txbNomeRestaurante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbNomeRestaurante.Location = new System.Drawing.Point(151, 72);
             this.txbNomeRestaurante.Name = "txbNomeRestaurante";
-            this.txbNomeRestaurante.Size = new System.Drawing.Size(231, 22);
+            this.txbNomeRestaurante.Size = new System.Drawing.Size(174, 20);
             this.txbNomeRestaurante.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 112);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(48, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 36);
+            this.label1.Size = new System.Drawing.Size(85, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnCriarRestaurante
             // 
-            this.btnCriarRestaurante.Location = new System.Drawing.Point(751, 257);
-            this.btnCriarRestaurante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCriarRestaurante.Location = new System.Drawing.Point(512, 172);
             this.btnCriarRestaurante.Name = "btnCriarRestaurante";
-            this.btnCriarRestaurante.Size = new System.Drawing.Size(160, 57);
+            this.btnCriarRestaurante.Size = new System.Drawing.Size(174, 29);
             this.btnCriarRestaurante.TabIndex = 2;
             this.btnCriarRestaurante.Text = "Criar";
             this.btnCriarRestaurante.UseVisualStyleBackColor = true;
@@ -75,83 +73,75 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 176);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(48, 115);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 36);
+            this.label2.Size = new System.Drawing.Size(62, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "Rua:";
             // 
             // txbRuaRestaurante
             // 
-            this.txbRuaRestaurante.Location = new System.Drawing.Point(197, 187);
-            this.txbRuaRestaurante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbRuaRestaurante.Location = new System.Drawing.Point(151, 124);
             this.txbRuaRestaurante.Name = "txbRuaRestaurante";
-            this.txbRuaRestaurante.Size = new System.Drawing.Size(231, 22);
+            this.txbRuaRestaurante.Size = new System.Drawing.Size(174, 20);
             this.txbRuaRestaurante.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(60, 246);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(48, 172);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 36);
+            this.label3.Size = new System.Drawing.Size(97, 29);
             this.label3.TabIndex = 6;
             this.label3.Text = "Cidade:";
             // 
             // txbCidadeRestaurante
             // 
-            this.txbCidadeRestaurante.Location = new System.Drawing.Point(197, 257);
-            this.txbCidadeRestaurante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbCidadeRestaurante.Location = new System.Drawing.Point(151, 181);
             this.txbCidadeRestaurante.Name = "txbCidadeRestaurante";
-            this.txbCidadeRestaurante.Size = new System.Drawing.Size(231, 22);
+            this.txbCidadeRestaurante.Size = new System.Drawing.Size(174, 20);
             this.txbCidadeRestaurante.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(488, 112);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(369, 63);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 36);
+            this.label4.Size = new System.Drawing.Size(137, 29);
             this.label4.TabIndex = 8;
             this.label4.Text = "Cod.Postal:";
             // 
             // txbCodPostalRestaurante
             // 
-            this.txbCodPostalRestaurante.Location = new System.Drawing.Point(679, 123);
-            this.txbCodPostalRestaurante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbCodPostalRestaurante.Location = new System.Drawing.Point(512, 72);
             this.txbCodPostalRestaurante.Name = "txbCodPostalRestaurante";
-            this.txbCodPostalRestaurante.Size = new System.Drawing.Size(231, 22);
+            this.txbCodPostalRestaurante.Size = new System.Drawing.Size(174, 20);
             this.txbCodPostalRestaurante.TabIndex = 7;
             // 
             // txbpaisRestaurante
             // 
-            this.txbpaisRestaurante.Location = new System.Drawing.Point(679, 187);
-            this.txbpaisRestaurante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbpaisRestaurante.Location = new System.Drawing.Point(512, 124);
             this.txbpaisRestaurante.Name = "txbpaisRestaurante";
-            this.txbpaisRestaurante.Size = new System.Drawing.Size(231, 22);
+            this.txbpaisRestaurante.Size = new System.Drawing.Size(174, 20);
             this.txbpaisRestaurante.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(488, 176);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(369, 115);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 36);
+            this.label5.Size = new System.Drawing.Size(66, 29);
             this.label5.TabIndex = 10;
             this.label5.Text = "País:";
             // 
             // CriarRestaurante
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 374);
+            this.ClientSize = new System.Drawing.Size(774, 255);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txbpaisRestaurante);
             this.Controls.Add(this.label4);
@@ -163,9 +153,9 @@
             this.Controls.Add(this.btnCriarRestaurante);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txbNomeRestaurante);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CriarRestaurante";
             this.Text = "CriarRestaurante";
+            this.Load += new System.EventHandler(this.CriarRestaurante_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
