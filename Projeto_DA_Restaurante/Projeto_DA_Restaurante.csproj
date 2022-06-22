@@ -61,7 +61,9 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
-    <Compile Include="CriarClientes.cs" />
+    <Compile Include="CriarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CriarClientes.Designer.cs">
       <DependentUpon>CriarClientes.cs</DependentUpon>
     </Compile>
@@ -77,7 +79,9 @@
     <Compile Include="CriarRestaurante.Designer.cs">
       <DependentUpon>CriarRestaurante.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarCliente.cs" />
+    <Compile Include="EditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EditarCliente.Designer.cs">
       <DependentUpon>EditarCliente.cs</DependentUpon>
     </Compile>
