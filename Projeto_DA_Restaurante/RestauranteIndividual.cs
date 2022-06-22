@@ -16,5 +16,24 @@ namespace Projeto_DA_Restaurante
         {
             InitializeComponent();
         }
+
+        private void btnPedidosRestaurante_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Pedidos pedidos = new Pedidos();
+            pedidos.ShowDialog();
+        }
+
+        private void btnCriarMenu_Click(object sender, EventArgs e)
+        {
+            AssociarMenu criarMenu = new AssociarMenu();
+            criarMenu.ShowDialog();
+        }
+
+        private void btnCriarTrabalhadores_Click(object sender, EventArgs e)
+        {
+            AssociarTrabalhadores associarTrabalhadores = new AssociarTrabalhadores();
+            associarTrabalhadores.ShowDialog();
+        }
     }
 }

@@ -38,5 +38,12 @@ namespace Projeto_DA_Restaurante
             CriarRestaurante criarRestaurante = new CriarRestaurante();
             criarRestaurante.ShowDialog();
         }
+
+        private void btnAbrirRestaurante_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RestauranteIndividual restauranteIndividual = new RestauranteIndividual();
+            restauranteIndividual.ShowDialog();
+        }
     }
 }

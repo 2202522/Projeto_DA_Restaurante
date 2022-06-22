@@ -86,6 +86,7 @@
             this.btnAbrirRestaurante.TabIndex = 3;
             this.btnAbrirRestaurante.Text = "Abrir";
             this.btnAbrirRestaurante.UseVisualStyleBackColor = true;
+            this.btnAbrirRestaurante.Click += new System.EventHandler(this.btnAbrirRestaurante_Click);
             // 
             // categoriaSetBindingSource
             // 
