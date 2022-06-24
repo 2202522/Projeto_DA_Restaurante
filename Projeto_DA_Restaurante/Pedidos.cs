@@ -49,8 +49,29 @@ namespace Projeto_DA_Restaurante
 
         private void btnCriarPedido_Click(object sender, EventArgs e)
         {
+            this.Hide();
             CriarPedido criarPedido = new CriarPedido();
             criarPedido.ShowDialog();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pedidos_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'restauranteDataSet1.PedidoSet' table. You can move, or remove it, as needed.
+            this.pedidoSetTableAdapter.Fill(this.restauranteDataSet1.PedidoSet);
+            // TODO: This line of code loads data into the 'restauranteDataSet1.RestauranteSet' table. You can move, or remove it, as needed.
+            this.restauranteSetTableAdapter.Fill(this.restauranteDataSet1.RestauranteSet);
+        }
+
+        private void restauranteSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.restauranteSetBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.restauranteDataSet1);
         }
     }
 }

@@ -28,134 +28,152 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txbNomeRestaurante = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnCriarRestaurante = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txbRuaRestaurante = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txbCidadeRestaurante = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txbCodPostalRestaurante = new System.Windows.Forms.TextBox();
-            this.txbpaisRestaurante = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label nomeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CriarRestaurante));
+            this.btnCriarRestauranteView = new System.Windows.Forms.Button();
+            this.restauranteDataSet1 = new Projeto_DA_Restaurante.RestauranteDataSet1();
+            this.restauranteSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.restauranteSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet1TableAdapters.RestauranteSetTableAdapter();
+            this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet1TableAdapters.TableAdapterManager();
+            this.restauranteSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.restauranteSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
+            nomeLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingNavigator)).BeginInit();
+            this.restauranteSetBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txbNomeRestaurante
+            // nomeLabel
             // 
-            this.txbNomeRestaurante.Location = new System.Drawing.Point(151, 72);
-            this.txbNomeRestaurante.Name = "txbNomeRestaurante";
-            this.txbNomeRestaurante.Size = new System.Drawing.Size(174, 20);
-            this.txbNomeRestaurante.TabIndex = 0;
+            nomeLabel.AutoSize = true;
+            nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nomeLabel.Location = new System.Drawing.Point(30, 53);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(74, 25);
+            nomeLabel.TabIndex = 5;
+            nomeLabel.Text = "Nome:";
             // 
-            // label1
+            // btnCriarRestauranteView
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(48, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nome:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.btnCriarRestauranteView.Location = new System.Drawing.Point(281, 134);
+            this.btnCriarRestauranteView.Name = "btnCriarRestauranteView";
+            this.btnCriarRestauranteView.Size = new System.Drawing.Size(138, 45);
+            this.btnCriarRestauranteView.TabIndex = 2;
+            this.btnCriarRestauranteView.Text = "Concluir";
+            this.btnCriarRestauranteView.UseVisualStyleBackColor = true;
+            this.btnCriarRestauranteView.Click += new System.EventHandler(this.btnCriarRestauranteView_Click);
             // 
-            // btnCriarRestaurante
+            // restauranteDataSet1
             // 
-            this.btnCriarRestaurante.Location = new System.Drawing.Point(512, 172);
-            this.btnCriarRestaurante.Name = "btnCriarRestaurante";
-            this.btnCriarRestaurante.Size = new System.Drawing.Size(174, 29);
-            this.btnCriarRestaurante.TabIndex = 2;
-            this.btnCriarRestaurante.Text = "Criar";
-            this.btnCriarRestaurante.UseVisualStyleBackColor = true;
-            this.btnCriarRestaurante.Click += new System.EventHandler(this.btnCriarRestaurante_Click);
+            this.restauranteDataSet1.DataSetName = "RestauranteDataSet1";
+            this.restauranteDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label2
+            // restauranteSetBindingSource
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(48, 115);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 29);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Rua:";
+            this.restauranteSetBindingSource.DataMember = "RestauranteSet";
+            this.restauranteSetBindingSource.DataSource = this.restauranteDataSet1;
             // 
-            // txbRuaRestaurante
+            // restauranteSetTableAdapter
             // 
-            this.txbRuaRestaurante.Location = new System.Drawing.Point(151, 124);
-            this.txbRuaRestaurante.Name = "txbRuaRestaurante";
-            this.txbRuaRestaurante.Size = new System.Drawing.Size(174, 20);
-            this.txbRuaRestaurante.TabIndex = 3;
+            this.restauranteSetTableAdapter.ClearBeforeFill = true;
             // 
-            // label3
+            // tableAdapterManager
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(48, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 29);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Cidade:";
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CategoriaSetTableAdapter = null;
+            this.tableAdapterManager.EstadoSetTableAdapter = null;
+            this.tableAdapterManager.ItemMenuSetTableAdapter = null;
+            this.tableAdapterManager.MetodoPagamentoSetTableAdapter = null;
+            this.tableAdapterManager.PagamentoSetTableAdapter = null;
+            this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
+            this.tableAdapterManager.PedidoSetTableAdapter = null;
+            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
+            this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
+            this.tableAdapterManager.PessoaSetTableAdapter = null;
+            this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
+            this.tableAdapterManager.RestauranteSetTableAdapter = this.restauranteSetTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // txbCidadeRestaurante
+            // restauranteSetBindingNavigator
             // 
-            this.txbCidadeRestaurante.Location = new System.Drawing.Point(151, 181);
-            this.txbCidadeRestaurante.Name = "txbCidadeRestaurante";
-            this.txbCidadeRestaurante.Size = new System.Drawing.Size(174, 20);
-            this.txbCidadeRestaurante.TabIndex = 5;
+            this.restauranteSetBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.restauranteSetBindingNavigator.BindingSource = this.restauranteSetBindingSource;
+            this.restauranteSetBindingNavigator.CountItem = null;
+            this.restauranteSetBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.restauranteSetBindingNavigator.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restauranteSetBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.restauranteSetBindingNavigatorSaveItem});
+            this.restauranteSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.restauranteSetBindingNavigator.MoveFirstItem = null;
+            this.restauranteSetBindingNavigator.MoveLastItem = null;
+            this.restauranteSetBindingNavigator.MoveNextItem = null;
+            this.restauranteSetBindingNavigator.MovePreviousItem = null;
+            this.restauranteSetBindingNavigator.Name = "restauranteSetBindingNavigator";
+            this.restauranteSetBindingNavigator.PositionItem = null;
+            this.restauranteSetBindingNavigator.Size = new System.Drawing.Size(436, 25);
+            this.restauranteSetBindingNavigator.TabIndex = 3;
+            this.restauranteSetBindingNavigator.Text = "bindingNavigator1";
             // 
-            // label4
+            // bindingNavigatorAddNewItem
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(369, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 29);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Cod.Postal:";
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
-            // txbCodPostalRestaurante
+            // bindingNavigatorDeleteItem
             // 
-            this.txbCodPostalRestaurante.Location = new System.Drawing.Point(512, 72);
-            this.txbCodPostalRestaurante.Name = "txbCodPostalRestaurante";
-            this.txbCodPostalRestaurante.Size = new System.Drawing.Size(174, 20);
-            this.txbCodPostalRestaurante.TabIndex = 7;
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // txbpaisRestaurante
+            // restauranteSetBindingNavigatorSaveItem
             // 
-            this.txbpaisRestaurante.Location = new System.Drawing.Point(512, 124);
-            this.txbpaisRestaurante.Name = "txbpaisRestaurante";
-            this.txbpaisRestaurante.Size = new System.Drawing.Size(174, 20);
-            this.txbpaisRestaurante.TabIndex = 9;
+            this.restauranteSetBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.restauranteSetBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("restauranteSetBindingNavigatorSaveItem.Image")));
+            this.restauranteSetBindingNavigatorSaveItem.Name = "restauranteSetBindingNavigatorSaveItem";
+            this.restauranteSetBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.restauranteSetBindingNavigatorSaveItem.Text = "Save Data";
+            this.restauranteSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.restauranteSetBindingNavigatorSaveItem_Click_1);
             // 
-            // label5
+            // nomeTextBox
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(369, 115);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 29);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "País:";
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.restauranteSetBindingSource, "Nome", true));
+            this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeTextBox.Location = new System.Drawing.Point(110, 53);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(202, 31);
+            this.nomeTextBox.TabIndex = 6;
             // 
             // CriarRestaurante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 255);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txbpaisRestaurante);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txbCodPostalRestaurante);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txbCidadeRestaurante);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txbRuaRestaurante);
-            this.Controls.Add(this.btnCriarRestaurante);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txbNomeRestaurante);
+            this.ClientSize = new System.Drawing.Size(436, 197);
+            this.Controls.Add(nomeLabel);
+            this.Controls.Add(this.nomeTextBox);
+            this.Controls.Add(this.restauranteSetBindingNavigator);
+            this.Controls.Add(this.btnCriarRestauranteView);
             this.Name = "CriarRestaurante";
             this.Text = "CriarRestaurante";
             this.Load += new System.EventHandler(this.CriarRestaurante_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingNavigator)).EndInit();
+            this.restauranteSetBindingNavigator.ResumeLayout(false);
+            this.restauranteSetBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,16 +181,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txbNomeRestaurante;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCriarRestaurante;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbRuaRestaurante;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txbCidadeRestaurante;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txbCodPostalRestaurante;
-        private System.Windows.Forms.TextBox txbpaisRestaurante;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnCriarRestauranteView;
+        private RestauranteDataSet1 restauranteDataSet1;
+        private System.Windows.Forms.BindingSource restauranteSetBindingSource;
+        private RestauranteDataSet1TableAdapters.RestauranteSetTableAdapter restauranteSetTableAdapter;
+        private RestauranteDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator restauranteSetBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton restauranteSetBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox nomeTextBox;
     }
 }

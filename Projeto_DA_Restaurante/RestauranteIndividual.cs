@@ -24,16 +24,42 @@ namespace Projeto_DA_Restaurante
             pedidos.ShowDialog();
         }
 
-        private void btnCriarMenu_Click(object sender, EventArgs e)
+        private void itemMenuSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            AssociarMenu criarMenu = new AssociarMenu();
-            criarMenu.ShowDialog();
+            this.Validate();
+            this.itemMenuSetBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.restauranteDataSet1);
+
         }
 
-        private void btnCriarTrabalhadores_Click(object sender, EventArgs e)
+        private void RestauranteIndividual_Load(object sender, EventArgs e)
         {
-            AssociarTrabalhadores associarTrabalhadores = new AssociarTrabalhadores();
-            associarTrabalhadores.ShowDialog();
+            // TODO: This line of code loads data into the 'restauranteDataSet1.PessoaSet_Trabalhador' table. You can move, or remove it, as needed.
+            this.pessoaSet_TrabalhadorTableAdapter.Fill(this.restauranteDataSet1.PessoaSet_Trabalhador);
+            // TODO: This line of code loads data into the 'restauranteDataSet1.ItemMenuSet' table. You can move, or remove it, as needed.
+            this.itemMenuSetTableAdapter.Fill(this.restauranteDataSet1.ItemMenuSet);
+
+        }
+
+        private void btnEditarMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CRUD_Menu cRUD_Menu = new CRUD_Menu();
+            cRUD_Menu.ShowDialog();
+        }
+
+        private void btHome_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            GestaoRestaurantes gestaoRestaurantes = new GestaoRestaurantes();
+            gestaoRestaurantes.ShowDialog();
+        }
+
+        private void btnApagarTrabalhadores_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CRUD_Trabalhadores cRUD_Trabalhadores = new CRUD_Trabalhadores();
+            cRUD_Trabalhadores.ShowDialog();
         }
     }
 }

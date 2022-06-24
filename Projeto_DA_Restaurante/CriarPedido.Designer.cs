@@ -28,135 +28,273 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbCliente = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txbValorPedido = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbTrabalhador = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbRestaurante = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbEstadoPedido = new System.Windows.Forms.ComboBox();
-            this.btnConcluirPedido = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CriarPedido));
+            System.Windows.Forms.Label idLabel;
+            System.Windows.Forms.Label valorTotalLabel;
+            System.Windows.Forms.Label restauranteIdLabel;
+            System.Windows.Forms.Label clienteIdLabel;
+            System.Windows.Forms.Label trabalhadorIdLabel;
+            System.Windows.Forms.Label estadoIdLabel;
+            this.restauranteDataSet1 = new Projeto_DA_Restaurante.RestauranteDataSet1();
+            this.pedidoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pedidoSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet1TableAdapters.PedidoSetTableAdapter();
+            this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet1TableAdapters.TableAdapterManager();
+            this.pedidoSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.pedidoSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.valorTotalTextBox = new System.Windows.Forms.TextBox();
+            this.restauranteIdTextBox = new System.Windows.Forms.TextBox();
+            this.clienteIdComboBox = new System.Windows.Forms.ComboBox();
+            this.trabalhadorIdComboBox = new System.Windows.Forms.ComboBox();
+            this.estadoIdTextBox = new System.Windows.Forms.TextBox();
+            this.tbConcluir = new System.Windows.Forms.Button();
+            idLabel = new System.Windows.Forms.Label();
+            valorTotalLabel = new System.Windows.Forms.Label();
+            restauranteIdLabel = new System.Windows.Forms.Label();
+            clienteIdLabel = new System.Windows.Forms.Label();
+            trabalhadorIdLabel = new System.Windows.Forms.Label();
+            estadoIdLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingNavigator)).BeginInit();
+            this.pedidoSetBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label2
+            // restauranteDataSet1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(50, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 29);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Cliente:";
+            this.restauranteDataSet1.DataSetName = "RestauranteDataSet1";
+            this.restauranteDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // cbCliente
+            // pedidoSetBindingSource
             // 
-            this.cbCliente.FormattingEnabled = true;
-            this.cbCliente.Location = new System.Drawing.Point(204, 53);
-            this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(174, 21);
-            this.cbCliente.TabIndex = 8;
+            this.pedidoSetBindingSource.DataMember = "PedidoSet";
+            this.pedidoSetBindingSource.DataSource = this.restauranteDataSet1;
             // 
-            // label1
+            // pedidoSetTableAdapter
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(399, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 29);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Valor:";
+            this.pedidoSetTableAdapter.ClearBeforeFill = true;
             // 
-            // txbValorPedido
+            // tableAdapterManager
             // 
-            this.txbValorPedido.Location = new System.Drawing.Point(553, 107);
-            this.txbValorPedido.Name = "txbValorPedido";
-            this.txbValorPedido.Size = new System.Drawing.Size(174, 20);
-            this.txbValorPedido.TabIndex = 6;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CategoriaSetTableAdapter = null;
+            this.tableAdapterManager.EstadoSetTableAdapter = null;
+            this.tableAdapterManager.ItemMenuSetTableAdapter = null;
+            this.tableAdapterManager.MetodoPagamentoSetTableAdapter = null;
+            this.tableAdapterManager.PagamentoSetTableAdapter = null;
+            this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
+            this.tableAdapterManager.PedidoSetTableAdapter = this.pedidoSetTableAdapter;
+            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
+            this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
+            this.tableAdapterManager.PessoaSetTableAdapter = null;
+            this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
+            this.tableAdapterManager.RestauranteSetTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // label3
+            // pedidoSetBindingNavigator
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(399, 44);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 29);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Trabalhador:";
+            this.pedidoSetBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.pedidoSetBindingNavigator.BindingSource = this.pedidoSetBindingSource;
+            this.pedidoSetBindingNavigator.CountItem = null;
+            this.pedidoSetBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.pedidoSetBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.pedidoSetBindingNavigatorSaveItem});
+            this.pedidoSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.pedidoSetBindingNavigator.MoveFirstItem = null;
+            this.pedidoSetBindingNavigator.MoveLastItem = null;
+            this.pedidoSetBindingNavigator.MoveNextItem = null;
+            this.pedidoSetBindingNavigator.MovePreviousItem = null;
+            this.pedidoSetBindingNavigator.Name = "pedidoSetBindingNavigator";
+            this.pedidoSetBindingNavigator.PositionItem = null;
+            this.pedidoSetBindingNavigator.Size = new System.Drawing.Size(688, 25);
+            this.pedidoSetBindingNavigator.TabIndex = 0;
+            this.pedidoSetBindingNavigator.Text = "bindingNavigator1";
             // 
-            // cbTrabalhador
+            // bindingNavigatorAddNewItem
             // 
-            this.cbTrabalhador.FormattingEnabled = true;
-            this.cbTrabalhador.Location = new System.Drawing.Point(556, 53);
-            this.cbTrabalhador.Name = "cbTrabalhador";
-            this.cbTrabalhador.Size = new System.Drawing.Size(174, 21);
-            this.cbTrabalhador.TabIndex = 10;
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
-            // label4
+            // bindingNavigatorDeleteItem
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 97);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 29);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Restaurante:";
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // cbRestaurante
+            // pedidoSetBindingNavigatorSaveItem
             // 
-            this.cbRestaurante.FormattingEnabled = true;
-            this.cbRestaurante.Location = new System.Drawing.Point(201, 106);
-            this.cbRestaurante.Name = "cbRestaurante";
-            this.cbRestaurante.Size = new System.Drawing.Size(174, 21);
-            this.cbRestaurante.TabIndex = 12;
+            this.pedidoSetBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pedidoSetBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pedidoSetBindingNavigatorSaveItem.Image")));
+            this.pedidoSetBindingNavigatorSaveItem.Name = "pedidoSetBindingNavigatorSaveItem";
+            this.pedidoSetBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.pedidoSetBindingNavigatorSaveItem.Text = "Save Data";
+            this.pedidoSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.pedidoSetBindingNavigatorSaveItem_Click_1);
             // 
-            // label5
+            // idLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(50, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 29);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Estado:";
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(54, 58);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(30, 24);
+            idLabel.TabIndex = 1;
+            idLabel.Text = "Id:";
             // 
-            // cbEstadoPedido
+            // idTextBox
             // 
-            this.cbEstadoPedido.FormattingEnabled = true;
-            this.cbEstadoPedido.Location = new System.Drawing.Point(204, 158);
-            this.cbEstadoPedido.Name = "cbEstadoPedido";
-            this.cbEstadoPedido.Size = new System.Drawing.Size(174, 21);
-            this.cbEstadoPedido.TabIndex = 14;
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pedidoSetBindingSource, "Id", true));
+            this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idTextBox.Location = new System.Drawing.Point(195, 56);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(121, 29);
+            this.idTextBox.TabIndex = 2;
             // 
-            // btnConcluirPedido
+            // valorTotalLabel
             // 
-            this.btnConcluirPedido.Location = new System.Drawing.Point(556, 149);
-            this.btnConcluirPedido.Name = "btnConcluirPedido";
-            this.btnConcluirPedido.Size = new System.Drawing.Size(174, 38);
-            this.btnConcluirPedido.TabIndex = 16;
-            this.btnConcluirPedido.Text = "Concluir";
-            this.btnConcluirPedido.UseVisualStyleBackColor = true;
+            valorTotalLabel.AutoSize = true;
+            valorTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            valorTotalLabel.Location = new System.Drawing.Point(54, 93);
+            valorTotalLabel.Name = "valorTotalLabel";
+            valorTotalLabel.Size = new System.Drawing.Size(105, 24);
+            valorTotalLabel.TabIndex = 3;
+            valorTotalLabel.Text = "Valor Total:";
+            // 
+            // valorTotalTextBox
+            // 
+            this.valorTotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pedidoSetBindingSource, "ValorTotal", true));
+            this.valorTotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valorTotalTextBox.Location = new System.Drawing.Point(195, 91);
+            this.valorTotalTextBox.Name = "valorTotalTextBox";
+            this.valorTotalTextBox.Size = new System.Drawing.Size(121, 29);
+            this.valorTotalTextBox.TabIndex = 4;
+            // 
+            // restauranteIdLabel
+            // 
+            restauranteIdLabel.AutoSize = true;
+            restauranteIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            restauranteIdLabel.Location = new System.Drawing.Point(54, 129);
+            restauranteIdLabel.Name = "restauranteIdLabel";
+            restauranteIdLabel.Size = new System.Drawing.Size(135, 24);
+            restauranteIdLabel.TabIndex = 5;
+            restauranteIdLabel.Text = "Restaurante Id:";
+            // 
+            // restauranteIdTextBox
+            // 
+            this.restauranteIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pedidoSetBindingSource, "RestauranteId", true));
+            this.restauranteIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restauranteIdTextBox.Location = new System.Drawing.Point(195, 126);
+            this.restauranteIdTextBox.Name = "restauranteIdTextBox";
+            this.restauranteIdTextBox.Size = new System.Drawing.Size(121, 29);
+            this.restauranteIdTextBox.TabIndex = 6;
+            // 
+            // clienteIdLabel
+            // 
+            clienteIdLabel.AutoSize = true;
+            clienteIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            clienteIdLabel.Location = new System.Drawing.Point(378, 56);
+            clienteIdLabel.Name = "clienteIdLabel";
+            clienteIdLabel.Size = new System.Drawing.Size(93, 24);
+            clienteIdLabel.TabIndex = 7;
+            clienteIdLabel.Text = "Cliente Id:";
+            // 
+            // clienteIdComboBox
+            // 
+            this.clienteIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pedidoSetBindingSource, "ClienteId", true));
+            this.clienteIdComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clienteIdComboBox.FormattingEnabled = true;
+            this.clienteIdComboBox.Location = new System.Drawing.Point(535, 50);
+            this.clienteIdComboBox.Name = "clienteIdComboBox";
+            this.clienteIdComboBox.Size = new System.Drawing.Size(121, 32);
+            this.clienteIdComboBox.TabIndex = 8;
+            // 
+            // trabalhadorIdLabel
+            // 
+            trabalhadorIdLabel.AutoSize = true;
+            trabalhadorIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            trabalhadorIdLabel.Location = new System.Drawing.Point(378, 93);
+            trabalhadorIdLabel.Name = "trabalhadorIdLabel";
+            trabalhadorIdLabel.Size = new System.Drawing.Size(137, 24);
+            trabalhadorIdLabel.TabIndex = 9;
+            trabalhadorIdLabel.Text = "Trabalhador Id:";
+            // 
+            // trabalhadorIdComboBox
+            // 
+            this.trabalhadorIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pedidoSetBindingSource, "TrabalhadorId", true));
+            this.trabalhadorIdComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trabalhadorIdComboBox.FormattingEnabled = true;
+            this.trabalhadorIdComboBox.Location = new System.Drawing.Point(535, 87);
+            this.trabalhadorIdComboBox.Name = "trabalhadorIdComboBox";
+            this.trabalhadorIdComboBox.Size = new System.Drawing.Size(121, 32);
+            this.trabalhadorIdComboBox.TabIndex = 10;
+            // 
+            // estadoIdLabel
+            // 
+            estadoIdLabel.AutoSize = true;
+            estadoIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            estadoIdLabel.Location = new System.Drawing.Point(54, 164);
+            estadoIdLabel.Name = "estadoIdLabel";
+            estadoIdLabel.Size = new System.Drawing.Size(93, 24);
+            estadoIdLabel.TabIndex = 11;
+            estadoIdLabel.Text = "Estado Id:";
+            // 
+            // estadoIdTextBox
+            // 
+            this.estadoIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pedidoSetBindingSource, "EstadoId", true));
+            this.estadoIdTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estadoIdTextBox.Location = new System.Drawing.Point(195, 161);
+            this.estadoIdTextBox.Name = "estadoIdTextBox";
+            this.estadoIdTextBox.Size = new System.Drawing.Size(121, 29);
+            this.estadoIdTextBox.TabIndex = 12;
+            // 
+            // tbConcluir
+            // 
+            this.tbConcluir.Location = new System.Drawing.Point(512, 161);
+            this.tbConcluir.Name = "tbConcluir";
+            this.tbConcluir.Size = new System.Drawing.Size(144, 39);
+            this.tbConcluir.TabIndex = 13;
+            this.tbConcluir.Text = "Concluir";
+            this.tbConcluir.UseVisualStyleBackColor = true;
+            this.tbConcluir.Click += new System.EventHandler(this.button1_Click);
             // 
             // CriarPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 223);
-            this.Controls.Add(this.btnConcluirPedido);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbEstadoPedido);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cbRestaurante);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.cbTrabalhador);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbCliente);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txbValorPedido);
+            this.ClientSize = new System.Drawing.Size(688, 223);
+            this.Controls.Add(this.tbConcluir);
+            this.Controls.Add(idLabel);
+            this.Controls.Add(this.idTextBox);
+            this.Controls.Add(valorTotalLabel);
+            this.Controls.Add(this.valorTotalTextBox);
+            this.Controls.Add(restauranteIdLabel);
+            this.Controls.Add(this.restauranteIdTextBox);
+            this.Controls.Add(clienteIdLabel);
+            this.Controls.Add(this.clienteIdComboBox);
+            this.Controls.Add(trabalhadorIdLabel);
+            this.Controls.Add(this.trabalhadorIdComboBox);
+            this.Controls.Add(estadoIdLabel);
+            this.Controls.Add(this.estadoIdTextBox);
+            this.Controls.Add(this.pedidoSetBindingNavigator);
             this.Name = "CriarPedido";
             this.Text = "CriarPedido";
+            this.Load += new System.EventHandler(this.CriarPedido_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingNavigator)).EndInit();
+            this.pedidoSetBindingNavigator.ResumeLayout(false);
+            this.pedidoSetBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,16 +302,20 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbCliente;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txbValorPedido;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbTrabalhador;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbRestaurante;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbEstadoPedido;
-        private System.Windows.Forms.Button btnConcluirPedido;
+        private RestauranteDataSet1 restauranteDataSet1;
+        private System.Windows.Forms.BindingSource pedidoSetBindingSource;
+        private RestauranteDataSet1TableAdapters.PedidoSetTableAdapter pedidoSetTableAdapter;
+        private RestauranteDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingNavigator pedidoSetBindingNavigator;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton pedidoSetBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox valorTotalTextBox;
+        private System.Windows.Forms.TextBox restauranteIdTextBox;
+        private System.Windows.Forms.ComboBox clienteIdComboBox;
+        private System.Windows.Forms.ComboBox trabalhadorIdComboBox;
+        private System.Windows.Forms.TextBox estadoIdTextBox;
+        private System.Windows.Forms.Button tbConcluir;
     }
 }

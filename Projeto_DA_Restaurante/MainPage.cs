@@ -16,7 +16,6 @@ namespace Projeto_DA_Restaurante
         {
             InitializeComponent();
         }
-
         private void btnRestaurante_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -34,18 +33,10 @@ namespace Projeto_DA_Restaurante
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Pedidos pedidos=new Pedidos();
+            Pedidos pedidos = new Pedidos();
             pedidos.ShowDialog();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -660,6 +660,7 @@
           <Property Name="Pais" Type="String" Nullable="false" />
           <NavigationProperty Name="Restaurante" Relationship="Restaurante.MoradaRestaurante" FromRole="Morada" ToRole="Restaurante" />
           <NavigationProperty Name="Pessoa" Relationship="Restaurante.PessoaMorada" FromRole="Morada" ToRole="Pessoa" />
+          <Property Name="Rua" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="MoradaRestaurante">
           <End Type="Restaurante.Morada" Role="Morada" Multiplicity="1" />

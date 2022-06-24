@@ -26,15 +26,18 @@ namespace Projeto_DA_Restaurante
 
         private void GestaoRestaurantes_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            // TODO: This line of code loads data into the 'restauranteDataSet1.MetodoPagamentoSet' table. You can move, or remove it, as needed.
+            this.metodoPagamentoSetTableAdapter.Fill(this.restauranteDataSet1.MetodoPagamentoSet);
+            // TODO: This line of code loads data into the 'restauranteDataSet1.RestauranteSet' table. You can move, or remove it, as needed.
+            this.restauranteSetTableAdapter.Fill(this.restauranteDataSet1.RestauranteSet);
+            // TODO: This line of code loads data into the 'restauranteDataSet1.CategoriaSet' table. You can move, or remove it, as needed.
+            this.categoriaSetTableAdapter.Fill(this.restauranteDataSet1.CategoriaSet);
+            
         }
 
         private void btnCriarRestaurante_Click(object sender, EventArgs e)
         {
+            this.Hide();
             CriarRestaurante criarRestaurante = new CriarRestaurante();
             criarRestaurante.ShowDialog();
         }
@@ -44,6 +47,40 @@ namespace Projeto_DA_Restaurante
             this.Hide();
             RestauranteIndividual restauranteIndividual = new RestauranteIndividual();
             restauranteIndividual.ShowDialog();
+        }
+
+        private void categoriaSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.categoriaSetBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.restauranteDataSet1);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CRUD_Categoria cRUD_Categoria = new CRUD_Categoria();
+            cRUD_Categoria.ShowDialog();
+        }
+
+        private void categoriaSetBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.categoriaSetBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.restauranteDataSet1);
+        }
+
+        private void btnMetodo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CRUD_MetodoPagamento crUD_MetodoPagamento = new CRUD_MetodoPagamento();
+            crUD_MetodoPagamento.ShowDialog();
+        }
+
+        private void restauranteSetComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

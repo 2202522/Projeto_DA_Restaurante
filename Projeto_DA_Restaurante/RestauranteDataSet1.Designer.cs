@@ -963,8 +963,7 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -1257,8 +1256,7 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -1537,8 +1535,7 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -1888,8 +1885,7 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -2219,8 +2215,7 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -2536,8 +2531,7 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -3163,8 +3157,7 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -3475,8 +3468,7 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -4636,8 +4628,7 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -7711,35 +7702,6 @@ SELECT Id, Nome, Fotografia, Ingredientes, Preco, Ativo, CategoriaId FROM ItemMe
             tableMapping.ColumnMappings.Add("Pais", "Pais");
             tableMapping.ColumnMappings.Add("Restaurante_Id", "Restaurante_Id");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[MoradaSet] WHERE (([Id] = @Original_Id) AND ([Restaurante_Id] " +
-                "= @Original_Restaurante_Id))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Restaurante_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Restaurante_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MoradaSet] ([Cidade], [CodPostal], [Pais], [Restaurante_Id]) V" +
-                "ALUES (@Cidade, @CodPostal, @Pais, @Restaurante_Id);\r\nSELECT Id, Cidade, CodPost" +
-                "al, Pais, Restaurante_Id FROM MoradaSet WHERE (Id = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cidade", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodPostal", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodPostal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pais", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pais", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Restaurante_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Restaurante_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[MoradaSet] SET [Cidade] = @Cidade, [CodPostal] = @CodPostal, [Pais] = @Pais, [Restaurante_Id] = @Restaurante_Id WHERE (([Id] = @Original_Id) AND ([Restaurante_Id] = @Original_Restaurante_Id));
-SELECT Id, Cidade, CodPostal, Pais, Restaurante_Id FROM MoradaSet WHERE (Id = @Id)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cidade", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cidade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CodPostal", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CodPostal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pais", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pais", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Restaurante_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Restaurante_Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Restaurante_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Restaurante_Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7781,149 +7743,6 @@ SELECT Id, Cidade, CodPostal, Pais, Restaurante_Id FROM MoradaSet WHERE (Id = @I
             RestauranteDataSet1.MoradaSetDataTable dataTable = new RestauranteDataSet1.MoradaSetDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RestauranteDataSet1.MoradaSetDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RestauranteDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "MoradaSet");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, int Original_Restaurante_Id) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Restaurante_Id));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Cidade, string CodPostal, string Pais, int Restaurante_Id) {
-            if ((Cidade == null)) {
-                throw new global::System.ArgumentNullException("Cidade");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Cidade));
-            }
-            if ((CodPostal == null)) {
-                throw new global::System.ArgumentNullException("CodPostal");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(CodPostal));
-            }
-            if ((Pais == null)) {
-                throw new global::System.ArgumentNullException("Pais");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Pais));
-            }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Restaurante_Id));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Cidade, string CodPostal, string Pais, int Restaurante_Id, int Original_Id, int Original_Restaurante_Id, int Id) {
-            if ((Cidade == null)) {
-                throw new global::System.ArgumentNullException("Cidade");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Cidade));
-            }
-            if ((CodPostal == null)) {
-                throw new global::System.ArgumentNullException("CodPostal");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(CodPostal));
-            }
-            if ((Pais == null)) {
-                throw new global::System.ArgumentNullException("Pais");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Pais));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Restaurante_Id));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_Restaurante_Id));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Id));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Cidade, string CodPostal, string Pais, int Restaurante_Id, int Original_Id, int Original_Restaurante_Id) {
-            return this.Update(Cidade, CodPostal, Pais, Restaurante_Id, Original_Id, Original_Restaurante_Id, Original_Id);
         }
     }
     
@@ -10456,8 +10275,6 @@ SELECT Restaurante_Id, ItemMenu_Id FROM RestauranteItemMenu WHERE (ItemMenu_Id =
         
         private ItemMenuSetTableAdapter _itemMenuSetTableAdapter;
         
-        private MoradaSetTableAdapter _moradaSetTableAdapter;
-        
         private PagamentoSetTableAdapter _pagamentoSetTableAdapter;
         
         private PedidoItemMenuTableAdapter _pedidoItemMenuTableAdapter;
@@ -10542,20 +10359,6 @@ SELECT Restaurante_Id, ItemMenu_Id FROM RestauranteItemMenu WHERE (ItemMenu_Id =
             }
             set {
                 this._itemMenuSetTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public MoradaSetTableAdapter MoradaSetTableAdapter {
-            get {
-                return this._moradaSetTableAdapter;
-            }
-            set {
-                this._moradaSetTableAdapter = value;
             }
         }
         
@@ -10706,10 +10509,6 @@ SELECT Restaurante_Id, ItemMenu_Id FROM RestauranteItemMenu WHERE (ItemMenu_Id =
                             && (this._itemMenuSetTableAdapter.Connection != null))) {
                     return this._itemMenuSetTableAdapter.Connection;
                 }
-                if (((this._moradaSetTableAdapter != null) 
-                            && (this._moradaSetTableAdapter.Connection != null))) {
-                    return this._moradaSetTableAdapter.Connection;
-                }
                 if (((this._pagamentoSetTableAdapter != null) 
                             && (this._pagamentoSetTableAdapter.Connection != null))) {
                     return this._pagamentoSetTableAdapter.Connection;
@@ -10767,9 +10566,6 @@ SELECT Restaurante_Id, ItemMenu_Id FROM RestauranteItemMenu WHERE (ItemMenu_Id =
                 if ((this._itemMenuSetTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._moradaSetTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._pagamentoSetTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -10811,15 +10607,6 @@ SELECT Restaurante_Id, ItemMenu_Id FROM RestauranteItemMenu WHERE (ItemMenu_Id =
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._restauranteSetTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._moradaSetTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.MoradaSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._moradaSetTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -10937,14 +10724,6 @@ SELECT Restaurante_Id, ItemMenu_Id FROM RestauranteItemMenu WHERE (ItemMenu_Id =
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._restauranteSetTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._moradaSetTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.MoradaSet.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._moradaSetTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -11134,14 +10913,6 @@ SELECT Restaurante_Id, ItemMenu_Id FROM RestauranteItemMenu WHERE (ItemMenu_Id =
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._moradaSetTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.MoradaSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._moradaSetTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._restauranteSetTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.RestauranteSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -11206,11 +10977,6 @@ SELECT Restaurante_Id, ItemMenu_Id FROM RestauranteItemMenu WHERE (ItemMenu_Id =
             }
             if (((this._itemMenuSetTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._itemMenuSetTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._moradaSetTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._moradaSetTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -11320,15 +11086,6 @@ SELECT Restaurante_Id, ItemMenu_Id FROM RestauranteItemMenu WHERE (ItemMenu_Id =
                     if (this._itemMenuSetTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._itemMenuSetTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._itemMenuSetTableAdapter.Adapter);
-                    }
-                }
-                if ((this._moradaSetTableAdapter != null)) {
-                    revertConnections.Add(this._moradaSetTableAdapter, this._moradaSetTableAdapter.Connection);
-                    this._moradaSetTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._moradaSetTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._moradaSetTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._moradaSetTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._moradaSetTableAdapter.Adapter);
                     }
                 }
                 if ((this._pagamentoSetTableAdapter != null)) {
@@ -11476,10 +11233,6 @@ SELECT Restaurante_Id, ItemMenu_Id FROM RestauranteItemMenu WHERE (ItemMenu_Id =
                 if ((this._itemMenuSetTableAdapter != null)) {
                     this._itemMenuSetTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._itemMenuSetTableAdapter]));
                     this._itemMenuSetTableAdapter.Transaction = null;
-                }
-                if ((this._moradaSetTableAdapter != null)) {
-                    this._moradaSetTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._moradaSetTableAdapter]));
-                    this._moradaSetTableAdapter.Transaction = null;
                 }
                 if ((this._pagamentoSetTableAdapter != null)) {
                     this._pagamentoSetTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._pagamentoSetTableAdapter]));
