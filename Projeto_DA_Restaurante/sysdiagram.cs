@@ -12,15 +12,12 @@ namespace Projeto_DA_Restaurante
     using System;
     using System.Collections.Generic;
     
-    public partial class Morada
+    public partial class sysdiagram
     {
-        public int Id { get; set; }
-        public string Cidade { get; set; }
-        public string CodPostal { get; set; }
-        public string Pais { get; set; }
-        public string Rua { get; set; }
-    
-        public virtual Pessoa Pessoa { get; set; }
-        public virtual Restaurante Restaurante { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -4,25 +4,27 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="5d61a940fb2544c4886f65aa1e252c67" Name="Diagram1" ZoomLevel="106" >
+      <Diagram DiagramId="5d61a940fb2544c4886f65aa1e252c67" Name="Diagram1" ZoomLevel="80" >
         <EntityTypeShape EntityType="Restaurante.Pessoa" Width="1.5" PointX="3.375" PointY="4.5" />
         <EntityTypeShape EntityType="Restaurante.Cliente" Width="1.5" PointX="2.375" PointY="6.875" />
         <EntityTypeShape EntityType="Restaurante.Trabalhador" Width="1.5" PointX="4.75" PointY="6.875" />
         <EntityTypeShape EntityType="Restaurante.Pagamento" Width="1.5" PointX="2.375" PointY="9.25" />
         <EntityTypeShape EntityType="Restaurante.Pedido" Width="1.5" PointX="5.125" PointY="9.5" />
         <EntityTypeShape EntityType="Restaurante.MetodoPagamento" Width="1.5" PointX="2.375" PointY="12.375" />
-        <EntityTypeShape EntityType="Restaurante.Estado" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="Restaurante.Estado" Width="1.5" PointX="5.125" PointY="13.25" />
         <EntityTypeShape EntityType="Restaurante.Restaurante" Width="1.5" PointX="8" PointY="6.125" />
-        <EntityTypeShape EntityType="Restaurante.ItemMenu" Width="1.5" PointX="10" PointY="8.5" />
-        <EntityTypeShape EntityType="Restaurante.Categoria" Width="1.5" PointX="10" PointY="12.375" />
+        <EntityTypeShape EntityType="Restaurante.ItemMenu" Width="1.5" PointX="7.625" PointY="8.875" />
+        <EntityTypeShape EntityType="Restaurante.Categoria" Width="1.5" PointX="7.625" PointY="12.375" />
         <AssociationConnector Association="Restaurante.CategoriaItemMenu" />
         <AssociationConnector Association="Restaurante.RestauranteItemMenu" />
         <AssociationConnector Association="Restaurante.RestauranteTrabalhador" />
         <AssociationConnector Association="Restaurante.PedidoItemMenu" />
         <AssociationConnector Association="Restaurante.RestaurantePedido" ManuallyRouted="true" >
-          <ConnectorPoint PointX="8" PointY="7.996129447179201" />
-          <ConnectorPoint PointX="6.4598595527206291" PointY="7.996129447179201" />
-          <ConnectorPoint PointX="6.4598595527206291" PointY="9.4999999999999964" />
+          <ConnectorPoint PointX="9.34375" PointY="8.297587890625" />
+          <ConnectorPoint PointX="9.34375" PointY="12.095896809895834" />
+          <ConnectorPoint PointX="8.4583333333333339" PointY="12.095896809895834" />
+          <ConnectorPoint PointX="8.2916666666666661" PointY="12.095896809895834" />
+          <ConnectorPoint PointX="6.625" PointY="12.095896809895834" />
         </AssociationConnector>
         <AssociationConnector Association="Restaurante.MetodoPagamentoPagamento" />
         <AssociationConnector Association="Restaurante.PedidoPagamento" />
@@ -37,9 +39,10 @@
         </AssociationConnector>
         <AssociationConnector Association="Restaurante.TrabalhadorPedido" />
         <EntityTypeShape EntityType="Restaurante.Morada" Width="1.5" PointX="5.875" PointY="3.875" />
-        <AssociationConnector Association="Restaurante.MoradaRestaurante" />
         <AssociationConnector Association="Restaurante.PessoaMorada" />
         <AssociationConnector Association="Restaurante.EstadoPedido" />
+        <EntityTypeShape EntityType="Restaurante.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="Restaurante.RestauranteMorada" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
