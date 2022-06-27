@@ -18,23 +18,17 @@ namespace Projeto_DA_Restaurante
         }
         private void btnRestaurante_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            GestaoRestaurantes gestaoRestaurantes = new GestaoRestaurantes();
-            gestaoRestaurantes.ShowDialog();
+            
         }
 
         private void btnUtilizador_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Utilizadores utilizadores = new Utilizadores();
-            utilizadores.ShowDialog();
+            
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Pedidos pedidos = new Pedidos();
-            pedidos.ShowDialog();
+           
         }
 
 

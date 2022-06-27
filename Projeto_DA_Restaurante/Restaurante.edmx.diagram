@@ -39,9 +39,10 @@
         </AssociationConnector>
         <AssociationConnector Association="Restaurante.TrabalhadorPedido" />
         <EntityTypeShape EntityType="Restaurante.Morada" Width="1.5" PointX="5.875" PointY="3.875" />
-        <AssociationConnector Association="Restaurante.MoradaRestaurante" />
         <AssociationConnector Association="Restaurante.PessoaMorada" />
         <AssociationConnector Association="Restaurante.EstadoPedido" />
+        <EntityTypeShape EntityType="Restaurante.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="Restaurante.RestauranteMorada" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

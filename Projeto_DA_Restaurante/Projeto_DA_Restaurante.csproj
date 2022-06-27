@@ -55,92 +55,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdicionarItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdicionarItem.Designer.cs">
-      <DependentUpon>AdicionarItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AssociarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AssociarCliente.Designer.cs">
-      <DependentUpon>AssociarCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AssociarTrabalhadores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AssociarTrabalhadores.Designer.cs">
-      <DependentUpon>AssociarTrabalhadores.cs</DependentUpon>
-    </Compile>
     <Compile Include="Categoria.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
-    <Compile Include="AssociarMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AssociarMenu.Designer.cs">
-      <DependentUpon>AssociarMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CriarPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CriarPedido.Designer.cs">
-      <DependentUpon>CriarPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CriarPrato.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CriarPrato.Designer.cs">
-      <DependentUpon>CriarPrato.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CriarRestaurante.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CriarRestaurante.Designer.cs">
-      <DependentUpon>CriarRestaurante.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CRUD_Categoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRUD_Categoria.Designer.cs">
-      <DependentUpon>CRUD_Categoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CRUD_Menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRUD_Menu.Designer.cs">
-      <DependentUpon>CRUD_Menu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CRUD_MetodoPagamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRUD_MetodoPagamento.Designer.cs">
-      <DependentUpon>CRUD_MetodoPagamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CRUD_Trabalhadores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CRUD_Trabalhadores.Designer.cs">
-      <DependentUpon>CRUD_Trabalhadores.cs</DependentUpon>
-    </Compile>
     <Compile Include="Estado.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FinalizarPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FinalizarPedido.Designer.cs">
-      <DependentUpon>FinalizarPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GestaoRestaurantes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GestaoRestaurantes.Designer.cs">
-      <DependentUpon>GestaoRestaurantes.cs</DependentUpon>
     </Compile>
     <Compile Include="ItemMenu.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
@@ -162,12 +84,6 @@
     </Compile>
     <Compile Include="Pedido.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Pedidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pedidos.Designer.cs">
-      <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Pessoa.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
@@ -210,65 +126,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RestauranteDataSet2.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RestauranteIndividual.cs">
-      <SubType>Form</SubType>
+    <Compile Include="RestauranteDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RestauranteDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RestauranteIndividual.Designer.cs">
-      <DependentUpon>RestauranteIndividual.cs</DependentUpon>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Restaurante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Restaurante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
     <Compile Include="Trabalhador.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
-    <Compile Include="Utilizadores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Utilizadores.Designer.cs">
-      <DependentUpon>Utilizadores.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="AdicionarItem.resx">
-      <DependentUpon>AdicionarItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AssociarCliente.resx">
-      <DependentUpon>AssociarCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AssociarMenu.resx">
-      <DependentUpon>AssociarMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AssociarTrabalhadores.resx">
-      <DependentUpon>AssociarTrabalhadores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CriarPedido.resx">
-      <DependentUpon>CriarPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CriarPrato.resx">
-      <DependentUpon>CriarPrato.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CriarRestaurante.resx">
-      <DependentUpon>CriarRestaurante.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CRUD_Categoria.resx">
-      <DependentUpon>CRUD_Categoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CRUD_Menu.resx">
-      <DependentUpon>CRUD_Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CRUD_MetodoPagamento.resx">
-      <DependentUpon>CRUD_MetodoPagamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CRUD_Trabalhadores.resx">
-      <DependentUpon>CRUD_Trabalhadores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FinalizarPedido.resx">
-      <DependentUpon>FinalizarPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GestaoRestaurantes.resx">
-      <DependentUpon>GestaoRestaurantes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Pedidos.resx">
-      <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -280,12 +156,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RestauranteIndividual.resx">
-      <DependentUpon>RestauranteIndividual.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Utilizadores.resx">
-      <DependentUpon>Utilizadores.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -335,6 +205,17 @@
     </None>
     <None Include="RestauranteDataSet2.xss">
       <DependentUpon>RestauranteDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="RestauranteDataSet3.xsc">
+      <DependentUpon>RestauranteDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="RestauranteDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RestauranteDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RestauranteDataSet3.xss">
+      <DependentUpon>RestauranteDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
