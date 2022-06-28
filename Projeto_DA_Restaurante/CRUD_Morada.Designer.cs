@@ -29,33 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Morada));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label cidadeLabel;
             System.Windows.Forms.Label codPostalLabel;
             System.Windows.Forms.Label paisLabel;
             System.Windows.Forms.Label ruaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Morada));
             this.btnSeguinte = new System.Windows.Forms.Button();
             this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
             this.moradaSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.moradaSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.MoradaSetTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
             this.moradaSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.moradaSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.cidadeTextBox = new System.Windows.Forms.TextBox();
             this.codPostalTextBox = new System.Windows.Forms.TextBox();
             this.paisTextBox = new System.Windows.Forms.TextBox();
             this.ruaTextBox = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             cidadeLabel = new System.Windows.Forms.Label();
             codPostalLabel = new System.Windows.Forms.Label();
@@ -66,6 +67,56 @@
             ((System.ComponentModel.ISupportInitialize)(this.moradaSetBindingNavigator)).BeginInit();
             this.moradaSetBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(118, 85);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(45, 32);
+            idLabel.TabIndex = 22;
+            idLabel.Text = "Id:";
+            // 
+            // cidadeLabel
+            // 
+            cidadeLabel.AutoSize = true;
+            cidadeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cidadeLabel.Location = new System.Drawing.Point(118, 135);
+            cidadeLabel.Name = "cidadeLabel";
+            cidadeLabel.Size = new System.Drawing.Size(113, 32);
+            cidadeLabel.TabIndex = 24;
+            cidadeLabel.Text = "Cidade:";
+            // 
+            // codPostalLabel
+            // 
+            codPostalLabel.AutoSize = true;
+            codPostalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            codPostalLabel.Location = new System.Drawing.Point(118, 185);
+            codPostalLabel.Name = "codPostalLabel";
+            codPostalLabel.Size = new System.Drawing.Size(161, 32);
+            codPostalLabel.TabIndex = 26;
+            codPostalLabel.Text = "Cod Postal:";
+            // 
+            // paisLabel
+            // 
+            paisLabel.AutoSize = true;
+            paisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            paisLabel.Location = new System.Drawing.Point(118, 236);
+            paisLabel.Name = "paisLabel";
+            paisLabel.Size = new System.Drawing.Size(78, 32);
+            paisLabel.TabIndex = 28;
+            paisLabel.Text = "Pais:";
+            // 
+            // ruaLabel
+            // 
+            ruaLabel.AutoSize = true;
+            ruaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            ruaLabel.Location = new System.Drawing.Point(118, 290);
+            ruaLabel.Name = "ruaLabel";
+            ruaLabel.Size = new System.Drawing.Size(74, 32);
+            ruaLabel.TabIndex = 30;
+            ruaLabel.Text = "Rua:";
             // 
             // btnSeguinte
             // 
@@ -139,6 +190,31 @@
             this.moradaSetBindingNavigator.TabIndex = 22;
             this.moradaSetBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMovePreviousItem
             // 
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -163,16 +239,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -186,26 +255,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // moradaSetBindingNavigatorSaveItem
             // 
@@ -216,16 +267,6 @@
             this.moradaSetBindingNavigatorSaveItem.Text = "Save Data";
             this.moradaSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.moradaSetBindingNavigatorSaveItem_Click_2);
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(118, 85);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(45, 32);
-            idLabel.TabIndex = 22;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moradaSetBindingSource, "Id", true));
@@ -234,16 +275,6 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(311, 38);
             this.idTextBox.TabIndex = 23;
-            // 
-            // cidadeLabel
-            // 
-            cidadeLabel.AutoSize = true;
-            cidadeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            cidadeLabel.Location = new System.Drawing.Point(118, 135);
-            cidadeLabel.Name = "cidadeLabel";
-            cidadeLabel.Size = new System.Drawing.Size(113, 32);
-            cidadeLabel.TabIndex = 24;
-            cidadeLabel.Text = "Cidade:";
             // 
             // cidadeTextBox
             // 
@@ -254,16 +285,6 @@
             this.cidadeTextBox.Size = new System.Drawing.Size(311, 38);
             this.cidadeTextBox.TabIndex = 25;
             // 
-            // codPostalLabel
-            // 
-            codPostalLabel.AutoSize = true;
-            codPostalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            codPostalLabel.Location = new System.Drawing.Point(118, 185);
-            codPostalLabel.Name = "codPostalLabel";
-            codPostalLabel.Size = new System.Drawing.Size(161, 32);
-            codPostalLabel.TabIndex = 26;
-            codPostalLabel.Text = "Cod Postal:";
-            // 
             // codPostalTextBox
             // 
             this.codPostalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moradaSetBindingSource, "CodPostal", true));
@@ -272,16 +293,6 @@
             this.codPostalTextBox.Name = "codPostalTextBox";
             this.codPostalTextBox.Size = new System.Drawing.Size(311, 38);
             this.codPostalTextBox.TabIndex = 27;
-            // 
-            // paisLabel
-            // 
-            paisLabel.AutoSize = true;
-            paisLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            paisLabel.Location = new System.Drawing.Point(118, 236);
-            paisLabel.Name = "paisLabel";
-            paisLabel.Size = new System.Drawing.Size(78, 32);
-            paisLabel.TabIndex = 28;
-            paisLabel.Text = "Pais:";
             // 
             // paisTextBox
             // 
@@ -292,16 +303,6 @@
             this.paisTextBox.Size = new System.Drawing.Size(311, 38);
             this.paisTextBox.TabIndex = 29;
             // 
-            // ruaLabel
-            // 
-            ruaLabel.AutoSize = true;
-            ruaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ruaLabel.Location = new System.Drawing.Point(118, 290);
-            ruaLabel.Name = "ruaLabel";
-            ruaLabel.Size = new System.Drawing.Size(74, 32);
-            ruaLabel.TabIndex = 30;
-            ruaLabel.Text = "Rua:";
-            // 
             // ruaTextBox
             // 
             this.ruaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moradaSetBindingSource, "Rua", true));
@@ -311,11 +312,23 @@
             this.ruaTextBox.Size = new System.Drawing.Size(311, 38);
             this.ruaTextBox.TabIndex = 31;
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(13, 337);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(109, 47);
+            this.btnBack.TabIndex = 32;
+            this.btnBack.Text = "Voltar atrás";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // CRUD_Morada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 404);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(cidadeLabel);
@@ -363,5 +376,6 @@
         private System.Windows.Forms.TextBox codPostalTextBox;
         private System.Windows.Forms.TextBox paisTextBox;
         private System.Windows.Forms.TextBox ruaTextBox;
+        private System.Windows.Forms.Button btnBack;
     }
 }

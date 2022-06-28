@@ -62,5 +62,12 @@ namespace Projeto_DA_Restaurante
             this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Utilizadores utilizadores = new Utilizadores();
+            utilizadores.ShowDialog();
+        }
     }
 }

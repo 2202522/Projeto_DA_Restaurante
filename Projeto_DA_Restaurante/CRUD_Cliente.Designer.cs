@@ -29,31 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Cliente));
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label telemovelLabel;
             System.Windows.Forms.Label morada_IdLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Cliente));
             this.btnSeguinte = new System.Windows.Forms.Button();
             this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
             this.pessoaSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pessoaSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PessoaSetTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
             this.pessoaSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.pessoaSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.telemovelTextBox = new System.Windows.Forms.TextBox();
             this.morada_IdTextBox = new System.Windows.Forms.TextBox();
+            this.btnBackM = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             telemovelLabel = new System.Windows.Forms.Label();
@@ -63,6 +64,46 @@
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingNavigator)).BeginInit();
             this.pessoaSetBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(120, 127);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(45, 32);
+            idLabel.TabIndex = 23;
+            idLabel.Text = "Id:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nomeLabel.Location = new System.Drawing.Point(120, 173);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(97, 32);
+            nomeLabel.TabIndex = 25;
+            nomeLabel.Text = "Nome:";
+            // 
+            // telemovelLabel
+            // 
+            telemovelLabel.AutoSize = true;
+            telemovelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            telemovelLabel.Location = new System.Drawing.Point(120, 223);
+            telemovelLabel.Name = "telemovelLabel";
+            telemovelLabel.Size = new System.Drawing.Size(154, 32);
+            telemovelLabel.TabIndex = 27;
+            telemovelLabel.Text = "Telemovel:";
+            // 
+            // morada_IdLabel
+            // 
+            morada_IdLabel.AutoSize = true;
+            morada_IdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            morada_IdLabel.Location = new System.Drawing.Point(120, 273);
+            morada_IdLabel.Name = "morada_IdLabel";
+            morada_IdLabel.Size = new System.Drawing.Size(148, 32);
+            morada_IdLabel.TabIndex = 29;
+            morada_IdLabel.Text = "Morada Id:";
             // 
             // btnSeguinte
             // 
@@ -136,6 +177,31 @@
             this.pessoaSetBindingNavigator.TabIndex = 23;
             this.pessoaSetBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMovePreviousItem
             // 
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -160,16 +226,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -183,26 +242,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // pessoaSetBindingNavigatorSaveItem
             // 
@@ -213,16 +254,6 @@
             this.pessoaSetBindingNavigatorSaveItem.Text = "Save Data";
             this.pessoaSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.pessoaSetBindingNavigatorSaveItem_Click_1);
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(120, 127);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(45, 32);
-            idLabel.TabIndex = 23;
-            idLabel.Text = "Id:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSetBindingSource, "Id", true));
@@ -231,16 +262,6 @@
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(268, 38);
             this.idTextBox.TabIndex = 24;
-            // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(120, 173);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(97, 32);
-            nomeLabel.TabIndex = 25;
-            nomeLabel.Text = "Nome:";
             // 
             // nomeTextBox
             // 
@@ -251,16 +272,6 @@
             this.nomeTextBox.Size = new System.Drawing.Size(268, 38);
             this.nomeTextBox.TabIndex = 26;
             // 
-            // telemovelLabel
-            // 
-            telemovelLabel.AutoSize = true;
-            telemovelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telemovelLabel.Location = new System.Drawing.Point(120, 223);
-            telemovelLabel.Name = "telemovelLabel";
-            telemovelLabel.Size = new System.Drawing.Size(154, 32);
-            telemovelLabel.TabIndex = 27;
-            telemovelLabel.Text = "Telemovel:";
-            // 
             // telemovelTextBox
             // 
             this.telemovelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSetBindingSource, "Telemovel", true));
@@ -269,16 +280,6 @@
             this.telemovelTextBox.Name = "telemovelTextBox";
             this.telemovelTextBox.Size = new System.Drawing.Size(268, 38);
             this.telemovelTextBox.TabIndex = 28;
-            // 
-            // morada_IdLabel
-            // 
-            morada_IdLabel.AutoSize = true;
-            morada_IdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            morada_IdLabel.Location = new System.Drawing.Point(120, 273);
-            morada_IdLabel.Name = "morada_IdLabel";
-            morada_IdLabel.Size = new System.Drawing.Size(148, 32);
-            morada_IdLabel.TabIndex = 29;
-            morada_IdLabel.Text = "Morada Id:";
             // 
             // morada_IdTextBox
             // 
@@ -289,11 +290,23 @@
             this.morada_IdTextBox.Size = new System.Drawing.Size(268, 38);
             this.morada_IdTextBox.TabIndex = 30;
             // 
+            // btnBackM
+            // 
+            this.btnBackM.Location = new System.Drawing.Point(13, 339);
+            this.btnBackM.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBackM.Name = "btnBackM";
+            this.btnBackM.Size = new System.Drawing.Size(109, 47);
+            this.btnBackM.TabIndex = 33;
+            this.btnBackM.Text = "Voltar atrás";
+            this.btnBackM.UseVisualStyleBackColor = true;
+            this.btnBackM.Click += new System.EventHandler(this.btnBackM_Click);
+            // 
             // CRUD_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 399);
+            this.Controls.Add(this.btnBackM);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(nomeLabel);
@@ -338,5 +351,6 @@
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.TextBox telemovelTextBox;
         private System.Windows.Forms.TextBox morada_IdTextBox;
+        private System.Windows.Forms.Button btnBackM;
     }
 }

@@ -48,5 +48,12 @@ namespace Projeto_DA_Restaurante
             this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
 
         }
+
+        private void btnBackM_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CRUD_Morada cRUD_Morada = new CRUD_Morada();
+            cRUD_Morada.ShowDialog();
+        }
     }
 }
