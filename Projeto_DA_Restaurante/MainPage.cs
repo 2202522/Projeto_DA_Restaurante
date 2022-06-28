@@ -23,7 +23,9 @@ namespace Projeto_DA_Restaurante
 
         private void btnUtilizador_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            Utilizadores utilizadores = new Utilizadores();
+            utilizadores.ShowDialog();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)

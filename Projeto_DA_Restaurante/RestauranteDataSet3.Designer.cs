@@ -2216,8 +2216,7 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -2228,7 +2227,7 @@ namespace Projeto_DA_Restaurante {
                 this.columnPais.AllowDBNull = false;
                 this.columnPais.MaxLength = 2147483647;
                 this.columnRua.AllowDBNull = false;
-                this.columnRua.MaxLength = 200;
+                this.columnRua.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3473,8 +3472,7 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -7799,7 +7797,7 @@ SELECT Id, Nome, Fotografia, Ingredientes, Preco, Ativo, CategoriaId FROM ItemMe
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Cidade, CodPostal, Pais, Rua FROM dbo.MoradaSet";
+            this._commandCollection[0].CommandText = "SELECT Id, Cidade, CodPostal, Pais, Rua\r\nFROM     MoradaSet";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

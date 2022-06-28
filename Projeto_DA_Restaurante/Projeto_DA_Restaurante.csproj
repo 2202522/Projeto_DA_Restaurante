@@ -61,6 +61,18 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Cliente.Designer.cs">
+      <DependentUpon>CRUD_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_Morada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUD_Morada.Designer.cs">
+      <DependentUpon>CRUD_Morada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estado.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
@@ -108,23 +120,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
-    <Compile Include="RestauranteDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RestauranteDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="RestauranteDataSet1.cs">
-      <DependentUpon>RestauranteDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="RestauranteDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RestauranteDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="RestauranteDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RestauranteDataSet2.xsd</DependentUpon>
+    <Compile Include="RestauranteDataSet3.cs">
+      <DependentUpon>RestauranteDataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="RestauranteDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -143,6 +140,18 @@
     <Compile Include="Trabalhador.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
+    <Compile Include="Utilizadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilizadores.Designer.cs">
+      <DependentUpon>Utilizadores.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CRUD_Cliente.resx">
+      <DependentUpon>CRUD_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Morada.resx">
+      <DependentUpon>CRUD_Morada.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +165,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Utilizadores.resx">
+      <DependentUpon>Utilizadores.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -172,39 +184,6 @@
     </EntityDeploy>
     <None Include="Restaurante.edmx.diagram">
       <DependentUpon>Restaurante.edmx</DependentUpon>
-    </None>
-    <None Include="RestauranteDataSet.xsc">
-      <DependentUpon>RestauranteDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="RestauranteDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RestauranteDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RestauranteDataSet.xss">
-      <DependentUpon>RestauranteDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="RestauranteDataSet1.xsc">
-      <DependentUpon>RestauranteDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="RestauranteDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RestauranteDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RestauranteDataSet1.xss">
-      <DependentUpon>RestauranteDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="RestauranteDataSet2.xsc">
-      <DependentUpon>RestauranteDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="RestauranteDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RestauranteDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RestauranteDataSet2.xss">
-      <DependentUpon>RestauranteDataSet2.xsd</DependentUpon>
     </None>
     <None Include="RestauranteDataSet3.xsc">
       <DependentUpon>RestauranteDataSet3.xsd</DependentUpon>
