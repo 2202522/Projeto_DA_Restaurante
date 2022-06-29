@@ -32,13 +32,14 @@
             this.btnUtilizador = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
             this.btnRestaurante = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(289, 43);
+            this.label1.Location = new System.Drawing.Point(299, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 33);
             this.label1.TabIndex = 2;
@@ -47,9 +48,9 @@
             // btnUtilizador
             // 
             this.btnUtilizador.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUtilizador.Location = new System.Drawing.Point(306, 189);
+            this.btnUtilizador.Location = new System.Drawing.Point(397, 107);
             this.btnUtilizador.Name = "btnUtilizador";
-            this.btnUtilizador.Size = new System.Drawing.Size(189, 92);
+            this.btnUtilizador.Size = new System.Drawing.Size(281, 126);
             this.btnUtilizador.TabIndex = 3;
             this.btnUtilizador.Text = "Utilizadores";
             this.btnUtilizador.UseVisualStyleBackColor = true;
@@ -58,9 +59,9 @@
             // btnPedidos
             // 
             this.btnPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedidos.Location = new System.Drawing.Point(535, 189);
+            this.btnPedidos.Location = new System.Drawing.Point(397, 263);
             this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(189, 92);
+            this.btnPedidos.Size = new System.Drawing.Size(281, 126);
             this.btnPedidos.TabIndex = 4;
             this.btnPedidos.Text = "Pedidos";
             this.btnPedidos.UseVisualStyleBackColor = true;
@@ -69,13 +70,24 @@
             // btnRestaurante
             // 
             this.btnRestaurante.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestaurante.Location = new System.Drawing.Point(77, 189);
+            this.btnRestaurante.Location = new System.Drawing.Point(84, 107);
             this.btnRestaurante.Name = "btnRestaurante";
-            this.btnRestaurante.Size = new System.Drawing.Size(189, 92);
+            this.btnRestaurante.Size = new System.Drawing.Size(281, 126);
             this.btnRestaurante.TabIndex = 5;
             this.btnRestaurante.Text = "Restaurante";
             this.btnRestaurante.UseVisualStyleBackColor = true;
             this.btnRestaurante.Click += new System.EventHandler(this.btnRestaurante_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(84, 263);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(281, 126);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Estado";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainPage
             // 
@@ -83,6 +95,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRestaurante);
             this.Controls.Add(this.btnPedidos);
             this.Controls.Add(this.btnUtilizador);
@@ -99,5 +112,6 @@
         private System.Windows.Forms.Button btnUtilizador;
         private System.Windows.Forms.Button btnPedidos;
         private System.Windows.Forms.Button btnRestaurante;
+        private System.Windows.Forms.Button button1;
     }
 }

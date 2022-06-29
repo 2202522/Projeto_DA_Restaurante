@@ -1,6 +1,6 @@
 ﻿namespace Projeto_DA_Restaurante
 {
-    partial class CRUD_Morada
+    partial class CRUD_Utilizador
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Morada));
-            System.Windows.Forms.Label cidadeLabel;
-            System.Windows.Forms.Label codPostalLabel;
-            System.Windows.Forms.Label paisLabel;
-            System.Windows.Forms.Label ruaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Utilizador));
+            System.Windows.Forms.Label nomeLabel;
+            System.Windows.Forms.Label telemovelLabel;
+            System.Windows.Forms.Label morada_IdLabel;
             this.btnSeguinte = new System.Windows.Forms.Button();
             this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
-            this.moradaSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.moradaSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.MoradaSetTableAdapter();
+            this.pessoaSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pessoaSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PessoaSetTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            this.moradaSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.pessoaSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
@@ -47,19 +46,17 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.moradaSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.cidadeTextBox = new System.Windows.Forms.TextBox();
-            this.codPostalTextBox = new System.Windows.Forms.TextBox();
-            this.paisTextBox = new System.Windows.Forms.TextBox();
-            this.ruaTextBox = new System.Windows.Forms.TextBox();
-            cidadeLabel = new System.Windows.Forms.Label();
-            codPostalLabel = new System.Windows.Forms.Label();
-            paisLabel = new System.Windows.Forms.Label();
-            ruaLabel = new System.Windows.Forms.Label();
+            this.pessoaSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.telemovelTextBox = new System.Windows.Forms.TextBox();
+            this.morada_IdTextBox = new System.Windows.Forms.TextBox();
+            nomeLabel = new System.Windows.Forms.Label();
+            telemovelLabel = new System.Windows.Forms.Label();
+            morada_IdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moradaSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moradaSetBindingNavigator)).BeginInit();
-            this.moradaSetBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingNavigator)).BeginInit();
+            this.pessoaSetBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSeguinte
@@ -67,8 +64,8 @@
             this.btnSeguinte.Location = new System.Drawing.Point(295, 142);
             this.btnSeguinte.Name = "btnSeguinte";
             this.btnSeguinte.Size = new System.Drawing.Size(82, 38);
-            this.btnSeguinte.TabIndex = 21;
-            this.btnSeguinte.Text = "Seguinte";
+            this.btnSeguinte.TabIndex = 22;
+            this.btnSeguinte.Text = "Concluir";
             this.btnSeguinte.UseVisualStyleBackColor = true;
             this.btnSeguinte.Click += new System.EventHandler(this.btnSeguinte_Click);
             // 
@@ -77,14 +74,14 @@
             this.restauranteDataSet3.DataSetName = "RestauranteDataSet3";
             this.restauranteDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // moradaSetBindingSource
+            // pessoaSetBindingSource
             // 
-            this.moradaSetBindingSource.DataMember = "MoradaSet";
-            this.moradaSetBindingSource.DataSource = this.restauranteDataSet3;
+            this.pessoaSetBindingSource.DataMember = "PessoaSet";
+            this.pessoaSetBindingSource.DataSource = this.restauranteDataSet3;
             // 
-            // moradaSetTableAdapter
+            // pessoaSetTableAdapter
             // 
-            this.moradaSetTableAdapter.ClearBeforeFill = true;
+            this.pessoaSetTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -93,24 +90,24 @@
             this.tableAdapterManager.EstadoSetTableAdapter = null;
             this.tableAdapterManager.ItemMenuSetTableAdapter = null;
             this.tableAdapterManager.MetodoPagamentoSetTableAdapter = null;
-            this.tableAdapterManager.MoradaSetTableAdapter = this.moradaSetTableAdapter;
+            this.tableAdapterManager.MoradaSetTableAdapter = null;
             this.tableAdapterManager.PagamentoSetTableAdapter = null;
             this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
             this.tableAdapterManager.PedidoSetTableAdapter = null;
             this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
             this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
-            this.tableAdapterManager.PessoaSetTableAdapter = null;
+            this.tableAdapterManager.PessoaSetTableAdapter = this.pessoaSetTableAdapter;
             this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
             this.tableAdapterManager.RestauranteSetTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // moradaSetBindingNavigator
+            // pessoaSetBindingNavigator
             // 
-            this.moradaSetBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.moradaSetBindingNavigator.BindingSource = this.moradaSetBindingSource;
-            this.moradaSetBindingNavigator.CountItem = null;
-            this.moradaSetBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.moradaSetBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pessoaSetBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.pessoaSetBindingNavigator.BindingSource = this.pessoaSetBindingSource;
+            this.pessoaSetBindingNavigator.CountItem = null;
+            this.pessoaSetBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.pessoaSetBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
             this.bindingNavigatorPositionItem,
@@ -118,17 +115,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.moradaSetBindingNavigatorSaveItem});
-            this.moradaSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.moradaSetBindingNavigator.MoveFirstItem = null;
-            this.moradaSetBindingNavigator.MoveLastItem = null;
-            this.moradaSetBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.moradaSetBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.moradaSetBindingNavigator.Name = "moradaSetBindingNavigator";
-            this.moradaSetBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.moradaSetBindingNavigator.Size = new System.Drawing.Size(389, 25);
-            this.moradaSetBindingNavigator.TabIndex = 22;
-            this.moradaSetBindingNavigator.Text = "bindingNavigator1";
+            this.pessoaSetBindingNavigatorSaveItem});
+            this.pessoaSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.pessoaSetBindingNavigator.MoveFirstItem = null;
+            this.pessoaSetBindingNavigator.MoveLastItem = null;
+            this.pessoaSetBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.pessoaSetBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.pessoaSetBindingNavigator.Name = "pessoaSetBindingNavigator";
+            this.pessoaSetBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.pessoaSetBindingNavigator.Size = new System.Drawing.Size(389, 25);
+            this.pessoaSetBindingNavigator.TabIndex = 23;
+            this.pessoaSetBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMovePreviousItem
             // 
@@ -148,7 +145,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -160,13 +156,13 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -183,110 +179,91 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
-            // moradaSetBindingNavigatorSaveItem
+            // pessoaSetBindingNavigatorSaveItem
             // 
-            this.moradaSetBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.moradaSetBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("moradaSetBindingNavigatorSaveItem.Image")));
-            this.moradaSetBindingNavigatorSaveItem.Name = "moradaSetBindingNavigatorSaveItem";
-            this.moradaSetBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.moradaSetBindingNavigatorSaveItem.Text = "Save Data";
-            this.moradaSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.moradaSetBindingNavigatorSaveItem_Click);
+            this.pessoaSetBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.pessoaSetBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pessoaSetBindingNavigatorSaveItem.Image")));
+            this.pessoaSetBindingNavigatorSaveItem.Name = "pessoaSetBindingNavigatorSaveItem";
+            this.pessoaSetBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.pessoaSetBindingNavigatorSaveItem.Text = "Save Data";
+            this.pessoaSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.pessoaSetBindingNavigatorSaveItem_Click);
             // 
-            // cidadeLabel
+            // nomeLabel
             // 
-            cidadeLabel.AutoSize = true;
-            cidadeLabel.Location = new System.Drawing.Point(12, 53);
-            cidadeLabel.Name = "cidadeLabel";
-            cidadeLabel.Size = new System.Drawing.Size(43, 13);
-            cidadeLabel.TabIndex = 24;
-            cidadeLabel.Text = "Cidade:";
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(43, 63);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(38, 13);
+            nomeLabel.TabIndex = 25;
+            nomeLabel.Text = "Nome:";
             // 
-            // cidadeTextBox
+            // nomeTextBox
             // 
-            this.cidadeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moradaSetBindingSource, "Cidade", true));
-            this.cidadeTextBox.Location = new System.Drawing.Point(79, 50);
-            this.cidadeTextBox.Name = "cidadeTextBox";
-            this.cidadeTextBox.Size = new System.Drawing.Size(100, 20);
-            this.cidadeTextBox.TabIndex = 25;
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSetBindingSource, "Nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(108, 60);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nomeTextBox.TabIndex = 26;
             // 
-            // codPostalLabel
+            // telemovelLabel
             // 
-            codPostalLabel.AutoSize = true;
-            codPostalLabel.Location = new System.Drawing.Point(12, 79);
-            codPostalLabel.Name = "codPostalLabel";
-            codPostalLabel.Size = new System.Drawing.Size(61, 13);
-            codPostalLabel.TabIndex = 26;
-            codPostalLabel.Text = "Cod Postal:";
+            telemovelLabel.AutoSize = true;
+            telemovelLabel.Location = new System.Drawing.Point(43, 89);
+            telemovelLabel.Name = "telemovelLabel";
+            telemovelLabel.Size = new System.Drawing.Size(59, 13);
+            telemovelLabel.TabIndex = 27;
+            telemovelLabel.Text = "Telemovel:";
             // 
-            // codPostalTextBox
+            // telemovelTextBox
             // 
-            this.codPostalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moradaSetBindingSource, "CodPostal", true));
-            this.codPostalTextBox.Location = new System.Drawing.Point(79, 76);
-            this.codPostalTextBox.Name = "codPostalTextBox";
-            this.codPostalTextBox.Size = new System.Drawing.Size(100, 20);
-            this.codPostalTextBox.TabIndex = 27;
+            this.telemovelTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSetBindingSource, "Telemovel", true));
+            this.telemovelTextBox.Location = new System.Drawing.Point(108, 86);
+            this.telemovelTextBox.Name = "telemovelTextBox";
+            this.telemovelTextBox.Size = new System.Drawing.Size(100, 20);
+            this.telemovelTextBox.TabIndex = 28;
             // 
-            // paisLabel
+            // morada_IdLabel
             // 
-            paisLabel.AutoSize = true;
-            paisLabel.Location = new System.Drawing.Point(195, 53);
-            paisLabel.Name = "paisLabel";
-            paisLabel.Size = new System.Drawing.Size(30, 13);
-            paisLabel.TabIndex = 28;
-            paisLabel.Text = "Pais:";
+            morada_IdLabel.AutoSize = true;
+            morada_IdLabel.Location = new System.Drawing.Point(43, 115);
+            morada_IdLabel.Name = "morada_IdLabel";
+            morada_IdLabel.Size = new System.Drawing.Size(58, 13);
+            morada_IdLabel.TabIndex = 29;
+            morada_IdLabel.Text = "Morada Id:";
             // 
-            // paisTextBox
+            // morada_IdTextBox
             // 
-            this.paisTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moradaSetBindingSource, "Pais", true));
-            this.paisTextBox.Location = new System.Drawing.Point(262, 50);
-            this.paisTextBox.Name = "paisTextBox";
-            this.paisTextBox.Size = new System.Drawing.Size(100, 20);
-            this.paisTextBox.TabIndex = 29;
+            this.morada_IdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSetBindingSource, "Morada_Id", true));
+            this.morada_IdTextBox.Location = new System.Drawing.Point(108, 112);
+            this.morada_IdTextBox.Name = "morada_IdTextBox";
+            this.morada_IdTextBox.Size = new System.Drawing.Size(100, 20);
+            this.morada_IdTextBox.TabIndex = 30;
             // 
-            // ruaLabel
-            // 
-            ruaLabel.AutoSize = true;
-            ruaLabel.Location = new System.Drawing.Point(195, 79);
-            ruaLabel.Name = "ruaLabel";
-            ruaLabel.Size = new System.Drawing.Size(30, 13);
-            ruaLabel.TabIndex = 30;
-            ruaLabel.Text = "Rua:";
-            // 
-            // ruaTextBox
-            // 
-            this.ruaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.moradaSetBindingSource, "Rua", true));
-            this.ruaTextBox.Location = new System.Drawing.Point(262, 76);
-            this.ruaTextBox.Name = "ruaTextBox";
-            this.ruaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.ruaTextBox.TabIndex = 31;
-            // 
-            // CRUD_Morada
+            // CRUD_Utilizador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 192);
-            this.Controls.Add(cidadeLabel);
-            this.Controls.Add(this.cidadeTextBox);
-            this.Controls.Add(codPostalLabel);
-            this.Controls.Add(this.codPostalTextBox);
-            this.Controls.Add(paisLabel);
-            this.Controls.Add(this.paisTextBox);
-            this.Controls.Add(ruaLabel);
-            this.Controls.Add(this.ruaTextBox);
-            this.Controls.Add(this.moradaSetBindingNavigator);
+            this.Controls.Add(nomeLabel);
+            this.Controls.Add(this.nomeTextBox);
+            this.Controls.Add(telemovelLabel);
+            this.Controls.Add(this.telemovelTextBox);
+            this.Controls.Add(morada_IdLabel);
+            this.Controls.Add(this.morada_IdTextBox);
+            this.Controls.Add(this.pessoaSetBindingNavigator);
             this.Controls.Add(this.btnSeguinte);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "CRUD_Morada";
-            this.Text = "CRUD_Morada";
-            this.Load += new System.EventHandler(this.CRUD_Morada_Load);
+            this.Name = "CRUD_Utilizador";
+            this.Text = "CRUD_Cliente";
+            this.Load += new System.EventHandler(this.CRUD_Cliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moradaSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.moradaSetBindingNavigator)).EndInit();
-            this.moradaSetBindingNavigator.ResumeLayout(false);
-            this.moradaSetBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingNavigator)).EndInit();
+            this.pessoaSetBindingNavigator.ResumeLayout(false);
+            this.pessoaSetBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,10 +272,10 @@
         #endregion
         private System.Windows.Forms.Button btnSeguinte;
         private RestauranteDataSet3 restauranteDataSet3;
-        private System.Windows.Forms.BindingSource moradaSetBindingSource;
-        private RestauranteDataSet3TableAdapters.MoradaSetTableAdapter moradaSetTableAdapter;
+        private System.Windows.Forms.BindingSource pessoaSetBindingSource;
+        private RestauranteDataSet3TableAdapters.PessoaSetTableAdapter pessoaSetTableAdapter;
         private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator moradaSetBindingNavigator;
+        private System.Windows.Forms.BindingNavigator pessoaSetBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
@@ -306,10 +283,9 @@
         private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton moradaSetBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox cidadeTextBox;
-        private System.Windows.Forms.TextBox codPostalTextBox;
-        private System.Windows.Forms.TextBox paisTextBox;
-        private System.Windows.Forms.TextBox ruaTextBox;
+        private System.Windows.Forms.ToolStripButton pessoaSetBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox nomeTextBox;
+        private System.Windows.Forms.TextBox telemovelTextBox;
+        private System.Windows.Forms.TextBox morada_IdTextBox;
     }
 }

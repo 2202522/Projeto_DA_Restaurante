@@ -39,12 +39,6 @@
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
             this.moradaSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.MoradaSetTableAdapter();
             this.pessoaSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.pessoaSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.moradaSetDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,11 +51,11 @@
             this.pessoaSetDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCliente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.moradaSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingNavigator)).BeginInit();
-            this.pessoaSetBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moradaSetDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSetDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -86,23 +80,21 @@
             // btnEditarClientes
             // 
             this.btnEditarClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarClientes.Location = new System.Drawing.Point(900, 314);
-            this.btnEditarClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditarClientes.Location = new System.Drawing.Point(691, 229);
             this.btnEditarClientes.Name = "btnEditarClientes";
-            this.btnEditarClientes.Size = new System.Drawing.Size(160, 57);
+            this.btnEditarClientes.Size = new System.Drawing.Size(120, 46);
             this.btnEditarClientes.TabIndex = 22;
-            this.btnEditarClientes.Text = "Criar Lista de Clientes";
+            this.btnEditarClientes.Text = "Criar/Editar Utilizador";
             this.btnEditarClientes.UseVisualStyleBackColor = true;
             this.btnEditarClientes.Click += new System.EventHandler(this.btnEditarClientes_Click);
             // 
             // btnHome
             // 
-            this.btnHome.Location = new System.Drawing.Point(13, 357);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHome.Location = new System.Drawing.Point(12, 250);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(109, 47);
+            this.btnHome.Size = new System.Drawing.Size(82, 38);
             this.btnHome.TabIndex = 20;
-            this.btnHome.Text = "Home";
+            this.btnHome.Text = "Back";
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
@@ -136,72 +128,20 @@
             // 
             this.pessoaSetBindingNavigator.AddNewItem = null;
             this.pessoaSetBindingNavigator.BindingSource = this.pessoaSetBindingSource;
-            this.pessoaSetBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.pessoaSetBindingNavigator.CountItem = null;
             this.pessoaSetBindingNavigator.DeleteItem = null;
             this.pessoaSetBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.pessoaSetBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem});
             this.pessoaSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.pessoaSetBindingNavigator.MoveFirstItem = null;
             this.pessoaSetBindingNavigator.MoveLastItem = null;
-            this.pessoaSetBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.pessoaSetBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.pessoaSetBindingNavigator.MoveNextItem = null;
+            this.pessoaSetBindingNavigator.MovePreviousItem = null;
             this.pessoaSetBindingNavigator.Name = "pessoaSetBindingNavigator";
-            this.pessoaSetBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.pessoaSetBindingNavigator.Size = new System.Drawing.Size(1096, 31);
+            this.pessoaSetBindingNavigator.PositionItem = null;
+            this.pessoaSetBindingNavigator.Size = new System.Drawing.Size(822, 25);
             this.pessoaSetBindingNavigator.TabIndex = 25;
             this.pessoaSetBindingNavigator.Text = "bindingNavigator1";
             this.pessoaSetBindingNavigator.RefreshItems += new System.EventHandler(this.pessoaSetBindingNavigator_RefreshItems);
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // pessoaSetBindingNavigatorSaveItem
             // 
@@ -214,7 +154,8 @@
             // 
             // moradaSetDataGridView
             // 
-            this.moradaSetDataGridView.AllowUserToOrderColumns = true;
+            this.moradaSetDataGridView.AllowUserToAddRows = false;
+            this.moradaSetDataGridView.AllowUserToDeleteRows = false;
             this.moradaSetDataGridView.AutoGenerateColumns = false;
             this.moradaSetDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.moradaSetDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -223,12 +164,13 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.moradaSetDataGridView.DataSource = this.moradaSetBindingSource;
-            this.moradaSetDataGridView.Location = new System.Drawing.Point(17, 37);
+            this.moradaSetDataGridView.Location = new System.Drawing.Point(13, 30);
+            this.moradaSetDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.moradaSetDataGridView.Name = "moradaSetDataGridView";
             this.moradaSetDataGridView.ReadOnly = true;
             this.moradaSetDataGridView.RowHeadersWidth = 51;
             this.moradaSetDataGridView.RowTemplate.Height = 24;
-            this.moradaSetDataGridView.Size = new System.Drawing.Size(551, 191);
+            this.moradaSetDataGridView.Size = new System.Drawing.Size(413, 155);
             this.moradaSetDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn6
@@ -296,7 +238,8 @@
             // 
             // pessoaSetDataGridView
             // 
-            this.pessoaSetDataGridView.AllowUserToOrderColumns = true;
+            this.pessoaSetDataGridView.AllowUserToAddRows = false;
+            this.pessoaSetDataGridView.AllowUserToDeleteRows = false;
             this.pessoaSetDataGridView.AutoGenerateColumns = false;
             this.pessoaSetDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pessoaSetDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -304,20 +247,23 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.pessoaSetDataGridView.DataSource = this.pessoaSetBindingSource;
-            this.pessoaSetDataGridView.Location = new System.Drawing.Point(14, 38);
+            this.pessoaSetDataGridView.Location = new System.Drawing.Point(10, 31);
+            this.pessoaSetDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.pessoaSetDataGridView.Name = "pessoaSetDataGridView";
             this.pessoaSetDataGridView.ReadOnly = true;
             this.pessoaSetDataGridView.RowHeadersWidth = 51;
             this.pessoaSetDataGridView.RowTemplate.Height = 24;
-            this.pessoaSetDataGridView.Size = new System.Drawing.Size(428, 191);
+            this.pessoaSetDataGridView.Size = new System.Drawing.Size(321, 155);
             this.pessoaSetDataGridView.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pessoaSetDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(13, 64);
+            this.groupBox1.Location = new System.Drawing.Point(13, 27);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(459, 243);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(344, 197);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Morada";
@@ -325,23 +271,38 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.moradaSetDataGridView);
-            this.groupBox2.Location = new System.Drawing.Point(492, 64);
+            this.groupBox2.Location = new System.Drawing.Point(372, 27);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(585, 243);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(439, 197);
             this.groupBox2.TabIndex = 27;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Utilizadores";
             // 
+            // btnCliente
+            // 
+            this.btnCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.Location = new System.Drawing.Point(565, 229);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(120, 46);
+            this.btnCliente.TabIndex = 28;
+            this.btnCliente.Text = "Criar/Editar Cliente";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
             // Utilizadores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 417);
+            this.ClientSize = new System.Drawing.Size(822, 300);
+            this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pessoaSetBindingNavigator);
             this.Controls.Add(this.btnEditarClientes);
             this.Controls.Add(this.btnHome);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Utilizadores";
             this.Text = "Utilizadores";
             this.Load += new System.EventHandler(this.Utilizadores_Load);
@@ -349,8 +310,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingNavigator)).EndInit();
-            this.pessoaSetBindingNavigator.ResumeLayout(false);
-            this.pessoaSetBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moradaSetDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSetDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -368,12 +327,6 @@
         private RestauranteDataSet3TableAdapters.PessoaSetTableAdapter pessoaSetTableAdapter;
         private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator pessoaSetBindingNavigator;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton pessoaSetBindingNavigatorSaveItem;
         private RestauranteDataSet3TableAdapters.MoradaSetTableAdapter moradaSetTableAdapter;
         private System.Windows.Forms.BindingSource moradaSetBindingSource;
@@ -388,5 +341,6 @@
         private System.Windows.Forms.DataGridView pessoaSetDataGridView;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnCliente;
     }
 }

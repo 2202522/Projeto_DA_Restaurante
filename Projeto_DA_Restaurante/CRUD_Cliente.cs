@@ -17,36 +17,33 @@ namespace Projeto_DA_Restaurante
             InitializeComponent();
         }
 
-        private void pessoaSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void pessoaSet_ClienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.pessoaSetBindingSource.EndEdit();
+            this.pessoaSet_ClienteBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
 
         }
 
         private void CRUD_Cliente_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.PessoaSet' table. You can move, or remove it, as needed.
-            this.pessoaSetTableAdapter.Fill(this.restauranteDataSet3.PessoaSet);
-            // TODO: This line of code loads data into the 'restauranteDataSet3.PessoaSet' table. You can move, or remove it, as needed.
-            this.pessoaSetTableAdapter.Fill(this.restauranteDataSet3.PessoaSet);
+            // TODO: This line of code loads data into the 'restauranteDataSet3.PessoaSet_Cliente' table. You can move, or remove it, as needed.
+            this.pessoaSet_ClienteTableAdapter.Fill(this.restauranteDataSet3.PessoaSet_Cliente);
 
         }
 
-        private void btnSeguinte_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             Utilizadores utilizadores = new Utilizadores();
             utilizadores.ShowDialog();
         }
 
-        private void pessoaSetBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        private void btnConcluir_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.pessoaSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
+            this.Hide();
+            Utilizadores utilizadores = new Utilizadores();
+            utilizadores.ShowDialog();
         }
 
         private void btnBackM_Click(object sender, EventArgs e)

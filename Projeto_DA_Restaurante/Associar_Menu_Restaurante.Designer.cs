@@ -1,6 +1,6 @@
 ﻿namespace Projeto_DA_Restaurante
 {
-    partial class CRUD_Cliente
+    partial class Associar_Menu_Restaurante
     {
         /// <summary>
         /// Required designer variable.
@@ -29,35 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label totalgastoLabel;
-            System.Windows.Forms.Label numContribuienteLabel;
-            System.Windows.Forms.Label idLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Cliente));
+            System.Windows.Forms.Label restaurante_IdLabel;
+            System.Windows.Forms.Label itemMenu_IdLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Associar_Menu_Restaurante));
             this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
-            this.pessoaSet_ClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoaSet_ClienteTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PessoaSet_ClienteTableAdapter();
+            this.restauranteItemMenuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.restauranteItemMenuTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.RestauranteItemMenuTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            this.pessoaSet_ClienteBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.restauranteItemMenuBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.totalgastoTextBox = new System.Windows.Forms.TextBox();
-            this.numContribuienteTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.restaurante_IdTextBox = new System.Windows.Forms.TextBox();
+            this.itemMenu_IdTextBox = new System.Windows.Forms.TextBox();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.pessoaSet_ClienteBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.restauranteItemMenuBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnConcluir = new System.Windows.Forms.Button();
-            totalgastoLabel = new System.Windows.Forms.Label();
-            numContribuienteLabel = new System.Windows.Forms.Label();
-            idLabel = new System.Windows.Forms.Label();
+            restaurante_IdLabel = new System.Windows.Forms.Label();
+            itemMenu_IdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_ClienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_ClienteBindingNavigator)).BeginInit();
-            this.pessoaSet_ClienteBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteItemMenuBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteItemMenuBindingNavigator)).BeginInit();
+            this.restauranteItemMenuBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // restauranteDataSet3
@@ -65,14 +62,14 @@
             this.restauranteDataSet3.DataSetName = "RestauranteDataSet3";
             this.restauranteDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pessoaSet_ClienteBindingSource
+            // restauranteItemMenuBindingSource
             // 
-            this.pessoaSet_ClienteBindingSource.DataMember = "PessoaSet_Cliente";
-            this.pessoaSet_ClienteBindingSource.DataSource = this.restauranteDataSet3;
+            this.restauranteItemMenuBindingSource.DataMember = "RestauranteItemMenu";
+            this.restauranteItemMenuBindingSource.DataSource = this.restauranteDataSet3;
             // 
-            // pessoaSet_ClienteTableAdapter
+            // restauranteItemMenuTableAdapter
             // 
-            this.pessoaSet_ClienteTableAdapter.ClearBeforeFill = true;
+            this.restauranteItemMenuTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -85,20 +82,20 @@
             this.tableAdapterManager.PagamentoSetTableAdapter = null;
             this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
             this.tableAdapterManager.PedidoSetTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = this.pessoaSet_ClienteTableAdapter;
+            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
             this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
             this.tableAdapterManager.PessoaSetTableAdapter = null;
-            this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
+            this.tableAdapterManager.RestauranteItemMenuTableAdapter = this.restauranteItemMenuTableAdapter;
             this.tableAdapterManager.RestauranteSetTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // pessoaSet_ClienteBindingNavigator
+            // restauranteItemMenuBindingNavigator
             // 
-            this.pessoaSet_ClienteBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.pessoaSet_ClienteBindingNavigator.BindingSource = this.pessoaSet_ClienteBindingSource;
-            this.pessoaSet_ClienteBindingNavigator.CountItem = null;
-            this.pessoaSet_ClienteBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.pessoaSet_ClienteBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.restauranteItemMenuBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.restauranteItemMenuBindingNavigator.BindingSource = this.restauranteItemMenuBindingSource;
+            this.restauranteItemMenuBindingNavigator.CountItem = null;
+            this.restauranteItemMenuBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.restauranteItemMenuBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
             this.bindingNavigatorPositionItem,
@@ -106,17 +103,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.pessoaSet_ClienteBindingNavigatorSaveItem});
-            this.pessoaSet_ClienteBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.pessoaSet_ClienteBindingNavigator.MoveFirstItem = null;
-            this.pessoaSet_ClienteBindingNavigator.MoveLastItem = null;
-            this.pessoaSet_ClienteBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.pessoaSet_ClienteBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.pessoaSet_ClienteBindingNavigator.Name = "pessoaSet_ClienteBindingNavigator";
-            this.pessoaSet_ClienteBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.pessoaSet_ClienteBindingNavigator.Size = new System.Drawing.Size(330, 25);
-            this.pessoaSet_ClienteBindingNavigator.TabIndex = 0;
-            this.pessoaSet_ClienteBindingNavigator.Text = "bindingNavigator1";
+            this.restauranteItemMenuBindingNavigatorSaveItem});
+            this.restauranteItemMenuBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.restauranteItemMenuBindingNavigator.MoveFirstItem = null;
+            this.restauranteItemMenuBindingNavigator.MoveLastItem = null;
+            this.restauranteItemMenuBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.restauranteItemMenuBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.restauranteItemMenuBindingNavigator.Name = "restauranteItemMenuBindingNavigator";
+            this.restauranteItemMenuBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.restauranteItemMenuBindingNavigator.Size = new System.Drawing.Size(330, 25);
+            this.restauranteItemMenuBindingNavigator.TabIndex = 0;
+            this.restauranteItemMenuBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorSeparator
             // 
@@ -138,56 +135,39 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // totalgastoLabel
+            // restaurante_IdLabel
             // 
-            totalgastoLabel.AutoSize = true;
-            totalgastoLabel.Location = new System.Drawing.Point(46, 68);
-            totalgastoLabel.Name = "totalgastoLabel";
-            totalgastoLabel.Size = new System.Drawing.Size(60, 13);
-            totalgastoLabel.TabIndex = 1;
-            totalgastoLabel.Text = "Totalgasto:";
+            restaurante_IdLabel.AutoSize = true;
+            restaurante_IdLabel.Location = new System.Drawing.Point(60, 63);
+            restaurante_IdLabel.Name = "restaurante_IdLabel";
+            restaurante_IdLabel.Size = new System.Drawing.Size(80, 13);
+            restaurante_IdLabel.TabIndex = 1;
+            restaurante_IdLabel.Text = "Restaurante Id:";
             // 
-            // totalgastoTextBox
+            // restaurante_IdTextBox
             // 
-            this.totalgastoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSet_ClienteBindingSource, "Totalgasto", true));
-            this.totalgastoTextBox.Location = new System.Drawing.Point(149, 65);
-            this.totalgastoTextBox.Name = "totalgastoTextBox";
-            this.totalgastoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.totalgastoTextBox.TabIndex = 2;
+            this.restaurante_IdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.restauranteItemMenuBindingSource, "Restaurante_Id", true));
+            this.restaurante_IdTextBox.Location = new System.Drawing.Point(146, 60);
+            this.restaurante_IdTextBox.Name = "restaurante_IdTextBox";
+            this.restaurante_IdTextBox.Size = new System.Drawing.Size(100, 20);
+            this.restaurante_IdTextBox.TabIndex = 2;
             // 
-            // numContribuienteLabel
+            // itemMenu_IdLabel
             // 
-            numContribuienteLabel.AutoSize = true;
-            numContribuienteLabel.Location = new System.Drawing.Point(46, 94);
-            numContribuienteLabel.Name = "numContribuienteLabel";
-            numContribuienteLabel.Size = new System.Drawing.Size(97, 13);
-            numContribuienteLabel.TabIndex = 3;
-            numContribuienteLabel.Text = "Num Contribuiente:";
+            itemMenu_IdLabel.AutoSize = true;
+            itemMenu_IdLabel.Location = new System.Drawing.Point(60, 89);
+            itemMenu_IdLabel.Name = "itemMenu_IdLabel";
+            itemMenu_IdLabel.Size = new System.Drawing.Size(72, 13);
+            itemMenu_IdLabel.TabIndex = 3;
+            itemMenu_IdLabel.Text = "Item Menu Id:";
             // 
-            // numContribuienteTextBox
+            // itemMenu_IdTextBox
             // 
-            this.numContribuienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSet_ClienteBindingSource, "NumContribuiente", true));
-            this.numContribuienteTextBox.Location = new System.Drawing.Point(149, 91);
-            this.numContribuienteTextBox.Name = "numContribuienteTextBox";
-            this.numContribuienteTextBox.Size = new System.Drawing.Size(100, 20);
-            this.numContribuienteTextBox.TabIndex = 4;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(46, 40);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 5;
-            idLabel.Text = "Id:";
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSet_ClienteBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(149, 37);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(100, 20);
-            this.idTextBox.TabIndex = 6;
+            this.itemMenu_IdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.restauranteItemMenuBindingSource, "ItemMenu_Id", true));
+            this.itemMenu_IdTextBox.Location = new System.Drawing.Point(146, 86);
+            this.itemMenu_IdTextBox.Name = "itemMenu_IdTextBox";
+            this.itemMenu_IdTextBox.Size = new System.Drawing.Size(100, 20);
+            this.itemMenu_IdTextBox.TabIndex = 4;
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -225,14 +205,14 @@
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
-            // pessoaSet_ClienteBindingNavigatorSaveItem
+            // restauranteItemMenuBindingNavigatorSaveItem
             // 
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pessoaSet_ClienteBindingNavigatorSaveItem.Image")));
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.Name = "pessoaSet_ClienteBindingNavigatorSaveItem";
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.Text = "Save Data";
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.Click += new System.EventHandler(this.pessoaSet_ClienteBindingNavigatorSaveItem_Click);
+            this.restauranteItemMenuBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.restauranteItemMenuBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("restauranteItemMenuBindingNavigatorSaveItem.Image")));
+            this.restauranteItemMenuBindingNavigatorSaveItem.Name = "restauranteItemMenuBindingNavigatorSaveItem";
+            this.restauranteItemMenuBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.restauranteItemMenuBindingNavigatorSaveItem.Text = "Save Data";
+            this.restauranteItemMenuBindingNavigatorSaveItem.Click += new System.EventHandler(this.restauranteItemMenuBindingNavigatorSaveItem_Click);
             // 
             // btnBack
             // 
@@ -240,7 +220,7 @@
             this.btnBack.Location = new System.Drawing.Point(12, 140);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(90, 40);
-            this.btnBack.TabIndex = 8;
+            this.btnBack.TabIndex = 17;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -251,33 +231,31 @@
             this.btnConcluir.Location = new System.Drawing.Point(228, 140);
             this.btnConcluir.Name = "btnConcluir";
             this.btnConcluir.Size = new System.Drawing.Size(90, 40);
-            this.btnConcluir.TabIndex = 9;
+            this.btnConcluir.TabIndex = 18;
             this.btnConcluir.Text = "Concluir";
             this.btnConcluir.UseVisualStyleBackColor = true;
             this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
             // 
-            // CRUD_Cliente
+            // Associar_Menu_Restaurante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(330, 192);
             this.Controls.Add(this.btnConcluir);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(totalgastoLabel);
-            this.Controls.Add(this.totalgastoTextBox);
-            this.Controls.Add(numContribuienteLabel);
-            this.Controls.Add(this.numContribuienteTextBox);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.idTextBox);
-            this.Controls.Add(this.pessoaSet_ClienteBindingNavigator);
-            this.Name = "CRUD_Cliente";
-            this.Text = "CRUD_Cliente";
-            this.Load += new System.EventHandler(this.CRUD_Cliente_Load);
+            this.Controls.Add(restaurante_IdLabel);
+            this.Controls.Add(this.restaurante_IdTextBox);
+            this.Controls.Add(itemMenu_IdLabel);
+            this.Controls.Add(this.itemMenu_IdTextBox);
+            this.Controls.Add(this.restauranteItemMenuBindingNavigator);
+            this.Name = "Associar_Menu_Restaurante";
+            this.Text = "Associar_Menu_Restaurante";
+            this.Load += new System.EventHandler(this.Associar_Menu_Restaurante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_ClienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_ClienteBindingNavigator)).EndInit();
-            this.pessoaSet_ClienteBindingNavigator.ResumeLayout(false);
-            this.pessoaSet_ClienteBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteItemMenuBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteItemMenuBindingNavigator)).EndInit();
+            this.restauranteItemMenuBindingNavigator.ResumeLayout(false);
+            this.restauranteItemMenuBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,10 +264,10 @@
         #endregion
 
         private RestauranteDataSet3 restauranteDataSet3;
-        private System.Windows.Forms.BindingSource pessoaSet_ClienteBindingSource;
-        private RestauranteDataSet3TableAdapters.PessoaSet_ClienteTableAdapter pessoaSet_ClienteTableAdapter;
+        private System.Windows.Forms.BindingSource restauranteItemMenuBindingSource;
+        private RestauranteDataSet3TableAdapters.RestauranteItemMenuTableAdapter restauranteItemMenuTableAdapter;
         private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator pessoaSet_ClienteBindingNavigator;
+        private System.Windows.Forms.BindingNavigator restauranteItemMenuBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
@@ -297,10 +275,9 @@
         private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton pessoaSet_ClienteBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox totalgastoTextBox;
-        private System.Windows.Forms.TextBox numContribuienteTextBox;
-        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.ToolStripButton restauranteItemMenuBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox restaurante_IdTextBox;
+        private System.Windows.Forms.TextBox itemMenu_IdTextBox;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnConcluir;
     }
