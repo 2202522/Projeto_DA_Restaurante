@@ -133,5 +133,19 @@ namespace Projeto_DA_Restaurante
                 MessageBox.Show("Sem dados para exportar", "Info");
             }
         }
+
+        private void btnPagamento_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EfetuarPagamento efetuarPagamento = new EfetuarPagamento();
+            efetuarPagamento.ShowDialog();
+        }
+
+        private void btnAdicionarPrato_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Prato prato = new Prato();
+            prato.ShowDialog();
+        }
     }
 }
