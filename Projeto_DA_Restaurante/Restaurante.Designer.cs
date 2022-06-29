@@ -1,10 +1,39 @@
-﻿// T4 code generation is enabled for model 'C:\Users\t.duarte.pereira\source\repos\Projeto_DA_Restaurante\Projeto_DA_Restaurante\Restaurante.edmx'. 
-// To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
-// property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
-// is open in the designer.
+﻿namespace Projeto_DA_Restaurante
+{
+    partial class Restaurante
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-// If no context and entity classes have been generated, it may be because you created an empty model but
-// have not yet chosen which version of Entity Framework to use. To generate a context class and entity
-// classes for your model, open the model in the designer, right-click on the designer surface, and
-// select 'Update Model from Database...', 'Generate Database from Model...', or 'Add Code Generation
-// Item...'.
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Restaurante";
+        }
+
+        #endregion
+    }
+}

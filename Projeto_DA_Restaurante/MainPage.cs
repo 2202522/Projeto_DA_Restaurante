@@ -18,7 +18,9 @@ namespace Projeto_DA_Restaurante
         }
         private void btnRestaurante_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            Restaurant restaurant = new Restaurant();
+            restaurant.ShowDialog();
         }
 
         private void btnUtilizador_Click(object sender, EventArgs e)
@@ -30,9 +32,16 @@ namespace Projeto_DA_Restaurante
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            Pedidos pedidos = new Pedidos();
+            pedidos.ShowDialog();
         }
 
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Status status = new Status();
+            status.ShowDialog();
+        }
     }
 }

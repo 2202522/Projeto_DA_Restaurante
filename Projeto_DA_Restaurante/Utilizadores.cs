@@ -56,5 +56,12 @@ namespace Projeto_DA_Restaurante
         {
 
         }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CRUD_Cliente cRUD_Cliente = new CRUD_Cliente();
+            cRUD_Cliente.ShowDialog();
+        }
     }
 }

@@ -3472,7 +3472,8 @@ namespace Projeto_DA_Restaurante {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = 1;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -3769,6 +3770,7 @@ namespace Projeto_DA_Restaurante {
                                 this.columnId}, true));
                 this.columnTotalgasto.AllowDBNull = false;
                 this.columnNumContribuiente.AllowDBNull = false;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
             }
@@ -4079,6 +4081,7 @@ namespace Projeto_DA_Restaurante {
                 this.columnPosicao.AllowDBNull = false;
                 this.columnPosicao.MaxLength = 2147483647;
                 this.columnRestauranteId.AllowDBNull = false;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
             }
@@ -10364,7 +10367,7 @@ SELECT Id, Nome, Restaurante_id FROM RestauranteSet WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Nome, Morada_id FROM dbo.RestauranteSet";
+            this._commandCollection[0].CommandText = "SELECT Id, Nome, Restaurante_id FROM dbo.RestauranteSet";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
