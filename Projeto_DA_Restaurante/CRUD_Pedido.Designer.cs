@@ -296,7 +296,7 @@
             this.restauranteIdComboBox.Name = "restauranteIdComboBox";
             this.restauranteIdComboBox.Size = new System.Drawing.Size(100, 21);
             this.restauranteIdComboBox.TabIndex = 15;
-            this.restauranteIdComboBox.SelectedIndexChanged += new System.EventHandler(this.restauranteIdComboBox_SelectedIndexChanged);
+//            this.restauranteIdComboBox.SelectedIndexChanged += new System.EventHandler(this.restauranteIdComboBox_SelectedIndexChanged);
             // 
             // CRUD_Pedido
             // 

@@ -47,9 +47,5 @@ namespace Projeto_DA_Restaurante
             pedido.ShowDialog();
         }
 
-        private void restauranteIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
     }
 }

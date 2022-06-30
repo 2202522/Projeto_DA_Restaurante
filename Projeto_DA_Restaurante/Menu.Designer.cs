@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
             this.itemMenuSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemMenuSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.ItemMenuSetTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            this.itemMenuSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.itemMenuSetDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +45,10 @@
             this.btn_Associar = new System.Windows.Forms.Button();
             this.btn_CRUD_Itens_Menu = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingNavigator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -83,23 +84,6 @@
             this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
             this.tableAdapterManager.RestauranteSetTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // itemMenuSetBindingNavigator
-            // 
-            this.itemMenuSetBindingNavigator.AddNewItem = null;
-            this.itemMenuSetBindingNavigator.BindingSource = this.itemMenuSetBindingSource;
-            this.itemMenuSetBindingNavigator.CountItem = null;
-            this.itemMenuSetBindingNavigator.DeleteItem = null;
-            this.itemMenuSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.itemMenuSetBindingNavigator.MoveFirstItem = null;
-            this.itemMenuSetBindingNavigator.MoveLastItem = null;
-            this.itemMenuSetBindingNavigator.MoveNextItem = null;
-            this.itemMenuSetBindingNavigator.MovePreviousItem = null;
-            this.itemMenuSetBindingNavigator.Name = "itemMenuSetBindingNavigator";
-            this.itemMenuSetBindingNavigator.PositionItem = null;
-            this.itemMenuSetBindingNavigator.Size = new System.Drawing.Size(678, 25);
-            this.itemMenuSetBindingNavigator.TabIndex = 0;
-            this.itemMenuSetBindingNavigator.Text = "bindingNavigator1";
             // 
             // itemMenuSetDataGridView
             // 
@@ -206,6 +190,24 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // newToolStripButton
+            // 
+            this.newToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
+            this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newToolStripButton.Name = "newToolStripButton";
+            this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton.Text = "&New";
+            // 
+            // openToolStripButton
+            // 
+            this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
+            this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openToolStripButton.Name = "openToolStripButton";
+            this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.openToolStripButton.Text = "&Open";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,17 +217,14 @@
             this.Controls.Add(this.btn_CRUD_Itens_Menu);
             this.Controls.Add(this.btn_Associar);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.itemMenuSetBindingNavigator);
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingNavigator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -235,7 +234,6 @@
         private System.Windows.Forms.BindingSource itemMenuSetBindingSource;
         private RestauranteDataSet3TableAdapters.ItemMenuSetTableAdapter itemMenuSetTableAdapter;
         private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator itemMenuSetBindingNavigator;
         private System.Windows.Forms.DataGridView itemMenuSetDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -247,5 +245,7 @@
         private System.Windows.Forms.Button btn_Associar;
         private System.Windows.Forms.Button btn_CRUD_Itens_Menu;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ToolStripButton newToolStripButton;
+        private System.Windows.Forms.ToolStripButton openToolStripButton;
     }
 }

@@ -43,5 +43,19 @@ namespace Projeto_DA_Restaurante
             Status status = new Status();
             status.ShowDialog();
         }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vendas vendas = new Vendas();
+            vendas.ShowDialog();
+        }
+
+        private void btnPromocoes_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Promocoes promocoes = new Promocoes();
+            promocoes.ShowDialog();
+        }
     }
 }

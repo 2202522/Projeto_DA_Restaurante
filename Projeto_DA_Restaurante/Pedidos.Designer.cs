@@ -33,7 +33,6 @@
             this.pedidoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pedidoSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PedidoSetTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            this.pedidoSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.pedidoSetDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,9 +43,10 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.CRUD_Pedido = new System.Windows.Forms.Button();
             this.Exportar = new System.Windows.Forms.Button();
+            this.btnPagamento = new System.Windows.Forms.Button();
+            this.btnAdicionarPrato = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingNavigator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoSetDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -82,23 +82,6 @@
             this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
             this.tableAdapterManager.RestauranteSetTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // pedidoSetBindingNavigator
-            // 
-            this.pedidoSetBindingNavigator.AddNewItem = null;
-            this.pedidoSetBindingNavigator.BindingSource = this.pedidoSetBindingSource;
-            this.pedidoSetBindingNavigator.CountItem = null;
-            this.pedidoSetBindingNavigator.DeleteItem = null;
-            this.pedidoSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.pedidoSetBindingNavigator.MoveFirstItem = null;
-            this.pedidoSetBindingNavigator.MoveLastItem = null;
-            this.pedidoSetBindingNavigator.MoveNextItem = null;
-            this.pedidoSetBindingNavigator.MovePreviousItem = null;
-            this.pedidoSetBindingNavigator.Name = "pedidoSetBindingNavigator";
-            this.pedidoSetBindingNavigator.PositionItem = null;
-            this.pedidoSetBindingNavigator.Size = new System.Drawing.Size(593, 25);
-            this.pedidoSetBindingNavigator.TabIndex = 0;
-            this.pedidoSetBindingNavigator.Text = "bindingNavigator1";
             // 
             // pedidoSetDataGridView
             // 
@@ -197,26 +180,47 @@
             this.Exportar.UseVisualStyleBackColor = true;
             this.Exportar.Click += new System.EventHandler(this.Exportar_Click);
             // 
+            // btnPagamento
+            // 
+            this.btnPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagamento.Location = new System.Drawing.Point(197, 282);
+            this.btnPagamento.Name = "btnPagamento";
+            this.btnPagamento.Size = new System.Drawing.Size(90, 40);
+            this.btnPagamento.TabIndex = 10;
+            this.btnPagamento.Text = "Efetuar Pagamento";
+            this.btnPagamento.UseVisualStyleBackColor = true;
+            this.btnPagamento.Click += new System.EventHandler(this.btnPagamento_Click);
+            // 
+            // btnAdicionarPrato
+            // 
+            this.btnAdicionarPrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarPrato.Location = new System.Drawing.Point(293, 282);
+            this.btnAdicionarPrato.Name = "btnAdicionarPrato";
+            this.btnAdicionarPrato.Size = new System.Drawing.Size(90, 40);
+            this.btnAdicionarPrato.TabIndex = 11;
+            this.btnAdicionarPrato.Text = " ";
+            this.btnAdicionarPrato.UseVisualStyleBackColor = true;
+            this.btnAdicionarPrato.Click += new System.EventHandler(this.btnAdicionarPrato_Click);
+            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(593, 392);
+            this.Controls.Add(this.btnAdicionarPrato);
+            this.Controls.Add(this.btnPagamento);
             this.Controls.Add(this.Exportar);
             this.Controls.Add(this.CRUD_Pedido);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pedidoSetBindingNavigator);
             this.Name = "Pedidos";
             this.Text = "Pedidos";
             this.Load += new System.EventHandler(this.Pedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingNavigator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoSetDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -226,7 +230,6 @@
         private System.Windows.Forms.BindingSource pedidoSetBindingSource;
         private RestauranteDataSet3TableAdapters.PedidoSetTableAdapter pedidoSetTableAdapter;
         private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator pedidoSetBindingNavigator;
         private System.Windows.Forms.DataGridView pedidoSetDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -237,5 +240,7 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button CRUD_Pedido;
         private System.Windows.Forms.Button Exportar;
+        private System.Windows.Forms.Button btnPagamento;
+        private System.Windows.Forms.Button btnAdicionarPrato;
     }
 }
