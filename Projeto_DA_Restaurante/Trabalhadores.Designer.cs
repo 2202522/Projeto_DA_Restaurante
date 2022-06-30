@@ -33,7 +33,6 @@
             this.pessoaSet_TrabalhadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pessoaSet_TrabalhadorTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PessoaSet_TrabalhadorTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            this.pessoaSet_TrabalhadorBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.pessoaSet_TrabalhadorDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +43,6 @@
             this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorBindingNavigator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -80,23 +78,6 @@
             this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
             this.tableAdapterManager.RestauranteSetTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // pessoaSet_TrabalhadorBindingNavigator
-            // 
-            this.pessoaSet_TrabalhadorBindingNavigator.AddNewItem = null;
-            this.pessoaSet_TrabalhadorBindingNavigator.BindingSource = this.pessoaSet_TrabalhadorBindingSource;
-            this.pessoaSet_TrabalhadorBindingNavigator.CountItem = null;
-            this.pessoaSet_TrabalhadorBindingNavigator.DeleteItem = null;
-            this.pessoaSet_TrabalhadorBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.pessoaSet_TrabalhadorBindingNavigator.MoveFirstItem = null;
-            this.pessoaSet_TrabalhadorBindingNavigator.MoveLastItem = null;
-            this.pessoaSet_TrabalhadorBindingNavigator.MoveNextItem = null;
-            this.pessoaSet_TrabalhadorBindingNavigator.MovePreviousItem = null;
-            this.pessoaSet_TrabalhadorBindingNavigator.Name = "pessoaSet_TrabalhadorBindingNavigator";
-            this.pessoaSet_TrabalhadorBindingNavigator.PositionItem = null;
-            this.pessoaSet_TrabalhadorBindingNavigator.Size = new System.Drawing.Size(390, 25);
-            this.pessoaSet_TrabalhadorBindingNavigator.TabIndex = 0;
-            this.pessoaSet_TrabalhadorBindingNavigator.Text = "bindingNavigator1";
             // 
             // pessoaSet_TrabalhadorDataGridView
             // 
@@ -188,17 +169,14 @@
             this.Controls.Add(this.btn_Associar);
             this.Controls.Add(this.btn_CRUD_Trabalhadores);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pessoaSet_TrabalhadorBindingNavigator);
             this.Name = "Trabalhadores";
             this.Text = "Trabalhadores";
             this.Load += new System.EventHandler(this.Trabalhadores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorBindingNavigator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -208,7 +186,6 @@
         private System.Windows.Forms.BindingSource pessoaSet_TrabalhadorBindingSource;
         private RestauranteDataSet3TableAdapters.PessoaSet_TrabalhadorTableAdapter pessoaSet_TrabalhadorTableAdapter;
         private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator pessoaSet_TrabalhadorBindingNavigator;
         private System.Windows.Forms.DataGridView pessoaSet_TrabalhadorDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

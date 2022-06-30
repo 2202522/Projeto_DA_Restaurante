@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EfetuarPagamento));
             System.Windows.Forms.Label valorLabel;
             System.Windows.Forms.Label metodoPagamentoIdLabel;
             System.Windows.Forms.Label pedidoIdLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EfetuarPagamento));
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnConcluir = new System.Windows.Forms.Button();
             this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
             this.pagamentoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pagamentoSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PagamentoSetTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
             this.pagamentoSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.valorTextBox = new System.Windows.Forms.TextBox();
-            this.metodoPagamentoIdComboBox = new System.Windows.Forms.ComboBox();
-            this.pedidoIdComboBox = new System.Windows.Forms.ComboBox();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.pagamentoSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnConcluir = new System.Windows.Forms.Button();
+            this.valorTextBox = new System.Windows.Forms.TextBox();
+            this.metodoPagamentoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.pedidoIdTextBox = new System.Windows.Forms.TextBox();
             valorLabel = new System.Windows.Forms.Label();
             metodoPagamentoIdLabel = new System.Windows.Forms.Label();
             pedidoIdLabel = new System.Windows.Forms.Label();
@@ -59,6 +59,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.pagamentoSetBindingNavigator)).BeginInit();
             this.pagamentoSetBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(12, 155);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(90, 40);
+            this.btnBack.TabIndex = 14;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnConcluir
+            // 
+            this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConcluir.Location = new System.Drawing.Point(356, 155);
+            this.btnConcluir.Name = "btnConcluir";
+            this.btnConcluir.Size = new System.Drawing.Size(90, 40);
+            this.btnConcluir.TabIndex = 15;
+            this.btnConcluir.Text = "Concluir";
+            this.btnConcluir.UseVisualStyleBackColor = true;
+            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
             // 
             // restauranteDataSet3
             // 
@@ -114,9 +136,18 @@
             this.pagamentoSetBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.pagamentoSetBindingNavigator.Name = "pagamentoSetBindingNavigator";
             this.pagamentoSetBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.pagamentoSetBindingNavigator.Size = new System.Drawing.Size(458, 25);
-            this.pagamentoSetBindingNavigator.TabIndex = 0;
+            this.pagamentoSetBindingNavigator.Size = new System.Drawing.Size(466, 25);
+            this.pagamentoSetBindingNavigator.TabIndex = 16;
             this.pagamentoSetBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
@@ -127,69 +158,24 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // valorLabel
-            // 
-            valorLabel.AutoSize = true;
-            valorLabel.Location = new System.Drawing.Point(101, 56);
-            valorLabel.Name = "valorLabel";
-            valorLabel.Size = new System.Drawing.Size(34, 13);
-            valorLabel.TabIndex = 3;
-            valorLabel.Text = "Valor:";
-            // 
-            // valorTextBox
-            // 
-            this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pagamentoSetBindingSource, "Valor", true));
-            this.valorTextBox.Location = new System.Drawing.Point(222, 53);
-            this.valorTextBox.Name = "valorTextBox";
-            this.valorTextBox.Size = new System.Drawing.Size(121, 20);
-            this.valorTextBox.TabIndex = 4;
-            // 
-            // metodoPagamentoIdLabel
-            // 
-            metodoPagamentoIdLabel.AutoSize = true;
-            metodoPagamentoIdLabel.Location = new System.Drawing.Point(101, 82);
-            metodoPagamentoIdLabel.Name = "metodoPagamentoIdLabel";
-            metodoPagamentoIdLabel.Size = new System.Drawing.Size(115, 13);
-            metodoPagamentoIdLabel.TabIndex = 5;
-            metodoPagamentoIdLabel.Text = "Metodo Pagamento Id:";
-            // 
-            // metodoPagamentoIdComboBox
-            // 
-            this.metodoPagamentoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pagamentoSetBindingSource, "MetodoPagamentoId", true));
-            this.metodoPagamentoIdComboBox.FormattingEnabled = true;
-            this.metodoPagamentoIdComboBox.Location = new System.Drawing.Point(222, 79);
-            this.metodoPagamentoIdComboBox.Name = "metodoPagamentoIdComboBox";
-            this.metodoPagamentoIdComboBox.Size = new System.Drawing.Size(121, 21);
-            this.metodoPagamentoIdComboBox.TabIndex = 6;
-            // 
-            // pedidoIdLabel
-            // 
-            pedidoIdLabel.AutoSize = true;
-            pedidoIdLabel.Location = new System.Drawing.Point(101, 109);
-            pedidoIdLabel.Name = "pedidoIdLabel";
-            pedidoIdLabel.Size = new System.Drawing.Size(55, 13);
-            pedidoIdLabel.TabIndex = 7;
-            pedidoIdLabel.Text = "Pedido Id:";
-            // 
-            // pedidoIdComboBox
-            // 
-            this.pedidoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pagamentoSetBindingSource, "PedidoId", true));
-            this.pedidoIdComboBox.FormattingEnabled = true;
-            this.pedidoIdComboBox.Location = new System.Drawing.Point(222, 106);
-            this.pedidoIdComboBox.Name = "pedidoIdComboBox";
-            this.pedidoIdComboBox.Size = new System.Drawing.Size(121, 21);
-            this.pedidoIdComboBox.TabIndex = 8;
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -206,72 +192,85 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // pagamentoSetBindingNavigatorSaveItem
             // 
             this.pagamentoSetBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.pagamentoSetBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pagamentoSetBindingNavigatorSaveItem.Image")));
             this.pagamentoSetBindingNavigatorSaveItem.Name = "pagamentoSetBindingNavigatorSaveItem";
-            this.pagamentoSetBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.pagamentoSetBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
             this.pagamentoSetBindingNavigatorSaveItem.Text = "Save Data";
-            this.pagamentoSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.pagamentoSetBindingNavigatorSaveItem_Click);
+            this.pagamentoSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.pagamentoSetBindingNavigatorSaveItem_Click_1);
             // 
-            // btnBack
+            // valorLabel
             // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 155);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(90, 40);
-            this.btnBack.TabIndex = 14;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            valorLabel.AutoSize = true;
+            valorLabel.Location = new System.Drawing.Point(106, 58);
+            valorLabel.Name = "valorLabel";
+            valorLabel.Size = new System.Drawing.Size(34, 13);
+            valorLabel.TabIndex = 18;
+            valorLabel.Text = "Valor:";
             // 
-            // btnConcluir
+            // valorTextBox
             // 
-            this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConcluir.Location = new System.Drawing.Point(356, 155);
-            this.btnConcluir.Name = "btnConcluir";
-            this.btnConcluir.Size = new System.Drawing.Size(90, 40);
-            this.btnConcluir.TabIndex = 15;
-            this.btnConcluir.Text = "Concluir";
-            this.btnConcluir.UseVisualStyleBackColor = true;
-            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
+            this.valorTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pagamentoSetBindingSource, "Valor", true));
+            this.valorTextBox.Location = new System.Drawing.Point(227, 55);
+            this.valorTextBox.Name = "valorTextBox";
+            this.valorTextBox.Size = new System.Drawing.Size(121, 20);
+            this.valorTextBox.TabIndex = 19;
+            // 
+            // metodoPagamentoIdLabel
+            // 
+            metodoPagamentoIdLabel.AutoSize = true;
+            metodoPagamentoIdLabel.Location = new System.Drawing.Point(106, 84);
+            metodoPagamentoIdLabel.Name = "metodoPagamentoIdLabel";
+            metodoPagamentoIdLabel.Size = new System.Drawing.Size(115, 13);
+            metodoPagamentoIdLabel.TabIndex = 20;
+            metodoPagamentoIdLabel.Text = "Metodo Pagamento Id:";
+            // 
+            // metodoPagamentoIdComboBox
+            // 
+            this.metodoPagamentoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pagamentoSetBindingSource, "MetodoPagamentoId", true));
+            this.metodoPagamentoIdComboBox.FormattingEnabled = true;
+            this.metodoPagamentoIdComboBox.Location = new System.Drawing.Point(227, 81);
+            this.metodoPagamentoIdComboBox.Name = "metodoPagamentoIdComboBox";
+            this.metodoPagamentoIdComboBox.Size = new System.Drawing.Size(121, 21);
+            this.metodoPagamentoIdComboBox.TabIndex = 21;
+            this.metodoPagamentoIdComboBox.SelectedIndexChanged += new System.EventHandler(this.metodoPagamentoIdComboBox_SelectedIndexChanged);
+            // 
+            // pedidoIdLabel
+            // 
+            pedidoIdLabel.AutoSize = true;
+            pedidoIdLabel.Location = new System.Drawing.Point(106, 111);
+            pedidoIdLabel.Name = "pedidoIdLabel";
+            pedidoIdLabel.Size = new System.Drawing.Size(55, 13);
+            pedidoIdLabel.TabIndex = 22;
+            pedidoIdLabel.Text = "Pedido Id:";
+            // 
+            // pedidoIdTextBox
+            // 
+            this.pedidoIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pagamentoSetBindingSource, "PedidoId", true));
+            this.pedidoIdTextBox.Location = new System.Drawing.Point(227, 108);
+            this.pedidoIdTextBox.Name = "pedidoIdTextBox";
+            this.pedidoIdTextBox.Size = new System.Drawing.Size(121, 20);
+            this.pedidoIdTextBox.TabIndex = 23;
             // 
             // EfetuarPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 207);
-            this.Controls.Add(this.btnConcluir);
-            this.Controls.Add(this.btnBack);
+            this.ClientSize = new System.Drawing.Size(466, 215);
             this.Controls.Add(valorLabel);
             this.Controls.Add(this.valorTextBox);
             this.Controls.Add(metodoPagamentoIdLabel);
             this.Controls.Add(this.metodoPagamentoIdComboBox);
             this.Controls.Add(pedidoIdLabel);
-            this.Controls.Add(this.pedidoIdComboBox);
+            this.Controls.Add(this.pedidoIdTextBox);
             this.Controls.Add(this.pagamentoSetBindingNavigator);
+            this.Controls.Add(this.btnConcluir);
+            this.Controls.Add(this.btnBack);
             this.Name = "EfetuarPagamento";
             this.Text = "EfetuarPagamento";
             this.Load += new System.EventHandler(this.EfetuarPagamento_Load);
@@ -286,7 +285,8 @@
         }
 
         #endregion
-
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnConcluir;
         private RestauranteDataSet3 restauranteDataSet3;
         private System.Windows.Forms.BindingSource pagamentoSetBindingSource;
         private RestauranteDataSet3TableAdapters.PagamentoSetTableAdapter pagamentoSetTableAdapter;
@@ -302,8 +302,6 @@
         private System.Windows.Forms.ToolStripButton pagamentoSetBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox valorTextBox;
         private System.Windows.Forms.ComboBox metodoPagamentoIdComboBox;
-        private System.Windows.Forms.ComboBox pedidoIdComboBox;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnConcluir;
+        private System.Windows.Forms.TextBox pedidoIdTextBox;
     }
 }

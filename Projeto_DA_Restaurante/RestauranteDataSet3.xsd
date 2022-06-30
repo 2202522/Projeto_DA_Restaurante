@@ -716,7 +716,7 @@ SELECT Id, Nome, Restaurante_id FROM RestauranteSet WHERE (Id = @Id)</CommandTex
         <xs:element name="CategoriaSet" msprop:Generator_RowEvHandlerName="CategoriaSetRowChangeEventHandler" msprop:Generator_RowDeletedName="CategoriaSetRowDeleted" msprop:Generator_RowDeletingName="CategoriaSetRowDeleting" msprop:Generator_RowEvArgName="CategoriaSetRowChangeEvent" msprop:Generator_TablePropName="CategoriaSet" msprop:Generator_RowChangedName="CategoriaSetRowChanged" msprop:Generator_UserTableName="CategoriaSet" msprop:Generator_RowChangingName="CategoriaSetRowChanging" msprop:Generator_RowClassName="CategoriaSetRow" msprop:Generator_TableClassName="CategoriaSetDataTable" msprop:Generator_TableVarName="tableCategoriaSet">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
               <xs:element name="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_UserColumnName="Nome" msprop:Generator_ColumnVarNameInTable="columnNome">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -737,7 +737,7 @@ SELECT Id, Nome, Restaurante_id FROM RestauranteSet WHERE (Id = @Id)</CommandTex
         <xs:element name="EstadoSet" msprop:Generator_RowEvHandlerName="EstadoSetRowChangeEventHandler" msprop:Generator_RowDeletedName="EstadoSetRowDeleted" msprop:Generator_RowDeletingName="EstadoSetRowDeleting" msprop:Generator_RowEvArgName="EstadoSetRowChangeEvent" msprop:Generator_TablePropName="EstadoSet" msprop:Generator_RowChangedName="EstadoSetRowChanged" msprop:Generator_UserTableName="EstadoSet" msprop:Generator_RowChangingName="EstadoSetRowChanging" msprop:Generator_RowClassName="EstadoSetRow" msprop:Generator_TableClassName="EstadoSetDataTable" msprop:Generator_TableVarName="tableEstadoSet">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
               <xs:element name="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_UserColumnName="estado" msprop:Generator_ColumnVarNameInTable="columnestado">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -751,7 +751,7 @@ SELECT Id, Nome, Restaurante_id FROM RestauranteSet WHERE (Id = @Id)</CommandTex
         <xs:element name="ItemMenuSet" msprop:Generator_RowEvHandlerName="ItemMenuSetRowChangeEventHandler" msprop:Generator_RowDeletedName="ItemMenuSetRowDeleted" msprop:Generator_RowDeletingName="ItemMenuSetRowDeleting" msprop:Generator_RowEvArgName="ItemMenuSetRowChangeEvent" msprop:Generator_TablePropName="ItemMenuSet" msprop:Generator_RowChangedName="ItemMenuSetRowChanged" msprop:Generator_UserTableName="ItemMenuSet" msprop:Generator_RowChangingName="ItemMenuSetRowChanging" msprop:Generator_RowClassName="ItemMenuSetRow" msprop:Generator_TableClassName="ItemMenuSetDataTable" msprop:Generator_TableVarName="tableItemMenuSet">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
               <xs:element name="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_UserColumnName="Nome" msprop:Generator_ColumnVarNameInTable="columnNome">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -788,7 +788,7 @@ SELECT Id, Nome, Restaurante_id FROM RestauranteSet WHERE (Id = @Id)</CommandTex
         <xs:element name="MetodoPagamentoSet" msprop:Generator_RowEvHandlerName="MetodoPagamentoSetRowChangeEventHandler" msprop:Generator_RowDeletedName="MetodoPagamentoSetRowDeleted" msprop:Generator_RowDeletingName="MetodoPagamentoSetRowDeleting" msprop:Generator_RowEvArgName="MetodoPagamentoSetRowChangeEvent" msprop:Generator_TablePropName="MetodoPagamentoSet" msprop:Generator_RowChangedName="MetodoPagamentoSetRowChanged" msprop:Generator_UserTableName="MetodoPagamentoSet" msprop:Generator_RowChangingName="MetodoPagamentoSetRowChanging" msprop:Generator_RowClassName="MetodoPagamentoSetRow" msprop:Generator_TableClassName="MetodoPagamentoSetDataTable" msprop:Generator_TableVarName="tableMetodoPagamentoSet">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
               <xs:element name="MetoPagamento" msprop:Generator_ColumnPropNameInTable="MetoPagamentoColumn" msprop:Generator_ColumnPropNameInRow="MetoPagamento" msprop:Generator_UserColumnName="MetoPagamento" msprop:Generator_ColumnVarNameInTable="columnMetoPagamento">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -844,7 +844,7 @@ SELECT Id, Nome, Restaurante_id FROM RestauranteSet WHERE (Id = @Id)</CommandTex
         <xs:element name="PagamentoSet" msprop:Generator_RowEvHandlerName="PagamentoSetRowChangeEventHandler" msprop:Generator_RowDeletedName="PagamentoSetRowDeleted" msprop:Generator_RowDeletingName="PagamentoSetRowDeleting" msprop:Generator_RowEvArgName="PagamentoSetRowChangeEvent" msprop:Generator_TablePropName="PagamentoSet" msprop:Generator_RowChangedName="PagamentoSetRowChanged" msprop:Generator_UserTableName="PagamentoSet" msprop:Generator_RowChangingName="PagamentoSetRowChanging" msprop:Generator_RowClassName="PagamentoSetRow" msprop:Generator_TableClassName="PagamentoSetDataTable" msprop:Generator_TableVarName="tablePagamentoSet">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
               <xs:element name="Valor" msprop:Generator_ColumnPropNameInTable="ValorColumn" msprop:Generator_ColumnPropNameInRow="Valor" msprop:Generator_UserColumnName="Valor" msprop:Generator_ColumnVarNameInTable="columnValor" type="xs:double" />
               <xs:element name="MetodoPagamentoId" msprop:Generator_ColumnPropNameInTable="MetodoPagamentoIdColumn" msprop:Generator_ColumnPropNameInRow="MetodoPagamentoId" msprop:Generator_UserColumnName="MetodoPagamentoId" msprop:Generator_ColumnVarNameInTable="columnMetodoPagamentoId" type="xs:int" />
               <xs:element name="PedidoId" msprop:Generator_ColumnPropNameInTable="PedidoIdColumn" msprop:Generator_ColumnPropNameInRow="PedidoId" msprop:Generator_UserColumnName="PedidoId" msprop:Generator_ColumnVarNameInTable="columnPedidoId" type="xs:int" />
@@ -862,7 +862,7 @@ SELECT Id, Nome, Restaurante_id FROM RestauranteSet WHERE (Id = @Id)</CommandTex
         <xs:element name="PedidoSet" msprop:Generator_RowEvHandlerName="PedidoSetRowChangeEventHandler" msprop:Generator_RowDeletedName="PedidoSetRowDeleted" msprop:Generator_RowDeletingName="PedidoSetRowDeleting" msprop:Generator_RowEvArgName="PedidoSetRowChangeEvent" msprop:Generator_TablePropName="PedidoSet" msprop:Generator_RowChangedName="PedidoSetRowChanged" msprop:Generator_UserTableName="PedidoSet" msprop:Generator_RowChangingName="PedidoSetRowChanging" msprop:Generator_RowClassName="PedidoSetRow" msprop:Generator_TableClassName="PedidoSetDataTable" msprop:Generator_TableVarName="tablePedidoSet">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
               <xs:element name="ValorTotal" msprop:Generator_ColumnPropNameInTable="ValorTotalColumn" msprop:Generator_ColumnPropNameInRow="ValorTotal" msprop:Generator_UserColumnName="ValorTotal" msprop:Generator_ColumnVarNameInTable="columnValorTotal" type="xs:double" />
               <xs:element name="RestauranteId" msprop:Generator_ColumnPropNameInTable="RestauranteIdColumn" msprop:Generator_ColumnPropNameInRow="RestauranteId" msprop:Generator_UserColumnName="RestauranteId" msprop:Generator_ColumnVarNameInTable="columnRestauranteId" type="xs:int" />
               <xs:element name="ClienteId" msprop:Generator_ColumnPropNameInTable="ClienteIdColumn" msprop:Generator_ColumnPropNameInRow="ClienteId" msprop:Generator_UserColumnName="ClienteId" msprop:Generator_ColumnVarNameInTable="columnClienteId" type="xs:int" />
@@ -874,7 +874,7 @@ SELECT Id, Nome, Restaurante_id FROM RestauranteSet WHERE (Id = @Id)</CommandTex
         <xs:element name="PessoaSet" msprop:Generator_RowEvHandlerName="PessoaSetRowChangeEventHandler" msprop:Generator_RowDeletedName="PessoaSetRowDeleted" msprop:Generator_RowDeletingName="PessoaSetRowDeleting" msprop:Generator_RowEvArgName="PessoaSetRowChangeEvent" msprop:Generator_TablePropName="PessoaSet" msprop:Generator_RowChangedName="PessoaSetRowChanged" msprop:Generator_UserTableName="PessoaSet" msprop:Generator_RowChangingName="PessoaSetRowChanging" msprop:Generator_RowClassName="PessoaSetRow" msprop:Generator_TableClassName="PessoaSetDataTable" msprop:Generator_TableVarName="tablePessoaSet">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_UserColumnName="Id" msprop:Generator_ColumnVarNameInTable="columnId" type="xs:int" />
               <xs:element name="Nome" msprop:Generator_ColumnPropNameInTable="NomeColumn" msprop:Generator_ColumnPropNameInRow="Nome" msprop:Generator_UserColumnName="Nome" msprop:Generator_ColumnVarNameInTable="columnNome">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -935,6 +935,15 @@ SELECT Id, Nome, Restaurante_id FROM RestauranteSet WHERE (Id = @Id)</CommandTex
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="CodigoPromocional" msprop:Generator_RowClassName="CodigoPromocionalRow" msprop:Generator_RowEvHandlerName="CodigoPromocionalRowChangeEventHandler" msprop:Generator_RowDeletedName="CodigoPromocionalRowDeleted" msprop:Generator_RowDeletingName="CodigoPromocionalRowDeleting" msprop:Generator_RowEvArgName="CodigoPromocionalRowChangeEvent" msprop:Generator_TablePropName="CodigoPromocional" msprop:Generator_RowChangedName="CodigoPromocionalRowChanged" msprop:Generator_UserTableName="CodigoPromocional" msprop:Generator_RowChangingName="CodigoPromocionalRowChanging" msprop:Generator_TableClassName="CodigoPromocionalDataTable" msprop:Generator_TableVarName="tableCodigoPromocional">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdCodigoPromocional" msdata:AutoIncrementSeed="1" msprop:Generator_UserColumnName="IdCodigoPromocional" msprop:Generator_ColumnPropNameInTable="IdCodigoPromocionalColumn" msprop:Generator_ColumnPropNameInRow="IdCodigoPromocional" msprop:Generator_ColumnVarNameInTable="columnIdCodigoPromocional" type="xs:string" minOccurs="0" />
+              <xs:element name="Referencia" msprop:Generator_UserColumnName="Referencia" msprop:Generator_ColumnPropNameInTable="ReferenciaColumn" msprop:Generator_ColumnPropNameInRow="Referencia" msprop:Generator_ColumnVarNameInTable="columnReferencia" type="xs:string" minOccurs="0" />
+              <xs:element name="Valor" msprop:Generator_UserColumnName="Valor" msprop:Generator_ColumnPropNameInTable="ValorColumn" msprop:Generator_ColumnPropNameInRow="Valor" msprop:Generator_ColumnVarNameInTable="columnValor" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -990,6 +999,10 @@ SELECT Id, Nome, Restaurante_id FROM RestauranteSet WHERE (Id = @Id)</CommandTex
     <xs:unique name="RestauranteSet_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:RestauranteSet" />
       <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="IdCodigoPromocional">
+      <xs:selector xpath=".//mstns:CodigoPromocional" />
+      <xs:field xpath="mstns:IdCodigoPromocional" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

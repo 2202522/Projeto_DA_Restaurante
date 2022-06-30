@@ -38,7 +38,6 @@
             this.pessoaSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PessoaSetTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
             this.moradaSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.MoradaSetTableAdapter();
-            this.pessoaSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.pessoaSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.moradaSetDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,7 +54,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.moradaSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingNavigator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moradaSetDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSetDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -123,25 +121,6 @@
             // moradaSetTableAdapter
             // 
             this.moradaSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // pessoaSetBindingNavigator
-            // 
-            this.pessoaSetBindingNavigator.AddNewItem = null;
-            this.pessoaSetBindingNavigator.BindingSource = this.pessoaSetBindingSource;
-            this.pessoaSetBindingNavigator.CountItem = null;
-            this.pessoaSetBindingNavigator.DeleteItem = null;
-            this.pessoaSetBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.pessoaSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.pessoaSetBindingNavigator.MoveFirstItem = null;
-            this.pessoaSetBindingNavigator.MoveLastItem = null;
-            this.pessoaSetBindingNavigator.MoveNextItem = null;
-            this.pessoaSetBindingNavigator.MovePreviousItem = null;
-            this.pessoaSetBindingNavigator.Name = "pessoaSetBindingNavigator";
-            this.pessoaSetBindingNavigator.PositionItem = null;
-            this.pessoaSetBindingNavigator.Size = new System.Drawing.Size(822, 25);
-            this.pessoaSetBindingNavigator.TabIndex = 25;
-            this.pessoaSetBindingNavigator.Text = "bindingNavigator1";
-            this.pessoaSetBindingNavigator.RefreshItems += new System.EventHandler(this.pessoaSetBindingNavigator_RefreshItems);
             // 
             // pessoaSetBindingNavigatorSaveItem
             // 
@@ -299,7 +278,6 @@
             this.Controls.Add(this.btnCliente);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pessoaSetBindingNavigator);
             this.Controls.Add(this.btnEditarClientes);
             this.Controls.Add(this.btnHome);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -309,13 +287,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.moradaSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingNavigator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.moradaSetDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSetDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -326,7 +302,6 @@
         private System.Windows.Forms.BindingSource pessoaSetBindingSource;
         private RestauranteDataSet3TableAdapters.PessoaSetTableAdapter pessoaSetTableAdapter;
         private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator pessoaSetBindingNavigator;
         private System.Windows.Forms.ToolStripButton pessoaSetBindingNavigatorSaveItem;
         private RestauranteDataSet3TableAdapters.MoradaSetTableAdapter moradaSetTableAdapter;
         private System.Windows.Forms.BindingSource moradaSetBindingSource;

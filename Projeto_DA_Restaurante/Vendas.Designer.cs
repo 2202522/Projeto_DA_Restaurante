@@ -73,6 +73,7 @@
             this.btnConsultarVendas.TabIndex = 10;
             this.btnConsultarVendas.Text = "Consultar";
             this.btnConsultarVendas.UseVisualStyleBackColor = true;
+            this.btnConsultarVendas.Click += new System.EventHandler(this.btnConsultarVendas_Click);
             // 
             // btnConsultarVendidos
             // 
@@ -83,6 +84,7 @@
             this.btnConsultarVendidos.TabIndex = 11;
             this.btnConsultarVendidos.Text = "Consultar";
             this.btnConsultarVendidos.UseVisualStyleBackColor = true;
+            this.btnConsultarVendidos.Click += new System.EventHandler(this.btnConsultarVendidos_Click);
             // 
             // Vendas
             // 

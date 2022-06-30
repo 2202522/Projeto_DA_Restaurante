@@ -10,8 +10,8 @@
         <EntityTypeShape EntityType="Restaurante.Trabalhador" Width="1.5" PointX="4.75" PointY="6.875" />
         <EntityTypeShape EntityType="Restaurante.Pagamento" Width="1.5" PointX="2.375" PointY="9.25" />
         <EntityTypeShape EntityType="Restaurante.Pedido" Width="1.5" PointX="5.125" PointY="9.5" />
-        <EntityTypeShape EntityType="Restaurante.MetodoPagamento" Width="1.5" PointX="2.375" PointY="12.375" />
-        <EntityTypeShape EntityType="Restaurante.Estado" Width="1.5" PointX="5.125" PointY="13.25" />
+        <EntityTypeShape EntityType="Restaurante.MetodoPagamento" Width="1.5" PointX="1.75" PointY="12.25" />
+        <EntityTypeShape EntityType="Restaurante.Estado" Width="1.5" PointX="5.625" PointY="13.625" />
         <EntityTypeShape EntityType="Restaurante.Restaurante" Width="1.5" PointX="8" PointY="6.125" />
         <EntityTypeShape EntityType="Restaurante.ItemMenu" Width="1.5" PointX="7.625" PointY="8.875" />
         <EntityTypeShape EntityType="Restaurante.Categoria" Width="1.5" PointX="7.625" PointY="12.375" />

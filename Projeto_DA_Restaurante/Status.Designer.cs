@@ -36,14 +36,12 @@
             this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
             this.estadoSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.EstadoSetTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            this.estadoSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnBack = new System.Windows.Forms.Button();
             this.CRUD_Estado = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.estadoSetDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estadoSetBindingNavigator)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -110,23 +108,6 @@
             this.tableAdapterManager.RestauranteSetTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // estadoSetBindingNavigator
-            // 
-            this.estadoSetBindingNavigator.AddNewItem = null;
-            this.estadoSetBindingNavigator.BindingSource = this.estadoSetBindingSource;
-            this.estadoSetBindingNavigator.CountItem = null;
-            this.estadoSetBindingNavigator.DeleteItem = null;
-            this.estadoSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.estadoSetBindingNavigator.MoveFirstItem = null;
-            this.estadoSetBindingNavigator.MoveLastItem = null;
-            this.estadoSetBindingNavigator.MoveNextItem = null;
-            this.estadoSetBindingNavigator.MovePreviousItem = null;
-            this.estadoSetBindingNavigator.Name = "estadoSetBindingNavigator";
-            this.estadoSetBindingNavigator.PositionItem = null;
-            this.estadoSetBindingNavigator.Size = new System.Drawing.Size(285, 25);
-            this.estadoSetBindingNavigator.TabIndex = 1;
-            this.estadoSetBindingNavigator.Text = "bindingNavigator1";
-            // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,7 +126,7 @@
             this.CRUD_Estado.Name = "CRUD_Estado";
             this.CRUD_Estado.Size = new System.Drawing.Size(90, 40);
             this.CRUD_Estado.TabIndex = 9;
-            this.CRUD_Estado.Text = "Criar/Editar Estado";
+            this.CRUD_Estado.Text = " ";
             this.CRUD_Estado.UseVisualStyleBackColor = true;
             this.CRUD_Estado.Click += new System.EventHandler(this.CRUD_Estado_Click);
             // 
@@ -156,7 +137,6 @@
             this.ClientSize = new System.Drawing.Size(285, 314);
             this.Controls.Add(this.CRUD_Estado);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.estadoSetBindingNavigator);
             this.Controls.Add(this.groupBox1);
             this.Name = "Status";
             this.Text = "State";
@@ -165,9 +145,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.estadoSetDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadoSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estadoSetBindingNavigator)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -178,7 +156,6 @@
         private System.Windows.Forms.BindingSource estadoSetBindingSource;
         private RestauranteDataSet3TableAdapters.EstadoSetTableAdapter estadoSetTableAdapter;
         private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator estadoSetBindingNavigator;
         private System.Windows.Forms.DataGridView estadoSetDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button btnBack;

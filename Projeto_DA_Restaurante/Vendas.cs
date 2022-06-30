@@ -24,7 +24,12 @@ namespace Projeto_DA_Restaurante
             mainPage.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnConsultarVendidos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsultarVendas_Click(object sender, EventArgs e)
         {
 
         }

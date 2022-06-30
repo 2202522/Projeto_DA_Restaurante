@@ -209,7 +209,6 @@
     </Compile>
     <Compile Include="Restaurante.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Restaurante.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -229,7 +228,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RestauranteDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition1_Result.cs">
+      <DependentUpon>Restaurante.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Restaurante.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams1_Result.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">

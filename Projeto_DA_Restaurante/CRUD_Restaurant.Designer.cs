@@ -39,22 +39,29 @@
             this.restauranteSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.RestauranteSetTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
             this.restauranteSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.restauranteSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.restaurante_idTextBox = new System.Windows.Forms.TextBox();
+            this.restaurante_idComboBox = new System.Windows.Forms.ComboBox();
+            this.moradaSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.moradaSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.MoradaSetTableAdapter();
             nomeLabel = new System.Windows.Forms.Label();
             restaurante_idLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingNavigator)).BeginInit();
             this.restauranteSetBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moradaSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -100,7 +107,7 @@
             this.tableAdapterManager.EstadoSetTableAdapter = null;
             this.tableAdapterManager.ItemMenuSetTableAdapter = null;
             this.tableAdapterManager.MetodoPagamentoSetTableAdapter = null;
-            this.tableAdapterManager.MoradaSetTableAdapter = null;
+            this.tableAdapterManager.MoradaSetTableAdapter = this.moradaSetTableAdapter;
             this.tableAdapterManager.PagamentoSetTableAdapter = null;
             this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
             this.tableAdapterManager.PedidoSetTableAdapter = null;
@@ -115,20 +122,24 @@
             // 
             this.restauranteSetBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.restauranteSetBindingNavigator.BindingSource = this.restauranteSetBindingSource;
-            this.restauranteSetBindingNavigator.CountItem = null;
+            this.restauranteSetBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.restauranteSetBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.restauranteSetBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
             this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
             this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.restauranteSetBindingNavigatorSaveItem});
             this.restauranteSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.restauranteSetBindingNavigator.MoveFirstItem = null;
-            this.restauranteSetBindingNavigator.MoveLastItem = null;
+            this.restauranteSetBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.restauranteSetBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.restauranteSetBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.restauranteSetBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.restauranteSetBindingNavigator.Name = "restauranteSetBindingNavigator";
@@ -136,6 +147,15 @@
             this.restauranteSetBindingNavigator.Size = new System.Drawing.Size(338, 25);
             this.restauranteSetBindingNavigator.TabIndex = 10;
             this.restauranteSetBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
             // 
@@ -160,6 +180,18 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -168,6 +200,15 @@
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
@@ -199,12 +240,12 @@
             this.restauranteSetBindingNavigatorSaveItem.Name = "restauranteSetBindingNavigatorSaveItem";
             this.restauranteSetBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
             this.restauranteSetBindingNavigatorSaveItem.Text = "Save Data";
-            this.restauranteSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.restauranteSetBindingNavigatorSaveItem_Click_1);
+            this.restauranteSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.restauranteSetBindingNavigatorSaveItem_Click_2);
             // 
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(53, 58);
+            nomeLabel.Location = new System.Drawing.Point(64, 57);
             nomeLabel.Name = "nomeLabel";
             nomeLabel.Size = new System.Drawing.Size(38, 13);
             nomeLabel.TabIndex = 12;
@@ -213,27 +254,40 @@
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.restauranteSetBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(138, 55);
+            this.nomeTextBox.Location = new System.Drawing.Point(149, 54);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(121, 20);
             this.nomeTextBox.TabIndex = 13;
             // 
             // restaurante_idLabel
             // 
             restaurante_idLabel.AutoSize = true;
-            restaurante_idLabel.Location = new System.Drawing.Point(53, 84);
+            restaurante_idLabel.Location = new System.Drawing.Point(64, 83);
             restaurante_idLabel.Name = "restaurante_idLabel";
-            restaurante_idLabel.Size = new System.Drawing.Size(60, 13);
+            restaurante_idLabel.Size = new System.Drawing.Size(79, 13);
             restaurante_idLabel.TabIndex = 14;
-            restaurante_idLabel.Text = "ID Morada:";
+            restaurante_idLabel.Text = "Restaurante id:";
             // 
-            // restaurante_idTextBox
+            // restaurante_idComboBox
             // 
-            this.restaurante_idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.restauranteSetBindingSource, "Restaurante_id", true));
-            this.restaurante_idTextBox.Location = new System.Drawing.Point(138, 81);
-            this.restaurante_idTextBox.Name = "restaurante_idTextBox";
-            this.restaurante_idTextBox.Size = new System.Drawing.Size(100, 20);
-            this.restaurante_idTextBox.TabIndex = 15;
+            this.restaurante_idComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.restauranteSetBindingSource, "Restaurante_id", true));
+            this.restaurante_idComboBox.DataSource = this.moradaSetBindingSource;
+            this.restaurante_idComboBox.DisplayMember = "Rua";
+            this.restaurante_idComboBox.FormattingEnabled = true;
+            this.restaurante_idComboBox.Location = new System.Drawing.Point(149, 80);
+            this.restaurante_idComboBox.Name = "restaurante_idComboBox";
+            this.restaurante_idComboBox.Size = new System.Drawing.Size(121, 21);
+            this.restaurante_idComboBox.TabIndex = 15;
+            this.restaurante_idComboBox.ValueMember = "Id";
+            // 
+            // moradaSetBindingSource
+            // 
+            this.moradaSetBindingSource.DataMember = "MoradaSet";
+            this.moradaSetBindingSource.DataSource = this.restauranteDataSet3;
+            // 
+            // moradaSetTableAdapter
+            // 
+            this.moradaSetTableAdapter.ClearBeforeFill = true;
             // 
             // CRUD_Restaurant
             // 
@@ -243,7 +297,7 @@
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(restaurante_idLabel);
-            this.Controls.Add(this.restaurante_idTextBox);
+            this.Controls.Add(this.restaurante_idComboBox);
             this.Controls.Add(this.restauranteSetBindingNavigator);
             this.Controls.Add(this.btnConcluir);
             this.Controls.Add(this.btnBack);
@@ -255,6 +309,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingNavigator)).EndInit();
             this.restauranteSetBindingNavigator.ResumeLayout(false);
             this.restauranteSetBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moradaSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,14 +325,20 @@
         private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator restauranteSetBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
         private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
+        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
+        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton restauranteSetBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox nomeTextBox;
-        private System.Windows.Forms.TextBox restaurante_idTextBox;
+        private System.Windows.Forms.ComboBox restaurante_idComboBox;
+        private RestauranteDataSet3TableAdapters.MoradaSetTableAdapter moradaSetTableAdapter;
+        private System.Windows.Forms.BindingSource moradaSetBindingSource;
     }
 }

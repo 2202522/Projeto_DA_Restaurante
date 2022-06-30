@@ -31,22 +31,23 @@ namespace Projeto_DA_Restaurante
 
         private void Pedidos_Load(object sender, EventArgs e)
         {
-          
+
+
             // TODO: This line of code loads data into the 'restauranteDataSet3.PedidoSet' table. You can move, or remove it, as needed.
             this.pedidoSetTableAdapter.Fill(this.restauranteDataSet3.PedidoSet);
 
-            //SqlConnection sqlCon;
-            //string conString;
-            //string sqlQuery;
+            SqlConnection sqlCon;
+            string conString;
+            string sqlQuery;
 
-            //conString = "Projeto_DA_Restaurante.Properties.Settings.RestauranteConnectionString";
-            //sqlCon = new SqlConnection(conString);
-            //sqlCon.Open();
-            //sqlQuery = "SELECT * FROM PedidoSet";
-            //SqlDataAdapter dscmd = new SqlDataAdapter(sqlQuery, sqlCon);
-            //DataTable dtData = new DataTable();
-            //dscmd.Fill(dtData);
-            //pedidoSetDataGridView.DataSource = dtData;
+            conString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Restaurante;Persist Security Info=True;User ID=sa;Password=Restaurante_2022";
+            sqlCon = new SqlConnection(conString);
+            sqlCon.Open();
+            sqlQuery = "SELECT * FROM PedidoSet";
+            SqlDataAdapter dscmd = new SqlDataAdapter(sqlQuery, sqlCon);
+            DataTable dtData = new DataTable();
+            dscmd.Fill(dtData);
+            pedidoSetDataGridView.DataSource = dtData;
 
         }
 
