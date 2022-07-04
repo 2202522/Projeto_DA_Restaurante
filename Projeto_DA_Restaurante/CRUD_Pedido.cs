@@ -13,24 +13,24 @@ namespace Projeto_DA_Restaurante
 {
     public partial class CRUD_Pedido : Form
     {
+        RestauranteContext restauranteContext;
         public CRUD_Pedido()
         {
             InitializeComponent();
-        }
-
-        private void pedidoSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.pedidoSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
+            restauranteContext = new RestauranteContext();
         }
 
         private void CRUD_Pedido_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.PedidoSet' table. You can move, or remove it, as needed.
-            this.pedidoSetTableAdapter.Fill(this.restauranteDataSet3.PedidoSet);
-            
+            // TODO: This line of code loads data into the 'restGestDBDataSet.EstadoSet' table. You can move, or remove it, as needed.
+            this.estadoSetTableAdapter.Fill(this.restGestDBDataSet.EstadoSet);
+            // TODO: This line of code loads data into the 'restGestDBDataSet.PessoaSet' table. You can move, or remove it, as needed.
+            this.pessoaSetTableAdapter.Fill(this.restGestDBDataSet.PessoaSet);
+            // TODO: This line of code loads data into the 'restGestDBDataSet.PessoaSet_Cliente' table. You can move, or remove it, as needed.
+            this.pessoaSet_ClienteTableAdapter.Fill(this.restGestDBDataSet.PessoaSet_Cliente);
+            // TODO: This line of code loads data into the 'restGestDBDataSet.RestauranteSet' table. You can move, or remove it, as needed.
+            this.restauranteSetTableAdapter.Fill(this.restGestDBDataSet.RestauranteSet);
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -42,6 +42,15 @@ namespace Projeto_DA_Restaurante
 
         private void btnConcluir_Click(object sender, EventArgs e)
         {
+            Pedido pedidos = new Pedido();
+            pedidos.ValorTotal = Convert.ToDouble(valorTotalTextBox.Text);
+            pedidos.TrabalhadorId = Convert.ToInt32(trabalhadorIdcomboBox.SelectedValue);
+            pedidos.ClienteId = Convert.ToInt32(clienteIdcomboBox.SelectedValue);
+            pedidos.RestauranteId = Convert.ToInt32(restauranteIdComboBox.SelectedValue);
+            pedidos.EstadoId = Convert.ToInt32(estadoIdcomboBox.SelectedValue);
+            restauranteContext.PedidoSet.Add(pedidos);
+            restauranteContext.SaveChanges();
+
             this.Hide();
             Pedidos pedido = new Pedidos();
             pedido.ShowDialog();

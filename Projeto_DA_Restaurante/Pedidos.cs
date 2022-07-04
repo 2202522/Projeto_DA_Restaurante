@@ -1,8 +1,8 @@
-﻿using iTextSharp.text;
-using iTextSharp.text.pdf;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -36,13 +36,13 @@ namespace Projeto_DA_Restaurante
             // TODO: This line of code loads data into the 'restauranteDataSet3.PedidoSet' table. You can move, or remove it, as needed.
             this.pedidoSetTableAdapter.Fill(this.restauranteDataSet3.PedidoSet);
 
-            SqlConnection sqlCon;
-            string conString;
+            SqlConnection sqlCon;            
             string sqlQuery;
 
-            conString = @"Data Source=.\SQLEXPRESS;Initial Catalog=Restaurante;Persist Security Info=True;User ID=sa;Password=Restaurante_2022";
+            string conString = ConfigurationManager.ConnectionStrings["RestauranteContainer"].ConnectionString;
             sqlCon = new SqlConnection(conString);
             sqlCon.Open();
+
             sqlQuery = "SELECT * FROM PedidoSet";
             SqlDataAdapter dscmd = new SqlDataAdapter(sqlQuery, sqlCon);
             DataTable dtData = new DataTable();
@@ -67,72 +67,72 @@ namespace Projeto_DA_Restaurante
 
         private void Exportar_Click(object sender, EventArgs e)
         {
-            if (pedidoSetDataGridView.Rows.Count > 0)
-            {
-                SaveFileDialog sfd = new SaveFileDialog();
-                sfd.Filter = "PDF (*.pdf)|*.pdf";
-                sfd.FileName = "ListaPedidos.pdf";
-                bool fileError = false;
-                if (sfd.ShowDialog() == DialogResult.OK)
-                { 
-                    if (File.Exists(sfd.FileName))
-                    {
-                        try
-                        {
-                            File.Delete(sfd.FileName);
-                        }
-                        catch (IOException ex)
-                        {
-                            fileError = true;
-                            MessageBox.Show("Não foi possivel guardar os dados" + ex.Message);
-                        }
-                    }
-                    if (!fileError)
-                    {
-                        try
-                        {
-                            PdfPTable pdfTable = new PdfPTable(pedidoSetDataGridView.Columns.Count);
-                            pdfTable.DefaultCell.Padding = 3;
-                            pdfTable.WidthPercentage = 100;
-                            pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
+            //if (pedidoSetDataGridView.Rows.Count > 0)
+            //{
+            //    SaveFileDialog sfd = new SaveFileDialog();
+            //    sfd.Filter = "PDF (*.pdf)|*.pdf";
+            //    sfd.FileName = "ListaPedidos.pdf";
+            //    bool fileError = false;
+            //    if (sfd.ShowDialog() == DialogResult.OK)
+            //    { 
+            //        if (File.Exists(sfd.FileName))
+            //        {
+            //            try
+            //            {
+            //                File.Delete(sfd.FileName);
+            //            }
+            //            catch (IOException ex)
+            //            {
+            //                fileError = true;
+            //                MessageBox.Show("Não foi possivel guardar os dados" + ex.Message);
+            //            }
+            //        }
+            //        if (!fileError)
+            //        {
+            //            try
+            //            {
+            //                PdfPTable pdfTable = new PdfPTable(pedidoSetDataGridView.Columns.Count);
+            //                pdfTable.DefaultCell.Padding = 3;
+            //                pdfTable.WidthPercentage = 100;
+            //                pdfTable.HorizontalAlignment = Element.ALIGN_LEFT;
 
-                            foreach (DataGridViewColumn column in pedidoSetDataGridView.Columns)
-                            {
-                                PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
-                                pdfTable.AddCell(cell);
-                            }
+            //                foreach (DataGridViewColumn column in pedidoSetDataGridView.Columns)
+            //                {
+            //                    PdfPCell cell = new PdfPCell(new Phrase(column.HeaderText));
+            //                    pdfTable.AddCell(cell);
+            //                }
 
-                            foreach (DataGridViewRow row in pedidoSetDataGridView.Rows)
-                            {
-                                foreach (DataGridViewCell cell in row.Cells)
-                                {
-                                    pdfTable.AddCell(cell.Value.ToString());
-                                }
-                            }
+            //                foreach (DataGridViewRow row in pedidoSetDataGridView.Rows)
+            //                {
+            //                    foreach (DataGridViewCell cell in row.Cells)
+            //                    {
+            //                        pdfTable.AddCell(cell.Value.ToString());
+            //                    }
+            //                }
 
-                            using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
-                            {
-                                Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
-                                PdfWriter.GetInstance(pdfDoc, stream);
-                                pdfDoc.Open();
-                                pdfDoc.Add(pdfTable);
-                                pdfDoc.Close();
-                                stream.Close();
-                            }
+            //                using (FileStream stream = new FileStream(sfd.FileName, FileMode.Create))
+            //                {
+            //                    Document pdfDoc = new Document(PageSize.A4, 10f, 20f, 20f, 10f);
+            //                    PdfWriter.GetInstance(pdfDoc, stream);
+            //                    pdfDoc.Open();
+            //                    pdfDoc.Add(pdfTable);
+            //                    pdfDoc.Close();
+            //                    stream.Close();
+            //                }
 
-                            MessageBox.Show("Exportado com sucesso", "Info");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Erro :" + ex.Message);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Sem dados para exportar", "Info");
-            }
+            //                MessageBox.Show("Exportado com sucesso", "Info");
+            //            }
+            //            catch (Exception ex)
+            //            {
+            //                MessageBox.Show("Erro :" + ex.Message);
+            //            }
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Sem dados para exportar", "Info");
+            //}
         }
 
         private void btnPagamento_Click(object sender, EventArgs e)
@@ -147,6 +147,32 @@ namespace Projeto_DA_Restaurante
             this.Hide();
             Prato prato = new Prato();
             prato.ShowDialog();
+        }
+
+        private void querryPedidoToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.pedidoSetTableAdapter.QuerryPedido(this.restauranteDataSet3.PedidoSet);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.pedidoSetTableAdapter.FillBy1(this.restauranteDataSet3.PedidoSet);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

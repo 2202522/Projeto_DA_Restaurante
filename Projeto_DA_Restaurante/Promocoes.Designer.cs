@@ -29,11 +29,113 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridViewPromocoes = new System.Windows.Forms.DataGridView();
+            this.restGestDBDataSet = new Projeto_DA_Restaurante.RestGestDBDataSet();
+            this.promocaosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.promocaosTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.PromocaosTableAdapter();
+            this.referenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.percentagemPromocaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPromocoes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.promocaosBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnBack
+            // 
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(12, 225);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(90, 40);
+            this.btnBack.TabIndex = 7;
+            this.btnBack.Text = "Voltar";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(186, 225);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 40);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Criar Codigos de Promoção";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dataGridViewPromocoes
+            // 
+            this.dataGridViewPromocoes.AllowUserToAddRows = false;
+            this.dataGridViewPromocoes.AllowUserToDeleteRows = false;
+            this.dataGridViewPromocoes.AutoGenerateColumns = false;
+            this.dataGridViewPromocoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPromocoes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.referenciaDataGridViewTextBoxColumn,
+            this.percentagemPromocaoDataGridViewTextBoxColumn});
+            this.dataGridViewPromocoes.DataSource = this.promocaosBindingSource;
+            this.dataGridViewPromocoes.Location = new System.Drawing.Point(12, 26);
+            this.dataGridViewPromocoes.Name = "dataGridViewPromocoes";
+            this.dataGridViewPromocoes.ReadOnly = true;
+            this.dataGridViewPromocoes.Size = new System.Drawing.Size(265, 150);
+            this.dataGridViewPromocoes.TabIndex = 9;
+            // 
+            // restGestDBDataSet
+            // 
+            this.restGestDBDataSet.DataSetName = "RestGestDBDataSet";
+            this.restGestDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // promocaosBindingSource
+            // 
+            this.promocaosBindingSource.DataMember = "Promocaos";
+            this.promocaosBindingSource.DataSource = this.restGestDBDataSet;
+            // 
+            // promocaosTableAdapter
+            // 
+            this.promocaosTableAdapter.ClearBeforeFill = true;
+            // 
+            // referenciaDataGridViewTextBoxColumn
+            // 
+            this.referenciaDataGridViewTextBoxColumn.DataPropertyName = "Referencia";
+            this.referenciaDataGridViewTextBoxColumn.HeaderText = "Referencia";
+            this.referenciaDataGridViewTextBoxColumn.Name = "referenciaDataGridViewTextBoxColumn";
+            this.referenciaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // percentagemPromocaoDataGridViewTextBoxColumn
+            // 
+            this.percentagemPromocaoDataGridViewTextBoxColumn.DataPropertyName = "PercentagemPromocao";
+            this.percentagemPromocaoDataGridViewTextBoxColumn.HeaderText = "Percentagem Promoção";
+            this.percentagemPromocaoDataGridViewTextBoxColumn.Name = "percentagemPromocaoDataGridViewTextBoxColumn";
+            this.percentagemPromocaoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.percentagemPromocaoDataGridViewTextBoxColumn.Width = 120;
+            // 
+            // Promocoes
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(288, 277);
+            this.Controls.Add(this.dataGridViewPromocoes);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBack);
+            this.Name = "Promocoes";
             this.Text = "Promocoes";
+            this.Load += new System.EventHandler(this.Promocoes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPromocoes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.promocaosBindingSource)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridViewPromocoes;
+        private RestGestDBDataSet restGestDBDataSet;
+        private System.Windows.Forms.BindingSource promocaosBindingSource;
+        private RestGestDBDataSetTableAdapters.PromocaosTableAdapter promocaosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn referenciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn percentagemPromocaoDataGridViewTextBoxColumn;
     }
 }

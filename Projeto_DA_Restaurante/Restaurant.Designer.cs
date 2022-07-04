@@ -43,7 +43,6 @@
             this.metodoPagamentoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_CRUD_Restaurante = new System.Windows.Forms.Button();
-            this.categoriaSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btn_CRUD_Trabalhadores = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -62,7 +61,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetBindingNavigator)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +90,7 @@
             this.categoriaSetDataGridView.ReadOnly = true;
             this.categoriaSetDataGridView.Size = new System.Drawing.Size(243, 220);
             this.categoriaSetDataGridView.TabIndex = 0;
+            this.categoriaSetDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categoriaSetDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -142,6 +141,7 @@
             this.metodoPagamentoSetDataGridView.ReadOnly = true;
             this.metodoPagamentoSetDataGridView.Size = new System.Drawing.Size(243, 220);
             this.metodoPagamentoSetDataGridView.TabIndex = 0;
+            this.metodoPagamentoSetDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metodoPagamentoSetDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -182,23 +182,6 @@
             this.btn_CRUD_Restaurante.Text = "Criar/Editar Restaurante";
             this.btn_CRUD_Restaurante.UseVisualStyleBackColor = true;
             this.btn_CRUD_Restaurante.Click += new System.EventHandler(this.btn_CRUD_Restaurante_Click);
-            // 
-            // categoriaSetBindingNavigator
-            // 
-            this.categoriaSetBindingNavigator.AddNewItem = null;
-            this.categoriaSetBindingNavigator.BindingSource = this.categoriaSetBindingSource;
-            this.categoriaSetBindingNavigator.CountItem = null;
-            this.categoriaSetBindingNavigator.DeleteItem = null;
-            this.categoriaSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.categoriaSetBindingNavigator.MoveFirstItem = null;
-            this.categoriaSetBindingNavigator.MoveLastItem = null;
-            this.categoriaSetBindingNavigator.MoveNextItem = null;
-            this.categoriaSetBindingNavigator.MovePreviousItem = null;
-            this.categoriaSetBindingNavigator.Name = "categoriaSetBindingNavigator";
-            this.categoriaSetBindingNavigator.PositionItem = null;
-            this.categoriaSetBindingNavigator.Size = new System.Drawing.Size(576, 25);
-            this.categoriaSetBindingNavigator.TabIndex = 3;
-            this.categoriaSetBindingNavigator.Text = "bindingNavigator1";
             // 
             // groupBox4
             // 
@@ -311,7 +294,6 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.categoriaSetBindingNavigator);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -326,11 +308,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetBindingNavigator)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -344,7 +324,6 @@
         private System.Windows.Forms.BindingSource categoriaSetBindingSource;
         private RestauranteDataSet3TableAdapters.CategoriaSetTableAdapter categoriaSetTableAdapter;
         private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator categoriaSetBindingNavigator;
         private System.Windows.Forms.DataGridView categoriaSetDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

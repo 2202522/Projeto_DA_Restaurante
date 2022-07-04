@@ -21,11 +21,9 @@ namespace Projeto_DA_Restaurante
 
         private void Utilizadores_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.MoradaSet' table. You can move, or remove it, as needed.
-            this.moradaSetTableAdapter.Fill(this.restauranteDataSet3.MoradaSet);
-            // TODO: This line of code loads data into the 'restauranteDataSet3.PessoaSet' table. You can move, or remove it, as needed.
-            this.pessoaSetTableAdapter.Fill(this.restauranteDataSet3.PessoaSet);
-            // TODO: This line of code loads data into the 'restauranteDataSet3.MoradaSet' table. You can move, or remove it, as needed.
+            // TODO: This line of code loads data into the 'restGestDBDataSet1.PessoaSet' table. You can move, or remove it, as needed.
+            this.pessoaSetTableAdapter1.Fill(this.restGestDBDataSet1.PessoaSet);
+
             // this.moradaSetTableAdapter.Fill(this.restauranteDataSet3.MoradaSet);
 
         }
@@ -33,8 +31,8 @@ namespace Projeto_DA_Restaurante
         private void btnEditarClientes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CRUD_Morada cRUD_Morada = new CRUD_Morada();
-            cRUD_Morada.ShowDialog();
+            CRUD_Utilizador cRUD_Utilizador = new CRUD_Utilizador();
+            cRUD_Utilizador.ShowDialog();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -42,14 +40,6 @@ namespace Projeto_DA_Restaurante
             this.Hide();
             MainPage mainPage = new MainPage();
             mainPage.ShowDialog();
-        }
-
-        private void pessoaSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.pessoaSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
         }
 
         private void pessoaSetBindingNavigator_RefreshItems(object sender, EventArgs e)
@@ -62,6 +52,11 @@ namespace Projeto_DA_Restaurante
             this.Hide();
             CRUD_Cliente cRUD_Cliente = new CRUD_Cliente();
             cRUD_Cliente.ShowDialog();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

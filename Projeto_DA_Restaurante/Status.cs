@@ -27,6 +27,10 @@ namespace Projeto_DA_Restaurante
 
         private void State_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'restGestDBDataSet.EstadoSet' table. You can move, or remove it, as needed.
+            this.estadoSetTableAdapter1.Fill(this.restGestDBDataSet.EstadoSet);
+            // TODO: This line of code loads data into the 'restauranteDataSet3.EstadoSet' table. You can move, or remove it, as needed.
+            this.estadoSetTableAdapter.Fill(this.restauranteDataSet3.EstadoSet);
             // TODO: This line of code loads data into the 'restauranteDataSet3.EstadoSet' table. You can move, or remove it, as needed.
             this.estadoSetTableAdapter.Fill(this.restauranteDataSet3.EstadoSet);
 
@@ -44,6 +48,24 @@ namespace Projeto_DA_Restaurante
             this.Hide();
             CRUD_State cRUD_State = new CRUD_State();
             cRUD_State.ShowDialog();
+        }
+
+        private void estadoSetBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void estadoSetBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void estadoSetBindingNavigatorSaveItem_Click_3(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.estadoSetBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
+
         }
     }
 }

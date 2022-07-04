@@ -12,23 +12,15 @@ namespace Projeto_DA_Restaurante
 {
     public partial class CRUD_State : Form
     {
+        RestauranteContext restauranteContext;
         public CRUD_State()
         {
             InitializeComponent();
-        }
-
-        private void estadoSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.estadoSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
+            restauranteContext = new RestauranteContext();
         }
 
         private void CRUD_State_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.EstadoSet' table. You can move, or remove it, as needed.
-            this.estadoSetTableAdapter.Fill(this.restauranteDataSet3.EstadoSet);
 
         }
 
@@ -41,6 +33,11 @@ namespace Projeto_DA_Restaurante
 
         private void btnConcluir_Click(object sender, EventArgs e)
         {
+            Estado estado = new Estado();
+            estado.estado = estadoTextBox.Text;
+            restauranteContext.EstadoSet.Add(estado);
+            restauranteContext.SaveChanges();
+
             this.Hide();
             Status state = new Status();
             state.ShowDialog();

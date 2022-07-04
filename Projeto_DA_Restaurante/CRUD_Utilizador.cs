@@ -12,31 +12,36 @@ namespace Projeto_DA_Restaurante
 {
     public partial class CRUD_Utilizador : Form
     {
+        RestauranteContext restauranteContext;
         public CRUD_Utilizador()
         {
             InitializeComponent();
+            restauranteContext = new RestauranteContext();
         }        
 
         private void CRUD_Cliente_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.PessoaSet' table. You can move, or remove it, as needed.
-            this.pessoaSetTableAdapter.Fill(this.restauranteDataSet3.PessoaSet);
 
         }
 
         private void btnSeguinte_Click(object sender, EventArgs e)
         {
+            Pessoa pessoa = new Pessoa();
+            pessoa.Nome = nomeTextBox.Text;
+            pessoa.Telemovel = int.Parse(telemovelTextBox.Text);
+            restauranteContext.PessoaSet.Add(pessoa);
+            restauranteContext.SaveChanges();
+
+            this.Hide();
+            CRUD_Morada cRUD_Morada = new CRUD_Morada();
+            cRUD_Morada.ShowDialog();
+        }
+
+        private void voltarbutton_Click(object sender, EventArgs e)
+        {
             this.Hide();
             Utilizadores utilizadores = new Utilizadores();
             utilizadores.ShowDialog();
-        }
-
-        private void pessoaSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.pessoaSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
         }
     }
 }

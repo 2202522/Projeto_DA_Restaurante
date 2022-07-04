@@ -13,18 +13,15 @@ namespace Projeto_DA_Restaurante
 {
     public partial class CRUD_Restaurant : Form
     {
+        RestauranteContext restauranteContext;
         public CRUD_Restaurant()
         {
             InitializeComponent();
+            restauranteContext = new RestauranteContext();
         }
         
         private void CRUD_Restaurant_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.MoradaSet' table. You can move, or remove it, as needed.
-            this.moradaSetTableAdapter.Fill(this.restauranteDataSet3.MoradaSet);
-            // TODO: This line of code loads data into the 'restauranteDataSet3.RestauranteSet' table. You can move, or remove it, as needed.
-            this.restauranteSetTableAdapter.Fill(this.restauranteDataSet3.RestauranteSet);
-
+        {            
             //string constr = @"Data Source=.\SQLEXPRESS;Initial Catalog=Restaurante;Persist Security Info=True;User ID=sa;Password=Restaurante_2022";
             //using (SqlConnection con = new SqlConnection(constr))
             //{
@@ -41,9 +38,14 @@ namespace Projeto_DA_Restaurante
 
         private void btnConcluir_Click(object sender, EventArgs e)
         {
+            Restaurante restaurante = new Restaurante();
+            restaurante.Nome = nomeTextBox.Text;
+            restauranteContext.RestauranteSet.Add(restaurante);
+            restauranteContext.SaveChanges();
+
             this.Hide();
-            Restaurant restaurant = new Restaurant();
-            restaurant.ShowDialog();
+            CRUD_Morada_Restaurante cRUD_Morada_Restaurante = new CRUD_Morada_Restaurante();
+            cRUD_Morada_Restaurante.ShowDialog();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -53,32 +55,13 @@ namespace Projeto_DA_Restaurante
             restaurant.ShowDialog();
         }
 
-        private void restauranteSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.restauranteSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
-        }
-
-        private void restauranteSetBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.restauranteSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
-        }
-
-        private void restaurante_idComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void restaurante_idComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
         }
 
-        private void restauranteSetBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        private void nomeTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.Validate();
-            this.restauranteSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
 
         }
     }

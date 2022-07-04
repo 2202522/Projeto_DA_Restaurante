@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,23 +13,19 @@ namespace Projeto_DA_Restaurante
 {
     public partial class CRUD_Menu : Form
     {
+
+        RestauranteContext restauranteContext;
         public CRUD_Menu()
         {
             InitializeComponent();
-        }
-
-        private void itemMenuSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.itemMenuSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
+            restauranteContext = new RestauranteContext();
 
         }
 
         private void CRUD_Menu_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.ItemMenuSet' table. You can move, or remove it, as needed.
-            this.itemMenuSetTableAdapter.Fill(this.restauranteDataSet3.ItemMenuSet);
+            // TODO: This line of code loads data into the 'restGestDBDataSet.CategoriaSet' table. You can move, or remove it, as needed.
+            this.categoriaSetTableAdapter.Fill(this.restGestDBDataSet.CategoriaSet);
 
         }
 
@@ -41,9 +38,34 @@ namespace Projeto_DA_Restaurante
 
         private void btnCocluir_Click(object sender, EventArgs e)
         {
+            ItemMenu itemMenu = new ItemMenu();
+            itemMenu.Nome = nomeTextBox.Text;            
+            itemMenu.Fotografia = fotografiaTextBox.Text;
+            itemMenu.Preco = Convert.ToDouble(precoTextBox.Text);
+            itemMenu.Ingredientes = ingredientesTextBox.Text;
+            itemMenu.Ativo = ativoTextBox.Text; //alterar para bolean
+            itemMenu.CategoriaId = Convert.ToInt32(categoriacomboBox.SelectedValue);
+            restauranteContext.ItemMenuSet.Add(itemMenu);
+            restauranteContext.SaveChanges();
+
             this.Hide();
             Menu menu = new Menu();
             menu.ShowDialog();
+        }
+
+        private void fotografiaTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void categoriacomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void categoriaSetBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

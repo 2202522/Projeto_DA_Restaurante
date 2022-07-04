@@ -19,9 +19,8 @@ namespace Projeto_DA_Restaurante
         public string CodPostal { get; set; }
         public string Pais { get; set; }
         public string Rua { get; set; }
-        public string Rua01 { get; set; }
     
-        public virtual Pessoa Pessoa { get; set; }
         public virtual Restaurante Restaurante { get; set; }
+        public virtual Pessoa Pessoa { get; set; }
     }
 }
