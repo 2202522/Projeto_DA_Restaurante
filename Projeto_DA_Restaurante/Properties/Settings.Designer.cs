@@ -33,5 +33,16 @@ namespace Projeto_DA_Restaurante.Properties {
                 return ((string)(this["RestauranteConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=RestGestDB;Integrated Security" +
+            "=True")]
+        public string RestGestDBConnectionString {
+            get {
+                return ((string)(this["RestGestDBConnectionString"]));
+            }
+        }
     }
 }

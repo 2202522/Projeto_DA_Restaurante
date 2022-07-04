@@ -13,40 +13,43 @@ namespace Projeto_DA_Restaurante
 {
     public partial class Prato : Form
     {
+        RestauranteContext restauranteContext;
         public Prato()
         {
             InitializeComponent();
+            restauranteContext = new RestauranteContext();
         }
-
-        private void pedidoItemMenuBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.pedidoItemMenuBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
-        }
-
         private void Prato_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.PedidoItemMenu' table. You can move, or remove it, as needed.
-            this.pedidoItemMenuTableAdapter.Fill(this.restauranteDataSet3.PedidoItemMenu);
-            string constr = @"Data Source=.\SQLEXPRESS;Initial Catalog=Restaurante;Persist Security Info=True;User ID=sa;Password=Restaurante_2022";
-            using (SqlConnection con = new SqlConnection(constr)) 
-            {
-                using (SqlDataAdapter sda = new SqlDataAdapter("SELECT Id, Nome FROM ItemMenuSet", con))
-                {
-                    DataTable dt = new DataTable();
-                    sda.Fill(dt);
+            // TODO: This line of code loads data into the 'restGestDBDataSet.PedidoSet' table. You can move, or remove it, as needed.
+            this.pedidoSetTableAdapter.Fill(this.restGestDBDataSet.PedidoSet);
+            // TODO: This line of code loads data into the 'restGestDBDataSet.ItemMenuSet' table. You can move, or remove it, as needed.
+            this.itemMenuSetTableAdapter.Fill(this.restGestDBDataSet.ItemMenuSet);
 
-                    itemMenu_IdComboBox.DataSource = dt;
-                    itemMenu_IdComboBox.DisplayMember = "Nome";
-                    itemMenu_IdComboBox.ValueMember = "Id";
-                }
-            }
+            //string constr = @"Data Source=.\SQLEXPRESS;Initial Catalog=Restaurante;Persist Security Info=True;User ID=sa;Password=Restaurante_2022";
+            //using (SqlConnection con = new SqlConnection(constr)) 
+            //{
+            //    using (SqlDataAdapter sda = new SqlDataAdapter("SELECT Id, Nome FROM ItemMenuSet", con))
+            //    {
+            //        DataTable dt = new DataTable();
+            //        sda.Fill(dt);
+
+            //        itemMenu_IdComboBox.DataSource = dt;
+            //        itemMenu_IdComboBox.DisplayMember = "Nome";
+            //        itemMenu_IdComboBox.ValueMember = "Id";
+            //    }
+            //}
         }
 
         private void btnConcluir_Click(object sender, EventArgs e)
         {
+            //Pedi itemMenu = new ItemMenu();
+            //itemMenu.Nome = nomeTextBox.Text;
+            //itemMenu.Fotografia = fotografiaTextBox.Text;
+
+            //restauranteContext.ItemMenuSet.Add(itemMenu);
+            //restauranteContext.SaveChanges();
+
             this.Hide();
             Pedidos pedido = new Pedidos();
             pedido.ShowDialog();
@@ -59,13 +62,6 @@ namespace Projeto_DA_Restaurante
             pedido.ShowDialog();
         }
 
-        private void pedidoItemMenuBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.pedidoItemMenuBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
-        }
 
         private void itemMenu_IdComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -15,31 +15,46 @@ namespace Projeto_DA_Restaurante
 {
     public partial class CRUD_Morada : Form
     {
+        RestauranteContext restauranteContext;
         public CRUD_Morada()
         {
             InitializeComponent();
+            restauranteContext = new RestauranteContext();
         }
 
         private void CRUD_Morada_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.MoradaSet' table. You can move, or remove it, as needed.
-            this.moradaSetTableAdapter.Fill(this.restauranteDataSet3.MoradaSet);
-
+            // TODO: This line of code loads data into the 'restGestDBDataSet.PessoaSet' table. You can move, or remove it, as needed.
+            this.pessoaSetTableAdapter.Fill(this.restGestDBDataSet.PessoaSet);
         }
 
         private void btnSeguinte_Click(object sender, EventArgs e)
         {
+            Morada morada = new Morada();
+            morada.Cidade = cidadeTextBox.Text;
+            morada.CodPostal = codPostalTextBox.Text;
+            morada.Rua = ruaTextBox.Text;
+            morada.Pais = paisTextBox.Text;
+            morada.Pessoa.Id = Convert.ToInt32(nomeComboBox.SelectedValue);
+            restauranteContext.MoradaSet.Add(morada);          
+            restauranteContext.SaveChanges();
+
             this.Hide();
-            CRUD_Utilizador cRUD_Cliente = new CRUD_Utilizador();
-            cRUD_Cliente.ShowDialog();
+            Utilizadores utilizadores = new Utilizadores();
+            utilizadores.ShowDialog();
 
         }
 
-        private void moradaSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void nomeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pessoaSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.moradaSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
+            this.pessoaSetBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.restGestDBDataSet);
 
         }
     }

@@ -29,59 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
-            this.pedidoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pedidoSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PedidoSetTableAdapter();
-            this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
             this.pedidoSetDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pedidoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.CRUD_Pedido = new System.Windows.Forms.Button();
             this.Exportar = new System.Windows.Forms.Button();
             this.btnPagamento = new System.Windows.Forms.Button();
             this.btnAdicionarPrato = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).BeginInit();
+            this.pedidoSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PedidoSetTableAdapter();
+            this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoSetDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // restauranteDataSet3
-            // 
-            this.restauranteDataSet3.DataSetName = "RestauranteDataSet3";
-            this.restauranteDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pedidoSetBindingSource
-            // 
-            this.pedidoSetBindingSource.DataMember = "PedidoSet";
-            this.pedidoSetBindingSource.DataSource = this.restauranteDataSet3;
-            // 
-            // pedidoSetTableAdapter
-            // 
-            this.pedidoSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoriaSetTableAdapter = null;
-            this.tableAdapterManager.EstadoSetTableAdapter = null;
-            this.tableAdapterManager.ItemMenuSetTableAdapter = null;
-            this.tableAdapterManager.MetodoPagamentoSetTableAdapter = null;
-            this.tableAdapterManager.MoradaSetTableAdapter = null;
-            this.tableAdapterManager.PagamentoSetTableAdapter = null;
-            this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
-            this.tableAdapterManager.PedidoSetTableAdapter = this.pedidoSetTableAdapter;
-            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
-            this.tableAdapterManager.PessoaSetTableAdapter = null;
-            this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
-            this.tableAdapterManager.RestauranteSetTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // pedidoSetDataGridView
             // 
@@ -137,12 +105,22 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
+            // pedidoSetBindingSource
+            // 
+            this.pedidoSetBindingSource.DataMember = "PedidoSet";
+            this.pedidoSetBindingSource.DataSource = this.restauranteDataSet3;
+            // 
+            // restauranteDataSet3
+            // 
+            this.restauranteDataSet3.DataSetName = "RestauranteDataSet3";
+            this.restauranteDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pedidoSetDataGridView);
             this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(563, 248);
+            this.groupBox1.Size = new System.Drawing.Size(573, 248);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pedidos";
@@ -198,9 +176,31 @@
             this.btnAdicionarPrato.Name = "btnAdicionarPrato";
             this.btnAdicionarPrato.Size = new System.Drawing.Size(90, 40);
             this.btnAdicionarPrato.TabIndex = 11;
-            this.btnAdicionarPrato.Text = " ";
+            this.btnAdicionarPrato.Text = " Associar Prato a um Pedido";
             this.btnAdicionarPrato.UseVisualStyleBackColor = true;
             this.btnAdicionarPrato.Click += new System.EventHandler(this.btnAdicionarPrato_Click);
+            // 
+            // pedidoSetTableAdapter
+            // 
+            this.pedidoSetTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CategoriaSetTableAdapter = null;
+            this.tableAdapterManager.EstadoSetTableAdapter = null;
+            this.tableAdapterManager.ItemMenuSetTableAdapter = null;
+            this.tableAdapterManager.MetodoPagamentoSetTableAdapter = null;
+            this.tableAdapterManager.MoradaSetTableAdapter = null;
+            this.tableAdapterManager.PagamentoSetTableAdapter = null;
+            this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
+            this.tableAdapterManager.PedidoSetTableAdapter = this.pedidoSetTableAdapter;
+            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
+            this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
+            this.tableAdapterManager.PessoaSetTableAdapter = null;
+            this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
+            this.tableAdapterManager.RestauranteSetTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Pedidos
             // 
@@ -216,9 +216,9 @@
             this.Name = "Pedidos";
             this.Text = "Pedidos";
             this.Load += new System.EventHandler(this.Pedidos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoSetDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 

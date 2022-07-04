@@ -15,10 +15,10 @@ namespace Projeto_DA_Restaurante
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class RestauranteContainer : DbContext
+    public partial class RestauranteContext : DbContext
     {
-        public RestauranteContainer()
-            : base("name=RestauranteContainer")
+        public RestauranteContext()
+            : base("name=RestauranteContext")
         {
         }
     
@@ -37,6 +37,7 @@ namespace Projeto_DA_Restaurante
         public virtual DbSet<Categoria> CategoriaSet { get; set; }
         public virtual DbSet<Morada> MoradaSet { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Promocao> Promocaos { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

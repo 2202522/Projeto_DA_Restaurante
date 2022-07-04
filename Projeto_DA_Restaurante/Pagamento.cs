@@ -18,8 +18,11 @@ namespace Projeto_DA_Restaurante
         public double Valor { get; set; }
         public int MetodoPagamentoId { get; set; }
         public int PedidoId { get; set; }
+        public System.DateTime Data { get; set; }
+        public int PromocaoIdPromocao { get; set; }
     
         public virtual MetodoPagamento MetodoPagamento { get; set; }
         public virtual Pedido Pedido { get; set; }
+        public virtual Promocao Promocao { get; set; }
     }
 }

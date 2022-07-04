@@ -12,9 +12,12 @@ namespace Projeto_DA_Restaurante
 {
     public partial class Restaurant : Form
     {
+        RestauranteContext restauranteContext;
+
         public Restaurant()
         {
             InitializeComponent();
+            restauranteContext = new RestauranteContext();
         }
 
         private void categoriaSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -27,11 +30,8 @@ namespace Projeto_DA_Restaurante
 
         private void Restaurant_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.MetodoPagamentoSet' table. You can move, or remove it, as needed.
-            this.metodoPagamentoSetTableAdapter.Fill(this.restauranteDataSet3.MetodoPagamentoSet);
-            // TODO: This line of code loads data into the 'restauranteDataSet3.CategoriaSet' table. You can move, or remove it, as needed.
-            this.categoriaSetTableAdapter.Fill(this.restauranteDataSet3.CategoriaSet);
-
+            metodoPagamentoSetDataGridView.DataSource = restauranteContext.MetodoPagamentoSet.ToList();
+            categoriaSetDataGridView.DataSource = restauranteContext.CategoriaSet.ToList();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -66,7 +66,7 @@ namespace Projeto_DA_Restaurante
         {
             this.Hide();
             Trabalhadores trabalhadores = new Trabalhadores();
-            trabalhadores.ShowDialog();
+            trabalhadores.ShowDialog();                     
         }
 
         private void btn_CRUD_Menu_Click(object sender, EventArgs e)
@@ -74,6 +74,16 @@ namespace Projeto_DA_Restaurante
             this.Hide();
             Menu menu = new Menu();
             menu.ShowDialog();
+        }
+
+        private void categoriaSetDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void metodoPagamentoSetDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
