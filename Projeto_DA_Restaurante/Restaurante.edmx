@@ -65,21 +65,21 @@
       <End Role="Trabalhador" EntitySet="PessoaSet_Trabalhador" />
       <End Role="Pedido" EntitySet="PedidoSet" />
     </AssociationSet>
-    <AssociationSet Name="PessoaMorada" Association="Restaurante.Store.PessoaMorada">
-      <End Role="Pessoa" EntitySet="PessoaSet" />
-      <End Role="Morada" EntitySet="MoradaSet" />
-    </AssociationSet>
     <AssociationSet Name="EstadoPedido" Association="Restaurante.Store.EstadoPedido">
       <End Role="Estado" EntitySet="EstadoSet" />
       <End Role="Pedido" EntitySet="PedidoSet" />
     </AssociationSet>
-    <AssociationSet Name="RestauranteMorada" Association="Restaurante.Store.RestauranteMorada">
-      <End Role="Restaurante" EntitySet="RestauranteSet" />
-      <End Role="Morada" EntitySet="MoradaSet" />
-    </AssociationSet>
     <AssociationSet Name="PromocaoPagamento" Association="Restaurante.Store.PromocaoPagamento">
       <End Role="Promocao" EntitySet="Promocaos" />
       <End Role="Pagamento" EntitySet="PagamentoSet" />
+    </AssociationSet>
+    <AssociationSet Name="PessoaMorada" Association="Restaurante.Store.PessoaMorada">
+      <End Role="Pessoa" EntitySet="PessoaSet" />
+      <End Role="Morada" EntitySet="MoradaSet" />
+    </AssociationSet>
+    <AssociationSet Name="MoradaRestaurante" Association="Restaurante.Store.MoradaRestaurante">
+      <End Role="Morada" EntitySet="MoradaSet" />
+      <End Role="Restaurante" EntitySet="RestauranteSet" />
     </AssociationSet>
     <AssociationSet Name="FK_Trabalhador_inherits_Pessoa" Association="Restaurante.Store.FK_Trabalhador_inherits_Pessoa">
       <End Role="Pessoa" EntitySet="PessoaSet" />
@@ -97,6 +97,7 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Telemovel" Type="int" Nullable="false" />
+    <Property Name="Morada_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PagamentoSet">
     <Key>
@@ -141,7 +142,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Restaurante_id" Type="int" Nullable="true" />
+    <Property Name="Morada_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ItemMenuSet">
     <Key>
@@ -169,11 +170,9 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Cidade" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CodPostal" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CodPostal" Type="int" Nullable="false" />
     <Property Name="Pais" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Rua" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Pessoa_Id" Type="int" Nullable="false" />
-    <Property Name="Restaurante_Id" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -310,18 +309,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="PessoaMorada">
-    <End Role="Pessoa" Type="Restaurante.Store.PessoaSet" Multiplicity="1" />
-    <End Role="Morada" Type="Restaurante.Store.MoradaSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Pessoa">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Morada">
-        <PropertyRef Name="Pessoa_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="EstadoPedido">
     <End Role="Estado" Type="Restaurante.Store.EstadoSet" Multiplicity="1" />
     <End Role="Pedido" Type="Restaurante.Store.PedidoSet" Multiplicity="*" />
@@ -334,18 +321,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="RestauranteMorada">
-    <End Role="Restaurante" Type="Restaurante.Store.RestauranteSet" Multiplicity="1" />
-    <End Role="Morada" Type="Restaurante.Store.MoradaSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Restaurante">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Morada">
-        <PropertyRef Name="Restaurante_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="PromocaoPagamento">
     <End Role="Promocao" Type="Restaurante.Store.Promocaos" Multiplicity="1" />
     <End Role="Pagamento" Type="Restaurante.Store.PagamentoSet" Multiplicity="*" />
@@ -355,6 +330,30 @@
       </Principal>
       <Dependent Role="Pagamento">
         <PropertyRef Name="PromocaoIdPromocao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PessoaMorada">
+    <End Role="Pessoa" Type="Restaurante.Store.PessoaSet" Multiplicity="*" />
+    <End Role="Morada" Type="Restaurante.Store.MoradaSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Morada">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pessoa">
+        <PropertyRef Name="Morada_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MoradaRestaurante">
+    <End Role="Morada" Type="Restaurante.Store.MoradaSet" Multiplicity="1" />
+    <End Role="Restaurante" Type="Restaurante.Store.RestauranteSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Morada">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Restaurante">
+        <PropertyRef Name="Morada_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -484,10 +483,6 @@
             <End Role="Pedido" EntitySet="PedidoSet" />
           </AssociationSet>
           <EntitySet Name="MoradaSet" EntityType="Restaurante.Morada" />
-          <AssociationSet Name="PessoaMorada" Association="Restaurante.PessoaMorada">
-            <End Role="Pessoa" EntitySet="PessoaSet" />
-            <End Role="Morada" EntitySet="MoradaSet" />
-          </AssociationSet>
           <AssociationSet Name="EstadoPedido" Association="Restaurante.EstadoPedido">
             <End Role="Estado" EntitySet="EstadoSet" />
             <End Role="Pedido" EntitySet="PedidoSet" />
@@ -523,10 +518,6 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
-          <AssociationSet Name="RestauranteMorada" Association="Restaurante.RestauranteMorada">
-            <End EntitySet="RestauranteSet" Role="Restaurante" />
-            <End EntitySet="MoradaSet" Role="Morada" />
-          </AssociationSet>
           <FunctionImport Name="sp_alterdiagram1">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -561,6 +552,14 @@
           <AssociationSet Name="PromocaoPagamento" Association="Restaurante.PromocaoPagamento">
             <End Role="Promocao" EntitySet="Promocaos" />
             <End Role="Pagamento" EntitySet="PagamentoSet" />
+          </AssociationSet>
+          <AssociationSet Name="PessoaMorada" Association="Restaurante.PessoaMorada">
+            <End Role="Pessoa" EntitySet="PessoaSet" />
+            <End Role="Morada" EntitySet="MoradaSet" />
+          </AssociationSet>
+          <AssociationSet Name="MoradaRestaurante" Association="Restaurante.MoradaRestaurante">
+            <End Role="Morada" EntitySet="MoradaSet" />
+            <End Role="Restaurante" EntitySet="RestauranteSet" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="Pessoa">
@@ -641,8 +640,7 @@
           <NavigationProperty Name="ItemMenu" Relationship="Restaurante.RestauranteItemMenu" FromRole="Restaurante" ToRole="ItemMenu" />
           <NavigationProperty Name="Trabalhador" Relationship="Restaurante.RestauranteTrabalhador" FromRole="Restaurante" ToRole="Trabalhador" />
           <NavigationProperty Name="Pedido" Relationship="Restaurante.RestaurantePedido" FromRole="Restaurante" ToRole="Pedido" />
-          <NavigationProperty Name="Morada" Relationship="Restaurante.RestauranteMorada" FromRole="Restaurante" ToRole="Morada" />
-          <Property Name="Restaurante_id" Type="Int32" />
+          <NavigationProperty Name="Morada" Relationship="Restaurante.MoradaRestaurante" FromRole="Restaurante" ToRole="Morada" />
         </EntityType>
         <EntityType Name="ItemMenu">
           <Key>
@@ -766,16 +764,12 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Cidade" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="CodPostal" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="CodPostal" Type="Int32" Nullable="false" />
           <Property Name="Pais" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Rua" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Restaurante" Relationship="Restaurante.RestauranteMorada" FromRole="Morada" ToRole="Restaurante" />
           <NavigationProperty Name="Pessoa" Relationship="Restaurante.PessoaMorada" FromRole="Morada" ToRole="Pessoa" />
+          <NavigationProperty Name="Restaurante" Relationship="Restaurante.MoradaRestaurante" FromRole="Morada" ToRole="Restaurante" />
         </EntityType>
-        <Association Name="PessoaMorada">
-          <End Type="Restaurante.Pessoa" Role="Pessoa" Multiplicity="1" />
-          <End Type="Restaurante.Morada" Role="Morada" Multiplicity="0..1" />
-        </Association>
         <Association Name="EstadoPedido">
           <End Type="Restaurante.Estado" Role="Estado" Multiplicity="1" />
           <End Type="Restaurante.Pedido" Role="Pedido" Multiplicity="*" />
@@ -809,10 +803,6 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
-        <Association Name="RestauranteMorada">
-          <End Type="Restaurante.Restaurante" Multiplicity="1" Role="Restaurante" />
-          <End Type="Restaurante.Morada" Multiplicity="0..1" Role="Morada" />
-        </Association>
         <ComplexType Name="sp_helpdiagramdefinition1_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
           <Property Type="Binary" Name="definition" Nullable="true" />
@@ -844,6 +834,14 @@
               <PropertyRef Name="PromocaoIdPromocao" />
             </Dependent>
           </ReferentialConstraint>
+        </Association>
+        <Association Name="PessoaMorada">
+          <End Type="Restaurante.Pessoa" Role="Pessoa" Multiplicity="0..1" />
+          <End Type="Restaurante.Morada" Role="Morada" Multiplicity="1" />
+        </Association>
+        <Association Name="MoradaRestaurante">
+          <End Type="Restaurante.Morada" Role="Morada" Multiplicity="1" />
+          <End Type="Restaurante.Restaurante" Role="Restaurante" Multiplicity="0..1" />
         </Association>
         </Schema>
     </edmx:ConceptualModels>
@@ -921,7 +919,6 @@
         <MappingFragment StoreEntitySet="RestauranteSet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
-          <ScalarProperty Name="Restaurante_id" ColumnName="Restaurante_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -994,19 +991,19 @@
         <ScalarProperty Name="Id" ColumnName="ItemMenu_Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="PessoaMorada" TypeName="Restaurante.PessoaMorada" StoreEntitySet="MoradaSet">
-      <EndProperty Name="Pessoa">
-        <ScalarProperty Name="Id" ColumnName="Pessoa_Id" />
-      </EndProperty>
+    <AssociationSetMapping Name="PessoaMorada" TypeName="Restaurante.PessoaMorada" StoreEntitySet="PessoaSet">
       <EndProperty Name="Morada">
+        <ScalarProperty Name="Id" ColumnName="Morada_Id" />
+      </EndProperty>
+      <EndProperty Name="Pessoa">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="RestauranteMorada" TypeName="Restaurante.RestauranteMorada" StoreEntitySet="MoradaSet">
-      <EndProperty Name="Restaurante">
-        <ScalarProperty Name="Id" ColumnName="Restaurante_Id" />
-      </EndProperty>
+    <AssociationSetMapping Name="MoradaRestaurante" TypeName="Restaurante.MoradaRestaurante" StoreEntitySet="RestauranteSet">
       <EndProperty Name="Morada">
+        <ScalarProperty Name="Id" ColumnName="Morada_Id" />
+      </EndProperty>
+      <EndProperty Name="Restaurante">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>

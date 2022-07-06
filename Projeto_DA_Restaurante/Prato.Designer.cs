@@ -28,23 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label pedido_IdLabel;
             System.Windows.Forms.Label itemMenu_IdLabel;
             this.btnConcluir = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.pedido_IdComboBox = new System.Windows.Forms.ComboBox();
-            this.pedidoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.restGestDBDataSet = new Projeto_DA_Restaurante.RestGestDBDataSet();
             this.itemMenu_IdComboBox = new System.Windows.Forms.ComboBox();
-            this.itemMenuSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemMenuSetTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.ItemMenuSetTableAdapter();
-            this.pedidoSetTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.PedidoSetTableAdapter();
             pedido_IdLabel = new System.Windows.Forms.Label();
             itemMenu_IdLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pedido_IdLabel
@@ -85,14 +76,13 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(90, 40);
             this.btnBack.TabIndex = 10;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // pedido_IdComboBox
             // 
-            this.pedido_IdComboBox.DataSource = this.pedidoSetBindingSource;
-            this.pedido_IdComboBox.DisplayMember = "ValorTotal";
+            this.pedido_IdComboBox.DisplayMember = "Id";
             this.pedido_IdComboBox.FormattingEnabled = true;
             this.pedido_IdComboBox.Location = new System.Drawing.Point(142, 46);
             this.pedido_IdComboBox.Name = "pedido_IdComboBox";
@@ -100,20 +90,9 @@
             this.pedido_IdComboBox.TabIndex = 12;
             this.pedido_IdComboBox.ValueMember = "Id";
             // 
-            // pedidoSetBindingSource
-            // 
-            this.pedidoSetBindingSource.DataMember = "PedidoSet";
-            this.pedidoSetBindingSource.DataSource = this.restGestDBDataSet;
-            // 
-            // restGestDBDataSet
-            // 
-            this.restGestDBDataSet.DataSetName = "RestGestDBDataSet";
-            this.restGestDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // itemMenu_IdComboBox
             // 
-            this.itemMenu_IdComboBox.DataSource = this.itemMenuSetBindingSource;
-            this.itemMenu_IdComboBox.DisplayMember = "Nome";
+            this.itemMenu_IdComboBox.DisplayMember = "Id";
             this.itemMenu_IdComboBox.FormattingEnabled = true;
             this.itemMenu_IdComboBox.Location = new System.Drawing.Point(142, 73);
             this.itemMenu_IdComboBox.Name = "itemMenu_IdComboBox";
@@ -121,19 +100,6 @@
             this.itemMenu_IdComboBox.TabIndex = 14;
             this.itemMenu_IdComboBox.ValueMember = "Id";
             this.itemMenu_IdComboBox.SelectedIndexChanged += new System.EventHandler(this.itemMenu_IdComboBox_SelectedIndexChanged);
-            // 
-            // itemMenuSetBindingSource
-            // 
-            this.itemMenuSetBindingSource.DataMember = "ItemMenuSet";
-            this.itemMenuSetBindingSource.DataSource = this.restGestDBDataSet;
-            // 
-            // itemMenuSetTableAdapter
-            // 
-            this.itemMenuSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // pedidoSetTableAdapter
-            // 
-            this.pedidoSetTableAdapter.ClearBeforeFill = true;
             // 
             // Prato
             // 
@@ -149,9 +115,6 @@
             this.Name = "Prato";
             this.Text = "Associar prato a um pedido";
             this.Load += new System.EventHandler(this.Prato_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,10 +125,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ComboBox pedido_IdComboBox;
         private System.Windows.Forms.ComboBox itemMenu_IdComboBox;
-        private RestGestDBDataSet restGestDBDataSet;
-        private System.Windows.Forms.BindingSource itemMenuSetBindingSource;
-        private RestGestDBDataSetTableAdapters.ItemMenuSetTableAdapter itemMenuSetTableAdapter;
-        private System.Windows.Forms.BindingSource pedidoSetBindingSource;
-        private RestGestDBDataSetTableAdapters.PedidoSetTableAdapter pedidoSetTableAdapter;
+
     }
 }

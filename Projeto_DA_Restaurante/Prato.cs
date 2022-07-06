@@ -21,10 +21,7 @@ namespace Projeto_DA_Restaurante
         }
         private void Prato_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restGestDBDataSet.PedidoSet' table. You can move, or remove it, as needed.
-            this.pedidoSetTableAdapter.Fill(this.restGestDBDataSet.PedidoSet);
-            // TODO: This line of code loads data into the 'restGestDBDataSet.ItemMenuSet' table. You can move, or remove it, as needed.
-            this.itemMenuSetTableAdapter.Fill(this.restGestDBDataSet.ItemMenuSet);
+
 
             //string constr = @"Data Source=.\SQLEXPRESS;Initial Catalog=Restaurante;Persist Security Info=True;User ID=sa;Password=Restaurante_2022";
             //using (SqlConnection con = new SqlConnection(constr)) 

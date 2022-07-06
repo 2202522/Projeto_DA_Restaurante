@@ -28,96 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.pedidoSetDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pedidoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
+            this.DataGridViewPedidos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.CRUD_Pedido = new System.Windows.Forms.Button();
             this.Exportar = new System.Windows.Forms.Button();
             this.btnPagamento = new System.Windows.Forms.Button();
             this.btnAdicionarPrato = new System.Windows.Forms.Button();
-            this.pedidoSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PedidoSetTableAdapter();
-            this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewPedidos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pedidoSetDataGridView
+            // DataGridViewPedidos
             // 
-            this.pedidoSetDataGridView.AllowUserToAddRows = false;
-            this.pedidoSetDataGridView.AllowUserToDeleteRows = false;
-            this.pedidoSetDataGridView.AutoGenerateColumns = false;
-            this.pedidoSetDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pedidoSetDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.pedidoSetDataGridView.DataSource = this.pedidoSetBindingSource;
-            this.pedidoSetDataGridView.Location = new System.Drawing.Point(9, 19);
-            this.pedidoSetDataGridView.Name = "pedidoSetDataGridView";
-            this.pedidoSetDataGridView.ReadOnly = true;
-            this.pedidoSetDataGridView.Size = new System.Drawing.Size(544, 220);
-            this.pedidoSetDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ValorTotal";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ValorTotal";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "RestauranteId";
-            this.dataGridViewTextBoxColumn3.HeaderText = "RestauranteId";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "ClienteId";
-            this.dataGridViewTextBoxColumn4.HeaderText = "ClienteId";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "TrabalhadorId";
-            this.dataGridViewTextBoxColumn5.HeaderText = "TrabalhadorId";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "EstadoId";
-            this.dataGridViewTextBoxColumn6.HeaderText = "EstadoId";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // pedidoSetBindingSource
-            // 
-            this.pedidoSetBindingSource.DataMember = "PedidoSet";
-            this.pedidoSetBindingSource.DataSource = this.restauranteDataSet3;
-            // 
-            // restauranteDataSet3
-            // 
-            this.restauranteDataSet3.DataSetName = "RestauranteDataSet3";
-            this.restauranteDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.DataGridViewPedidos.AllowUserToAddRows = false;
+            this.DataGridViewPedidos.AllowUserToDeleteRows = false;
+            this.DataGridViewPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridViewPedidos.Location = new System.Drawing.Point(9, 19);
+            this.DataGridViewPedidos.Name = "DataGridViewPedidos";
+            this.DataGridViewPedidos.ReadOnly = true;
+            this.DataGridViewPedidos.Size = new System.Drawing.Size(544, 220);
+            this.DataGridViewPedidos.TabIndex = 1;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pedidoSetDataGridView);
+            this.groupBox1.Controls.Add(this.DataGridViewPedidos);
             this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(573, 248);
@@ -132,7 +67,7 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(90, 40);
             this.btnBack.TabIndex = 7;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -180,28 +115,6 @@
             this.btnAdicionarPrato.UseVisualStyleBackColor = true;
             this.btnAdicionarPrato.Click += new System.EventHandler(this.btnAdicionarPrato_Click);
             // 
-            // pedidoSetTableAdapter
-            // 
-            this.pedidoSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoriaSetTableAdapter = null;
-            this.tableAdapterManager.EstadoSetTableAdapter = null;
-            this.tableAdapterManager.ItemMenuSetTableAdapter = null;
-            this.tableAdapterManager.MetodoPagamentoSetTableAdapter = null;
-            this.tableAdapterManager.MoradaSetTableAdapter = null;
-            this.tableAdapterManager.PagamentoSetTableAdapter = null;
-            this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
-            this.tableAdapterManager.PedidoSetTableAdapter = this.pedidoSetTableAdapter;
-            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
-            this.tableAdapterManager.PessoaSetTableAdapter = null;
-            this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
-            this.tableAdapterManager.RestauranteSetTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,26 +129,14 @@
             this.Name = "Pedidos";
             this.Text = "Pedidos";
             this.Load += new System.EventHandler(this.Pedidos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pedidoSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewPedidos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private RestauranteDataSet3 restauranteDataSet3;
-        private System.Windows.Forms.BindingSource pedidoSetBindingSource;
-        private RestauranteDataSet3TableAdapters.PedidoSetTableAdapter pedidoSetTableAdapter;
-        private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView pedidoSetDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridView DataGridViewPedidos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button CRUD_Pedido;

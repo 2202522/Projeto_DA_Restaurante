@@ -13,6 +13,11 @@ namespace Projeto_DA_Restaurante
 {
     public partial class CRUD_Pedido : Form
     {
+        List<Restaurante> restaurantes;
+        List<Estado> estados;
+        List<Cliente> clientes;
+        List<Trabalhador> trabalhadors;
+        List<ItemMenu> itemMenus;
         RestauranteContext restauranteContext;
         public CRUD_Pedido()
         {
@@ -22,15 +27,30 @@ namespace Projeto_DA_Restaurante
 
         private void CRUD_Pedido_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restGestDBDataSet.EstadoSet' table. You can move, or remove it, as needed.
-            this.estadoSetTableAdapter.Fill(this.restGestDBDataSet.EstadoSet);
-            // TODO: This line of code loads data into the 'restGestDBDataSet.PessoaSet' table. You can move, or remove it, as needed.
-            this.pessoaSetTableAdapter.Fill(this.restGestDBDataSet.PessoaSet);
-            // TODO: This line of code loads data into the 'restGestDBDataSet.PessoaSet_Cliente' table. You can move, or remove it, as needed.
-            this.pessoaSet_ClienteTableAdapter.Fill(this.restGestDBDataSet.PessoaSet_Cliente);
-            // TODO: This line of code loads data into the 'restGestDBDataSet.RestauranteSet' table. You can move, or remove it, as needed.
-            this.restauranteSetTableAdapter.Fill(this.restGestDBDataSet.RestauranteSet);
+            comboBoxrestaurante.DataSource = restauranteContext.RestauranteSet.ToList();
+            restaurantes = restauranteContext.RestauranteSet.ToList();
+            comboBoxrestaurante.ValueMember = "Id";
+            comboBoxrestaurante.DisplayMember = "Nome";
 
+            comboBoxestado.DataSource = restauranteContext.EstadoSet.ToList();
+            estados = restauranteContext.EstadoSet.ToList();
+            comboBoxestado.ValueMember = "Id";
+            comboBoxestado.DisplayMember = "estado";
+
+            comboBoxcliente.DataSource = restauranteContext.PessoaSet.ToList();
+            //clientes = restauranteContext.PessoaSet.ToList();
+            comboBoxcliente.ValueMember = "Id";
+            comboBoxcliente.DisplayMember = "Nome";
+
+            comboBoxtrabalhador.DataSource = restauranteContext.PessoaSet.ToList();
+            //trabalhadors = restauranteContext.PessoaSet.ToList();
+            comboBoxtrabalhador.ValueMember = "Id";
+            comboBoxtrabalhador.DisplayMember = "Nome";
+
+            comboBoxItemMenu.DataSource = restauranteContext.ItemMenuSet.ToList();
+            itemMenus = restauranteContext.ItemMenuSet.ToList();
+            comboBoxItemMenu.ValueMember = "Id";
+            comboBoxItemMenu.DisplayMember = "Nome";
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -43,11 +63,16 @@ namespace Projeto_DA_Restaurante
         private void btnConcluir_Click(object sender, EventArgs e)
         {
             Pedido pedidos = new Pedido();
-            pedidos.ValorTotal = Convert.ToDouble(valorTotalTextBox.Text);
-            pedidos.TrabalhadorId = Convert.ToInt32(trabalhadorIdcomboBox.SelectedValue);
-            pedidos.ClienteId = Convert.ToInt32(clienteIdcomboBox.SelectedValue);
-            pedidos.RestauranteId = Convert.ToInt32(restauranteIdComboBox.SelectedValue);
-            pedidos.EstadoId = Convert.ToInt32(estadoIdcomboBox.SelectedValue);
+            int index = comboBoxrestaurante.SelectedIndex;
+            pedidos.Restaurante = restaurantes[index];
+            int indexS = comboBoxestado.SelectedIndex;
+            pedidos.Estado = estados[indexS];
+            int indexI = comboBoxItemMenu.SelectedIndex;
+            pedidos.ItemMenu = (ICollection<ItemMenu>)itemMenus[indexI];
+            int indexC = comboBoxcliente.SelectedIndex;
+            pedidos.Cliente = clientes[indexC];
+            int indexT = comboBoxtrabalhador.SelectedIndex;
+            pedidos.Trabalhador = trabalhadors[indexT];
             restauranteContext.PedidoSet.Add(pedidos);
             restauranteContext.SaveChanges();
 

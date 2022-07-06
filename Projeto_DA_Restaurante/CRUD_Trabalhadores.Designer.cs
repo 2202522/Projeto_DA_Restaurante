@@ -28,61 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Trabalhadores));
-            System.Windows.Forms.Label salarioLabel;
-            System.Windows.Forms.Label posicaoLabel;
-            System.Windows.Forms.Label restauranteIdLabel;
-            System.Windows.Forms.Label idLabel;
-            this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnConcluir = new System.Windows.Forms.Button();
-            this.pessoaSet_TrabalhadorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoaSet_TrabalhadorTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PessoaSet_TrabalhadorTableAdapter();
-            this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            this.pessoaSet_TrabalhadorBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.pessoaSet_TrabalhadorBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.salarioTextBox = new System.Windows.Forms.TextBox();
-            this.posicaoTextBox = new System.Windows.Forms.TextBox();
-            this.restauranteIdTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            salarioLabel = new System.Windows.Forms.Label();
-            posicaoLabel = new System.Windows.Forms.Label();
-            restauranteIdLabel = new System.Windows.Forms.Label();
-            idLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorBindingNavigator)).BeginInit();
-            this.pessoaSet_TrabalhadorBindingNavigator.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ComboBoxrua = new System.Windows.Forms.ComboBox();
+            this.textBoxsalario = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxposicao = new System.Windows.Forms.TextBox();
+            this.Telemovel = new System.Windows.Forms.Label();
+            this.textBoxnome = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxtelemovel = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBoxrestaurante = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // restauranteDataSet3
-            // 
-            this.restauranteDataSet3.DataSetName = "RestauranteDataSet3";
-            this.restauranteDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 140);
+            this.btnBack.Location = new System.Drawing.Point(12, 155);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(90, 40);
             this.btnBack.TabIndex = 8;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnConcluir
             // 
             this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConcluir.Location = new System.Drawing.Point(228, 140);
+            this.btnConcluir.Location = new System.Drawing.Point(364, 155);
             this.btnConcluir.Name = "btnConcluir";
             this.btnConcluir.Size = new System.Drawing.Size(90, 40);
             this.btnConcluir.TabIndex = 9;
@@ -90,240 +66,151 @@
             this.btnConcluir.UseVisualStyleBackColor = true;
             this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
             // 
-            // pessoaSet_TrabalhadorBindingSource
+            // label1
             // 
-            this.pessoaSet_TrabalhadorBindingSource.DataMember = "PessoaSet_Trabalhador";
-            this.pessoaSet_TrabalhadorBindingSource.DataSource = this.restauranteDataSet3;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(245, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Morada:";
             // 
-            // pessoaSet_TrabalhadorTableAdapter
+            // ComboBoxrua
             // 
-            this.pessoaSet_TrabalhadorTableAdapter.ClearBeforeFill = true;
+            this.ComboBoxrua.FormattingEnabled = true;
+            this.ComboBoxrua.Location = new System.Drawing.Point(338, 61);
+            this.ComboBoxrua.Name = "ComboBoxrua";
+            this.ComboBoxrua.Size = new System.Drawing.Size(116, 21);
+            this.ComboBoxrua.TabIndex = 30;
             // 
-            // tableAdapterManager
+            // textBoxsalario
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoriaSetTableAdapter = null;
-            this.tableAdapterManager.EstadoSetTableAdapter = null;
-            this.tableAdapterManager.ItemMenuSetTableAdapter = null;
-            this.tableAdapterManager.MetodoPagamentoSetTableAdapter = null;
-            this.tableAdapterManager.MoradaSetTableAdapter = null;
-            this.tableAdapterManager.PagamentoSetTableAdapter = null;
-            this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
-            this.tableAdapterManager.PedidoSetTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = this.pessoaSet_TrabalhadorTableAdapter;
-            this.tableAdapterManager.PessoaSetTableAdapter = null;
-            this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
-            this.tableAdapterManager.RestauranteSetTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.textBoxsalario.Location = new System.Drawing.Point(112, 63);
+            this.textBoxsalario.Name = "textBoxsalario";
+            this.textBoxsalario.Size = new System.Drawing.Size(116, 20);
+            this.textBoxsalario.TabIndex = 29;
             // 
-            // pessoaSet_TrabalhadorBindingNavigator
+            // label6
             // 
-            this.pessoaSet_TrabalhadorBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.pessoaSet_TrabalhadorBindingNavigator.BindingSource = this.pessoaSet_TrabalhadorBindingSource;
-            this.pessoaSet_TrabalhadorBindingNavigator.CountItem = null;
-            this.pessoaSet_TrabalhadorBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.pessoaSet_TrabalhadorBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.pessoaSet_TrabalhadorBindingNavigatorSaveItem});
-            this.pessoaSet_TrabalhadorBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.pessoaSet_TrabalhadorBindingNavigator.MoveFirstItem = null;
-            this.pessoaSet_TrabalhadorBindingNavigator.MoveLastItem = null;
-            this.pessoaSet_TrabalhadorBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.pessoaSet_TrabalhadorBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.pessoaSet_TrabalhadorBindingNavigator.Name = "pessoaSet_TrabalhadorBindingNavigator";
-            this.pessoaSet_TrabalhadorBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.pessoaSet_TrabalhadorBindingNavigator.Size = new System.Drawing.Size(338, 25);
-            this.pessoaSet_TrabalhadorBindingNavigator.TabIndex = 10;
-            this.pessoaSet_TrabalhadorBindingNavigator.Text = "bindingNavigator1";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 64);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 16);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Salario:";
             // 
-            // bindingNavigatorMovePreviousItem
+            // textBoxposicao
             // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            this.textBoxposicao.Location = new System.Drawing.Point(338, 31);
+            this.textBoxposicao.Name = "textBoxposicao";
+            this.textBoxposicao.Size = new System.Drawing.Size(116, 20);
+            this.textBoxposicao.TabIndex = 27;
             // 
-            // bindingNavigatorSeparator
+            // Telemovel
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.Telemovel.AutoSize = true;
+            this.Telemovel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Telemovel.Location = new System.Drawing.Point(245, 32);
+            this.Telemovel.Name = "Telemovel";
+            this.Telemovel.Size = new System.Drawing.Size(60, 16);
+            this.Telemovel.TabIndex = 26;
+            this.Telemovel.Text = "Posição:";
             // 
-            // bindingNavigatorPositionItem
+            // textBoxnome
             // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            this.textBoxnome.Location = new System.Drawing.Point(112, 31);
+            this.textBoxnome.Name = "textBoxnome";
+            this.textBoxnome.Size = new System.Drawing.Size(116, 20);
+            this.textBoxnome.TabIndex = 25;
             // 
-            // bindingNavigatorMoveNextItem
+            // label5
             // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Nome:";
             // 
-            // bindingNavigatorSeparator2
+            // textBoxtelemovel
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.textBoxtelemovel.Location = new System.Drawing.Point(112, 98);
+            this.textBoxtelemovel.Name = "textBoxtelemovel";
+            this.textBoxtelemovel.Size = new System.Drawing.Size(116, 20);
+            this.textBoxtelemovel.TabIndex = 33;
             // 
-            // bindingNavigatorAddNewItem
+            // label2
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 16);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Telemovel:";
             // 
-            // bindingNavigatorDeleteItem
+            // label3
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(245, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 16);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "Restaurante:";
             // 
-            // pessoaSet_TrabalhadorBindingNavigatorSaveItem
+            // comboBoxrestaurante
             // 
-            this.pessoaSet_TrabalhadorBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pessoaSet_TrabalhadorBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pessoaSet_TrabalhadorBindingNavigatorSaveItem.Image")));
-            this.pessoaSet_TrabalhadorBindingNavigatorSaveItem.Name = "pessoaSet_TrabalhadorBindingNavigatorSaveItem";
-            this.pessoaSet_TrabalhadorBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.pessoaSet_TrabalhadorBindingNavigatorSaveItem.Text = "Save Data";
-            this.pessoaSet_TrabalhadorBindingNavigatorSaveItem.Click += new System.EventHandler(this.pessoaSet_TrabalhadorBindingNavigatorSaveItem_Click_1);
-            // 
-            // salarioLabel
-            // 
-            salarioLabel.AutoSize = true;
-            salarioLabel.Location = new System.Drawing.Point(60, 59);
-            salarioLabel.Name = "salarioLabel";
-            salarioLabel.Size = new System.Drawing.Size(42, 13);
-            salarioLabel.TabIndex = 10;
-            salarioLabel.Text = "Salario:";
-            // 
-            // salarioTextBox
-            // 
-            this.salarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSet_TrabalhadorBindingSource, "Salario", true));
-            this.salarioTextBox.Location = new System.Drawing.Point(146, 56);
-            this.salarioTextBox.Name = "salarioTextBox";
-            this.salarioTextBox.Size = new System.Drawing.Size(100, 20);
-            this.salarioTextBox.TabIndex = 11;
-            // 
-            // posicaoLabel
-            // 
-            posicaoLabel.AutoSize = true;
-            posicaoLabel.Location = new System.Drawing.Point(60, 85);
-            posicaoLabel.Name = "posicaoLabel";
-            posicaoLabel.Size = new System.Drawing.Size(48, 13);
-            posicaoLabel.TabIndex = 12;
-            posicaoLabel.Text = "Posicao:";
-            // 
-            // posicaoTextBox
-            // 
-            this.posicaoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSet_TrabalhadorBindingSource, "Posicao", true));
-            this.posicaoTextBox.Location = new System.Drawing.Point(146, 82);
-            this.posicaoTextBox.Name = "posicaoTextBox";
-            this.posicaoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.posicaoTextBox.TabIndex = 13;
-            // 
-            // restauranteIdLabel
-            // 
-            restauranteIdLabel.AutoSize = true;
-            restauranteIdLabel.Location = new System.Drawing.Point(60, 111);
-            restauranteIdLabel.Name = "restauranteIdLabel";
-            restauranteIdLabel.Size = new System.Drawing.Size(80, 13);
-            restauranteIdLabel.TabIndex = 14;
-            restauranteIdLabel.Text = "Restaurante Id:";
-            // 
-            // restauranteIdTextBox
-            // 
-            this.restauranteIdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSet_TrabalhadorBindingSource, "RestauranteId", true));
-            this.restauranteIdTextBox.Location = new System.Drawing.Point(146, 108);
-            this.restauranteIdTextBox.Name = "restauranteIdTextBox";
-            this.restauranteIdTextBox.Size = new System.Drawing.Size(100, 20);
-            this.restauranteIdTextBox.TabIndex = 15;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(60, 32);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 16;
-            idLabel.Text = "Id:";
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSet_TrabalhadorBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(146, 29);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(100, 20);
-            this.idTextBox.TabIndex = 17;
+            this.comboBoxrestaurante.FormattingEnabled = true;
+            this.comboBoxrestaurante.Location = new System.Drawing.Point(338, 95);
+            this.comboBoxrestaurante.Name = "comboBoxrestaurante";
+            this.comboBoxrestaurante.Size = new System.Drawing.Size(116, 21);
+            this.comboBoxrestaurante.TabIndex = 34;
             // 
             // CRUD_Trabalhadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 200);
-            this.Controls.Add(salarioLabel);
-            this.Controls.Add(this.salarioTextBox);
-            this.Controls.Add(posicaoLabel);
-            this.Controls.Add(this.posicaoTextBox);
-            this.Controls.Add(restauranteIdLabel);
-            this.Controls.Add(this.restauranteIdTextBox);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.idTextBox);
-            this.Controls.Add(this.pessoaSet_TrabalhadorBindingNavigator);
+            this.ClientSize = new System.Drawing.Size(466, 207);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBoxrestaurante);
+            this.Controls.Add(this.textBoxtelemovel);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ComboBoxrua);
+            this.Controls.Add(this.textBoxsalario);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBoxposicao);
+            this.Controls.Add(this.Telemovel);
+            this.Controls.Add(this.textBoxnome);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnConcluir);
             this.Controls.Add(this.btnBack);
             this.Name = "CRUD_Trabalhadores";
             this.Text = "CRUD_Trabalhadores";
             this.Load += new System.EventHandler(this.CRUD_Trabalhadores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorBindingNavigator)).EndInit();
-            this.pessoaSet_TrabalhadorBindingNavigator.ResumeLayout(false);
-            this.pessoaSet_TrabalhadorBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private RestauranteDataSet3 restauranteDataSet3;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnConcluir;
-        private System.Windows.Forms.BindingSource pessoaSet_TrabalhadorBindingSource;
-        private RestauranteDataSet3TableAdapters.PessoaSet_TrabalhadorTableAdapter pessoaSet_TrabalhadorTableAdapter;
-        private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator pessoaSet_TrabalhadorBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton pessoaSet_TrabalhadorBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox salarioTextBox;
-        private System.Windows.Forms.TextBox posicaoTextBox;
-        private System.Windows.Forms.TextBox restauranteIdTextBox;
-        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox ComboBoxrua;
+        private System.Windows.Forms.TextBox textBoxsalario;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxposicao;
+        private System.Windows.Forms.Label Telemovel;
+        private System.Windows.Forms.TextBox textBoxnome;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxtelemovel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBoxrestaurante;
     }
 }

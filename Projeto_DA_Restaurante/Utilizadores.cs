@@ -12,27 +12,28 @@ namespace Projeto_DA_Restaurante
 {
     public partial class Utilizadores : Form
     {
+        RestauranteContext restauranteContext;
         public Utilizadores()
         {
             InitializeComponent();
+            restauranteContext = new RestauranteContext();
         }
 
        
 
         private void Utilizadores_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restGestDBDataSet1.PessoaSet' table. You can move, or remove it, as needed.
-            this.pessoaSetTableAdapter1.Fill(this.restGestDBDataSet1.PessoaSet);
+            dataGridViewcliente.DataSource = restauranteContext.PessoaSet.ToList();
 
-            // this.moradaSetTableAdapter.Fill(this.restauranteDataSet3.MoradaSet);
-
+            dataGridViewmorada.DataSource = restauranteContext.MoradaSet.ToList();
+            dataGridViewrestaurante.DataSource = restauranteContext.RestauranteSet.ToList();
         }
 
         private void btnEditarClientes_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CRUD_Utilizador cRUD_Utilizador = new CRUD_Utilizador();
-            cRUD_Utilizador.ShowDialog();
+            CRUD_Morada cRUD_Morada = new CRUD_Morada();
+            cRUD_Morada.ShowDialog();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -42,16 +43,11 @@ namespace Projeto_DA_Restaurante
             mainPage.ShowDialog();
         }
 
-        private void pessoaSetBindingNavigator_RefreshItems(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCliente_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CRUD_Cliente cRUD_Cliente = new CRUD_Cliente();
-            cRUD_Cliente.ShowDialog();
+            CRUD_Morada cRUD_Morada = new CRUD_Morada();
+            cRUD_Morada.ShowDialog();
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

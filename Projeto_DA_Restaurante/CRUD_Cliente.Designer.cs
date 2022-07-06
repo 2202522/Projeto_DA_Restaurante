@@ -28,256 +28,125 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label totalgastoLabel;
-            System.Windows.Forms.Label numContribuienteLabel;
-            System.Windows.Forms.Label idLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUD_Cliente));
-            this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
-            this.pessoaSet_ClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoaSet_ClienteTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.PessoaSet_ClienteTableAdapter();
-            this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            this.pessoaSet_ClienteBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.totalgastoTextBox = new System.Windows.Forms.TextBox();
-            this.numContribuienteTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.pessoaSet_ClienteBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnConcluir = new System.Windows.Forms.Button();
-            totalgastoLabel = new System.Windows.Forms.Label();
-            numContribuienteLabel = new System.Windows.Forms.Label();
-            idLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_ClienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_ClienteBindingNavigator)).BeginInit();
-            this.pessoaSet_ClienteBindingNavigator.SuspendLayout();
+            this.textBoxcontribuinte = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxtelemovel = new System.Windows.Forms.TextBox();
+            this.Telemovel = new System.Windows.Forms.Label();
+            this.textBoxnome = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.buttonSeguinte = new System.Windows.Forms.Button();
+            this.buttonVoltar = new System.Windows.Forms.Button();
+            this.ruaComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // restauranteDataSet3
+            // textBoxcontribuinte
             // 
-            this.restauranteDataSet3.DataSetName = "RestauranteDataSet3";
-            this.restauranteDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.textBoxcontribuinte.Location = new System.Drawing.Point(121, 80);
+            this.textBoxcontribuinte.Name = "textBoxcontribuinte";
+            this.textBoxcontribuinte.Size = new System.Drawing.Size(116, 20);
+            this.textBoxcontribuinte.TabIndex = 19;
             // 
-            // pessoaSet_ClienteBindingSource
+            // label6
             // 
-            this.pessoaSet_ClienteBindingSource.DataMember = "PessoaSet_Cliente";
-            this.pessoaSet_ClienteBindingSource.DataSource = this.restauranteDataSet3;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(21, 81);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(102, 16);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Nrº Contribuinte:";
             // 
-            // pessoaSet_ClienteTableAdapter
+            // textBoxtelemovel
             // 
-            this.pessoaSet_ClienteTableAdapter.ClearBeforeFill = true;
+            this.textBoxtelemovel.Location = new System.Drawing.Point(335, 48);
+            this.textBoxtelemovel.Name = "textBoxtelemovel";
+            this.textBoxtelemovel.Size = new System.Drawing.Size(116, 20);
+            this.textBoxtelemovel.TabIndex = 17;
             // 
-            // tableAdapterManager
+            // Telemovel
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoriaSetTableAdapter = null;
-            this.tableAdapterManager.EstadoSetTableAdapter = null;
-            this.tableAdapterManager.ItemMenuSetTableAdapter = null;
-            this.tableAdapterManager.MetodoPagamentoSetTableAdapter = null;
-            this.tableAdapterManager.MoradaSetTableAdapter = null;
-            this.tableAdapterManager.PagamentoSetTableAdapter = null;
-            this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
-            this.tableAdapterManager.PedidoSetTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = this.pessoaSet_ClienteTableAdapter;
-            this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
-            this.tableAdapterManager.PessoaSetTableAdapter = null;
-            this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
-            this.tableAdapterManager.RestauranteSetTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.Telemovel.AutoSize = true;
+            this.Telemovel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Telemovel.Location = new System.Drawing.Point(254, 49);
+            this.Telemovel.Name = "Telemovel";
+            this.Telemovel.Size = new System.Drawing.Size(75, 16);
+            this.Telemovel.TabIndex = 16;
+            this.Telemovel.Text = "Telemovel:";
             // 
-            // pessoaSet_ClienteBindingNavigator
+            // textBoxnome
             // 
-            this.pessoaSet_ClienteBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.pessoaSet_ClienteBindingNavigator.BindingSource = this.pessoaSet_ClienteBindingSource;
-            this.pessoaSet_ClienteBindingNavigator.CountItem = null;
-            this.pessoaSet_ClienteBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.pessoaSet_ClienteBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.pessoaSet_ClienteBindingNavigatorSaveItem});
-            this.pessoaSet_ClienteBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.pessoaSet_ClienteBindingNavigator.MoveFirstItem = null;
-            this.pessoaSet_ClienteBindingNavigator.MoveLastItem = null;
-            this.pessoaSet_ClienteBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.pessoaSet_ClienteBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.pessoaSet_ClienteBindingNavigator.Name = "pessoaSet_ClienteBindingNavigator";
-            this.pessoaSet_ClienteBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.pessoaSet_ClienteBindingNavigator.Size = new System.Drawing.Size(330, 25);
-            this.pessoaSet_ClienteBindingNavigator.TabIndex = 0;
-            this.pessoaSet_ClienteBindingNavigator.Text = "bindingNavigator1";
+            this.textBoxnome.Location = new System.Drawing.Point(121, 48);
+            this.textBoxnome.Name = "textBoxnome";
+            this.textBoxnome.Size = new System.Drawing.Size(116, 20);
+            this.textBoxnome.TabIndex = 15;
             // 
-            // bindingNavigatorSeparator
+            // label5
             // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(21, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Nome:";
             // 
-            // bindingNavigatorPositionItem
+            // buttonSeguinte
             // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            this.buttonSeguinte.Location = new System.Drawing.Point(371, 157);
+            this.buttonSeguinte.Name = "buttonSeguinte";
+            this.buttonSeguinte.Size = new System.Drawing.Size(86, 40);
+            this.buttonSeguinte.TabIndex = 20;
+            this.buttonSeguinte.Text = "Seguiente";
+            this.buttonSeguinte.UseVisualStyleBackColor = true;
+            this.buttonSeguinte.Click += new System.EventHandler(this.buttonSeguinte_Click);
             // 
-            // bindingNavigatorSeparator2
+            // buttonVoltar
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.buttonVoltar.Location = new System.Drawing.Point(12, 157);
+            this.buttonVoltar.Name = "buttonVoltar";
+            this.buttonVoltar.Size = new System.Drawing.Size(86, 40);
+            this.buttonVoltar.TabIndex = 21;
+            this.buttonVoltar.Text = "Voltar";
+            this.buttonVoltar.UseVisualStyleBackColor = true;
+            this.buttonVoltar.Click += new System.EventHandler(this.buttonVoltar_Click);
             // 
-            // totalgastoLabel
+            // ruaComboBox
             // 
-            totalgastoLabel.AutoSize = true;
-            totalgastoLabel.Location = new System.Drawing.Point(46, 68);
-            totalgastoLabel.Name = "totalgastoLabel";
-            totalgastoLabel.Size = new System.Drawing.Size(60, 13);
-            totalgastoLabel.TabIndex = 1;
-            totalgastoLabel.Text = "Totalgasto:";
+            this.ruaComboBox.FormattingEnabled = true;
+            this.ruaComboBox.Location = new System.Drawing.Point(335, 81);
+            this.ruaComboBox.Name = "ruaComboBox";
+            this.ruaComboBox.Size = new System.Drawing.Size(116, 21);
+            this.ruaComboBox.TabIndex = 22;
             // 
-            // totalgastoTextBox
+            // label1
             // 
-            this.totalgastoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSet_ClienteBindingSource, "Totalgasto", true));
-            this.totalgastoTextBox.Location = new System.Drawing.Point(149, 65);
-            this.totalgastoTextBox.Name = "totalgastoTextBox";
-            this.totalgastoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.totalgastoTextBox.TabIndex = 2;
-            // 
-            // numContribuienteLabel
-            // 
-            numContribuienteLabel.AutoSize = true;
-            numContribuienteLabel.Location = new System.Drawing.Point(46, 94);
-            numContribuienteLabel.Name = "numContribuienteLabel";
-            numContribuienteLabel.Size = new System.Drawing.Size(97, 13);
-            numContribuienteLabel.TabIndex = 3;
-            numContribuienteLabel.Text = "Num Contribuiente:";
-            // 
-            // numContribuienteTextBox
-            // 
-            this.numContribuienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSet_ClienteBindingSource, "NumContribuiente", true));
-            this.numContribuienteTextBox.Location = new System.Drawing.Point(149, 91);
-            this.numContribuienteTextBox.Name = "numContribuienteTextBox";
-            this.numContribuienteTextBox.Size = new System.Drawing.Size(100, 20);
-            this.numContribuienteTextBox.TabIndex = 4;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(46, 40);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
-            idLabel.TabIndex = 5;
-            idLabel.Text = "Id:";
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaSet_ClienteBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(149, 37);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(100, 20);
-            this.idTextBox.TabIndex = 6;
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // pessoaSet_ClienteBindingNavigatorSaveItem
-            // 
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pessoaSet_ClienteBindingNavigatorSaveItem.Image")));
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.Name = "pessoaSet_ClienteBindingNavigatorSaveItem";
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.Text = "Save Data";
-            this.pessoaSet_ClienteBindingNavigatorSaveItem.Click += new System.EventHandler(this.pessoaSet_ClienteBindingNavigatorSaveItem_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 140);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(90, 40);
-            this.btnBack.TabIndex = 8;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnConcluir
-            // 
-            this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConcluir.Location = new System.Drawing.Point(228, 140);
-            this.btnConcluir.Name = "btnConcluir";
-            this.btnConcluir.Size = new System.Drawing.Size(90, 40);
-            this.btnConcluir.TabIndex = 9;
-            this.btnConcluir.Text = "Concluir";
-            this.btnConcluir.UseVisualStyleBackColor = true;
-            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(254, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 16);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Morada:";
             // 
             // CRUD_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 192);
-            this.Controls.Add(this.btnConcluir);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(totalgastoLabel);
-            this.Controls.Add(this.totalgastoTextBox);
-            this.Controls.Add(numContribuienteLabel);
-            this.Controls.Add(this.numContribuienteTextBox);
-            this.Controls.Add(idLabel);
-            this.Controls.Add(this.idTextBox);
-            this.Controls.Add(this.pessoaSet_ClienteBindingNavigator);
+            this.ClientSize = new System.Drawing.Size(469, 209);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ruaComboBox);
+            this.Controls.Add(this.buttonVoltar);
+            this.Controls.Add(this.buttonSeguinte);
+            this.Controls.Add(this.textBoxcontribuinte);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBoxtelemovel);
+            this.Controls.Add(this.Telemovel);
+            this.Controls.Add(this.textBoxnome);
+            this.Controls.Add(this.label5);
             this.Name = "CRUD_Cliente";
             this.Text = "CRUD_Cliente";
             this.Load += new System.EventHandler(this.CRUD_Cliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_ClienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_ClienteBindingNavigator)).EndInit();
-            this.pessoaSet_ClienteBindingNavigator.ResumeLayout(false);
-            this.pessoaSet_ClienteBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,23 +154,15 @@
 
         #endregion
 
-        private RestauranteDataSet3 restauranteDataSet3;
-        private System.Windows.Forms.BindingSource pessoaSet_ClienteBindingSource;
-        private RestauranteDataSet3TableAdapters.PessoaSet_ClienteTableAdapter pessoaSet_ClienteTableAdapter;
-        private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator pessoaSet_ClienteBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton pessoaSet_ClienteBindingNavigatorSaveItem;
-        private System.Windows.Forms.TextBox totalgastoTextBox;
-        private System.Windows.Forms.TextBox numContribuienteTextBox;
-        private System.Windows.Forms.TextBox idTextBox;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnConcluir;
+        private System.Windows.Forms.TextBox textBoxcontribuinte;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxtelemovel;
+        private System.Windows.Forms.Label Telemovel;
+        private System.Windows.Forms.TextBox textBoxnome;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonSeguinte;
+        private System.Windows.Forms.Button buttonVoltar;
+        private System.Windows.Forms.ComboBox ruaComboBox;
+        private System.Windows.Forms.Label label1;
     }
 }

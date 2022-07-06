@@ -32,13 +32,10 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewPromocoes = new System.Windows.Forms.DataGridView();
-            this.restGestDBDataSet = new Projeto_DA_Restaurante.RestGestDBDataSet();
             this.promocaosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.promocaosTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.PromocaosTableAdapter();
             this.referenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.percentagemPromocaoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPromocoes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.promocaosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,17 +79,13 @@
             // 
             // restGestDBDataSet
             // 
-            this.restGestDBDataSet.DataSetName = "RestGestDBDataSet";
-            this.restGestDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // promocaosBindingSource
             // 
             this.promocaosBindingSource.DataMember = "Promocaos";
-            this.promocaosBindingSource.DataSource = this.restGestDBDataSet;
             // 
             // promocaosTableAdapter
             // 
-            this.promocaosTableAdapter.ClearBeforeFill = true;
             // 
             // referenciaDataGridViewTextBoxColumn
             // 
@@ -121,7 +114,6 @@
             this.Text = "Promocoes";
             this.Load += new System.EventHandler(this.Promocoes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPromocoes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.promocaosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -132,9 +124,7 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridViewPromocoes;
-        private RestGestDBDataSet restGestDBDataSet;
         private System.Windows.Forms.BindingSource promocaosBindingSource;
-        private RestGestDBDataSetTableAdapters.PromocaosTableAdapter promocaosTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn referenciaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn percentagemPromocaoDataGridViewTextBoxColumn;
     }

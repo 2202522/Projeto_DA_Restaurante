@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.categoriaSetDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriaSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dataGridViewCategorias = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.metodoPagamentoSetDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metodoPagamentoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewMetodo = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_CRUD_Restaurante = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -50,16 +41,10 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.btn_CRUD_Categoria = new System.Windows.Forms.Button();
             this.btn_CRUD_MetodoPagamento = new System.Windows.Forms.Button();
-            this.categoriaSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.CategoriaSetTableAdapter();
-            this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            this.metodoPagamentoSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.MetodoPagamentoSetTableAdapter();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMetodo)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -67,7 +52,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.categoriaSetDataGridView);
+            this.groupBox1.Controls.Add(this.dataGridViewCategorias);
             this.groupBox1.Location = new System.Drawing.Point(20, 104);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(257, 246);
@@ -75,50 +60,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Categoria";
             // 
-            // categoriaSetDataGridView
+            // dataGridViewCategorias
             // 
-            this.categoriaSetDataGridView.AllowUserToAddRows = false;
-            this.categoriaSetDataGridView.AllowUserToDeleteRows = false;
-            this.categoriaSetDataGridView.AutoGenerateColumns = false;
-            this.categoriaSetDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.categoriaSetDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.categoriaSetDataGridView.DataSource = this.categoriaSetBindingSource;
-            this.categoriaSetDataGridView.Location = new System.Drawing.Point(6, 19);
-            this.categoriaSetDataGridView.Name = "categoriaSetDataGridView";
-            this.categoriaSetDataGridView.ReadOnly = true;
-            this.categoriaSetDataGridView.Size = new System.Drawing.Size(243, 220);
-            this.categoriaSetDataGridView.TabIndex = 0;
-            this.categoriaSetDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categoriaSetDataGridView_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Ativo";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ativo";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // categoriaSetBindingSource
-            // 
-            this.categoriaSetBindingSource.DataMember = "CategoriaSet";
-            this.categoriaSetBindingSource.DataSource = this.restauranteDataSet3;
-            // 
-            // restauranteDataSet3
-            // 
-            this.restauranteDataSet3.DataSetName = "RestauranteDataSet3";
-            this.restauranteDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCategorias.Location = new System.Drawing.Point(6, 19);
+            this.dataGridViewCategorias.Name = "dataGridViewCategorias";
+            this.dataGridViewCategorias.Size = new System.Drawing.Size(245, 221);
+            this.dataGridViewCategorias.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.metodoPagamentoSetDataGridView);
+            this.groupBox2.Controls.Add(this.dataGridViewMetodo);
             this.groupBox2.Location = new System.Drawing.Point(292, 104);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(255, 246);
@@ -126,41 +78,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Metodo de Pagamento";
             // 
-            // metodoPagamentoSetDataGridView
+            // dataGridViewMetodo
             // 
-            this.metodoPagamentoSetDataGridView.AllowUserToAddRows = false;
-            this.metodoPagamentoSetDataGridView.AllowUserToDeleteRows = false;
-            this.metodoPagamentoSetDataGridView.AutoGenerateColumns = false;
-            this.metodoPagamentoSetDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.metodoPagamentoSetDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.metodoPagamentoSetDataGridView.DataSource = this.metodoPagamentoSetBindingSource;
-            this.metodoPagamentoSetDataGridView.Location = new System.Drawing.Point(6, 19);
-            this.metodoPagamentoSetDataGridView.Name = "metodoPagamentoSetDataGridView";
-            this.metodoPagamentoSetDataGridView.ReadOnly = true;
-            this.metodoPagamentoSetDataGridView.Size = new System.Drawing.Size(243, 220);
-            this.metodoPagamentoSetDataGridView.TabIndex = 0;
-            this.metodoPagamentoSetDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metodoPagamentoSetDataGridView_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "MetoPagamento";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Metodo Pagamento";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Ativo";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Ativo";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // metodoPagamentoSetBindingSource
-            // 
-            this.metodoPagamentoSetBindingSource.DataMember = "MetodoPagamentoSet";
-            this.metodoPagamentoSetBindingSource.DataSource = this.restauranteDataSet3;
+            this.dataGridViewMetodo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMetodo.Location = new System.Drawing.Point(6, 19);
+            this.dataGridViewMetodo.Name = "dataGridViewMetodo";
+            this.dataGridViewMetodo.Size = new System.Drawing.Size(243, 221);
+            this.dataGridViewMetodo.TabIndex = 1;
             // 
             // groupBox3
             // 
@@ -232,7 +156,7 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(90, 40);
             this.btnBack.TabIndex = 6;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -258,32 +182,6 @@
             this.btn_CRUD_MetodoPagamento.UseVisualStyleBackColor = true;
             this.btn_CRUD_MetodoPagamento.Click += new System.EventHandler(this.btn_CRUD_MetodoPagamento_Click);
             // 
-            // categoriaSetTableAdapter
-            // 
-            this.categoriaSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoriaSetTableAdapter = this.categoriaSetTableAdapter;
-            this.tableAdapterManager.EstadoSetTableAdapter = null;
-            this.tableAdapterManager.ItemMenuSetTableAdapter = null;
-            this.tableAdapterManager.MetodoPagamentoSetTableAdapter = this.metodoPagamentoSetTableAdapter;
-            this.tableAdapterManager.MoradaSetTableAdapter = null;
-            this.tableAdapterManager.PagamentoSetTableAdapter = null;
-            this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
-            this.tableAdapterManager.PedidoSetTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
-            this.tableAdapterManager.PessoaSetTableAdapter = null;
-            this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
-            this.tableAdapterManager.RestauranteSetTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // metodoPagamentoSetTableAdapter
-            // 
-            this.metodoPagamentoSetTableAdapter.ClearBeforeFill = true;
-            // 
             // Restaurant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -301,12 +199,9 @@
             this.Text = "Restaurant";
             this.Load += new System.EventHandler(this.Restaurant_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMetodo)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -317,21 +212,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private RestauranteDataSet3 restauranteDataSet3;
-        private System.Windows.Forms.BindingSource categoriaSetBindingSource;
-        private RestauranteDataSet3TableAdapters.CategoriaSetTableAdapter categoriaSetTableAdapter;
-        private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView categoriaSetDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private RestauranteDataSet3TableAdapters.MetodoPagamentoSetTableAdapter metodoPagamentoSetTableAdapter;
-        private System.Windows.Forms.BindingSource metodoPagamentoSetBindingSource;
-        private System.Windows.Forms.DataGridView metodoPagamentoSetDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnBack;
@@ -340,5 +222,7 @@
         private System.Windows.Forms.Button btn_CRUD_Restaurante;
         private System.Windows.Forms.Button btn_CRUD_Trabalhadores;
         private System.Windows.Forms.Button btn_CRUD_Menu;
+        private System.Windows.Forms.DataGridView dataGridViewCategorias;
+        private System.Windows.Forms.DataGridView dataGridViewMetodo;
     }
 }

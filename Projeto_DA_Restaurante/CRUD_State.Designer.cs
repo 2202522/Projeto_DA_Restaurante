@@ -38,17 +38,19 @@
             // estadoLabel
             // 
             estadoLabel.AutoSize = true;
+            estadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             estadoLabel.Location = new System.Drawing.Point(59, 68);
             estadoLabel.Name = "estadoLabel";
-            estadoLabel.Size = new System.Drawing.Size(43, 13);
+            estadoLabel.Size = new System.Drawing.Size(53, 16);
             estadoLabel.TabIndex = 3;
             estadoLabel.Text = "Estado:";
             // 
             // estadoTextBox
             // 
-            this.estadoTextBox.Location = new System.Drawing.Point(107, 65);
+            this.estadoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estadoTextBox.Location = new System.Drawing.Point(118, 65);
             this.estadoTextBox.Name = "estadoTextBox";
-            this.estadoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.estadoTextBox.Size = new System.Drawing.Size(100, 22);
             this.estadoTextBox.TabIndex = 4;
             // 
             // btnConcluir
@@ -69,7 +71,7 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(90, 40);
             this.btnBack.TabIndex = 10;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 

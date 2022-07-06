@@ -20,18 +20,10 @@ namespace Projeto_DA_Restaurante
             restauranteContext = new RestauranteContext();
         }
 
-        private void categoriaSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.categoriaSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
-        }
-
         private void Restaurant_Load(object sender, EventArgs e)
         {
-            metodoPagamentoSetDataGridView.DataSource = restauranteContext.MetodoPagamentoSet.ToList();
-            categoriaSetDataGridView.DataSource = restauranteContext.CategoriaSet.ToList();
+            dataGridViewMetodo.DataSource = restauranteContext.MetodoPagamentoSet.ToList();
+            dataGridViewCategorias.DataSource = restauranteContext.CategoriaSet.ToList();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -58,8 +50,8 @@ namespace Projeto_DA_Restaurante
         private void btn_CRUD_Restaurante_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CRUD_Restaurant cRUD_Restaurant = new CRUD_Restaurant();
-            cRUD_Restaurant.ShowDialog();
+            CRUD_Morada_Restaurante cRUD_Morada_Restaurante = new CRUD_Morada_Restaurante();
+            cRUD_Morada_Restaurante.ShowDialog();
         }
 
         private void btn_CRUD_Trabalhadores_Click(object sender, EventArgs e)
@@ -74,16 +66,6 @@ namespace Projeto_DA_Restaurante
             this.Hide();
             Menu menu = new Menu();
             menu.ShowDialog();
-        }
-
-        private void categoriaSetDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void metodoPagamentoSetDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

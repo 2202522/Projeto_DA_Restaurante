@@ -28,40 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewMenu = new System.Windows.Forms.DataGridView();
             this.btn_Associar = new System.Windows.Forms.Button();
             this.btn_CRUD_Itens_Menu = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.restGestDBDataSet = new Projeto_DA_Restaurante.RestGestDBDataSet();
-            this.itemMenuSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemMenuSetTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.ItemMenuSetTableAdapter();
-            this.tableAdapterManager = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.TableAdapterManager();
-            this.itemMenuSetDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.itemMenuSetDataGridView);
+            this.groupBox1.Controls.Add(this.dataGridViewMenu);
             this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(654, 190);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Itens Menu";
+            // 
+            // dataGridViewMenu
+            // 
+            this.dataGridViewMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMenu.Location = new System.Drawing.Point(6, 19);
+            this.dataGridViewMenu.Name = "dataGridViewMenu";
+            this.dataGridViewMenu.Size = new System.Drawing.Size(642, 165);
+            this.dataGridViewMenu.TabIndex = 0;
             // 
             // btn_Associar
             // 
@@ -92,7 +87,7 @@
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(90, 40);
             this.btnBack.TabIndex = 15;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
@@ -114,102 +109,6 @@
             this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.openToolStripButton.Text = "&Open";
             // 
-            // restGestDBDataSet
-            // 
-            this.restGestDBDataSet.DataSetName = "RestGestDBDataSet";
-            this.restGestDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // itemMenuSetBindingSource
-            // 
-            this.itemMenuSetBindingSource.DataMember = "ItemMenuSet";
-            this.itemMenuSetBindingSource.DataSource = this.restGestDBDataSet;
-            // 
-            // itemMenuSetTableAdapter
-            // 
-            this.itemMenuSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoriaSetTableAdapter = null;
-            this.tableAdapterManager.EstadoSetTableAdapter = null;
-            this.tableAdapterManager.ItemMenuSetTableAdapter = this.itemMenuSetTableAdapter;
-            this.tableAdapterManager.MetodoPagamentoSetTableAdapter = null;
-            this.tableAdapterManager.MoradaSetTableAdapter = null;
-            this.tableAdapterManager.PagamentoSetTableAdapter = null;
-            this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
-            this.tableAdapterManager.PedidoSetTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
-            this.tableAdapterManager.PessoaSetTableAdapter = null;
-            this.tableAdapterManager.PromocaosTableAdapter = null;
-            this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
-            this.tableAdapterManager.RestauranteSetTableAdapter = null;
-            this.tableAdapterManager.sysdiagramsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // itemMenuSetDataGridView
-            // 
-            this.itemMenuSetDataGridView.AllowUserToAddRows = false;
-            this.itemMenuSetDataGridView.AllowUserToDeleteRows = false;
-            this.itemMenuSetDataGridView.AutoGenerateColumns = false;
-            this.itemMenuSetDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.itemMenuSetDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            this.itemMenuSetDataGridView.DataSource = this.itemMenuSetBindingSource;
-            this.itemMenuSetDataGridView.Location = new System.Drawing.Point(6, 19);
-            this.itemMenuSetDataGridView.Name = "itemMenuSetDataGridView";
-            this.itemMenuSetDataGridView.ReadOnly = true;
-            this.itemMenuSetDataGridView.Size = new System.Drawing.Size(642, 158);
-            this.itemMenuSetDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Fotografia";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Fotografia";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Ingredientes";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Ingredientes";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Preco";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Preco";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Ativo";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Ativo";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "CategoriaId";
-            this.dataGridViewTextBoxColumn7.HeaderText = "CategoriaId";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,9 +122,7 @@
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -237,16 +134,12 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ToolStripButton newToolStripButton;
         private System.Windows.Forms.ToolStripButton openToolStripButton;
-        private RestGestDBDataSet restGestDBDataSet;
-        private System.Windows.Forms.BindingSource itemMenuSetBindingSource;
-        private RestGestDBDataSetTableAdapters.ItemMenuSetTableAdapter itemMenuSetTableAdapter;
-        private RestGestDBDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView itemMenuSetDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridView dataGridViewMenu;
     }
 }

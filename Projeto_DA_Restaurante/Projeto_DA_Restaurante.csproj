@@ -73,11 +73,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssociarTrabalhador.cs">
+    <Compile Include="CRUD_Morada_Trabalhador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AssociarTrabalhador.Designer.cs">
-      <DependentUpon>AssociarTrabalhador.cs</DependentUpon>
+    <Compile Include="CRUD_Morada_Trabalhador.Designer.cs">
+      <DependentUpon>CRUD_Morada_Trabalhador.cs</DependentUpon>
     </Compile>
     <Compile Include="Associar_Menu_Restaurante.cs">
       <SubType>Form</SubType>
@@ -190,6 +190,10 @@
     <Compile Include="MetodoPagamento.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Categoria.part.cs" />
+    <Compile Include="Models\Morada.part.cs" />
+    <Compile Include="Models\Restaurante.part.cs" />
+    <Compile Include="Models\Trabalhador.part.cs" />
     <Compile Include="Morada.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
@@ -259,11 +263,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RestauranteDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RestGestDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RestGestDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="sp_helpdiagramdefinition1_Result.cs">
       <DependentUpon>Restaurante.tt</DependentUpon>
     </Compile>
@@ -306,8 +305,9 @@
     <Compile Include="Vendas.Designer.cs">
       <DependentUpon>Vendas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AssociarTrabalhador.resx">
-      <DependentUpon>AssociarTrabalhador.cs</DependentUpon>
+    <EmbeddedResource Include="CRUD_Morada_Trabalhador.resx">
+      <DependentUpon>CRUD_Morada_Trabalhador.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Associar_Menu_Restaurante.resx">
       <DependentUpon>Associar_Menu_Restaurante.cs</DependentUpon>
@@ -418,17 +418,6 @@
     </None>
     <None Include="RestauranteDataSet3.xss">
       <DependentUpon>RestauranteDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="RestGestDBDataSet.xsc">
-      <DependentUpon>RestGestDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="RestGestDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RestGestDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RestGestDBDataSet.xss">
-      <DependentUpon>RestGestDBDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

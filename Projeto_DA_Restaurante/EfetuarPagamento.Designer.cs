@@ -28,89 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label valorLabel;
-            System.Windows.Forms.Label metodoPagamentoIdLabel;
-            System.Windows.Forms.Label pedidoIdLabel;
-            System.Windows.Forms.Label dataLabel;
-            System.Windows.Forms.Label referenciaLabel;
             this.btnBack = new System.Windows.Forms.Button();
             this.btnConcluir = new System.Windows.Forms.Button();
-            this.valorTextBox = new System.Windows.Forms.TextBox();
-            this.dataDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.metodoPagamentoIdcomboBox = new System.Windows.Forms.ComboBox();
-            this.pedidoIdcomboBox = new System.Windows.Forms.ComboBox();
-            this.referenciaComboBox = new System.Windows.Forms.ComboBox();
-            this.restGestDBDataSet1 = new Projeto_DA_Restaurante.RestGestDBDataSet();
-            this.metodoPagamentoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.metodoPagamentoSetTableAdapter1 = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.MetodoPagamentoSetTableAdapter();
-            this.promocaosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.promocaosTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.PromocaosTableAdapter();
-            valorLabel = new System.Windows.Forms.Label();
-            metodoPagamentoIdLabel = new System.Windows.Forms.Label();
-            pedidoIdLabel = new System.Windows.Forms.Label();
-            dataLabel = new System.Windows.Forms.Label();
-            referenciaLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.promocaosBindingSource)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxvalor = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBoxpromoçao = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxpedido = new System.Windows.Forms.ComboBox();
+            this.comboBoxmetodo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // valorLabel
-            // 
-            valorLabel.AutoSize = true;
-            valorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            valorLabel.Location = new System.Drawing.Point(37, 53);
-            valorLabel.Name = "valorLabel";
-            valorLabel.Size = new System.Drawing.Size(93, 16);
-            valorLabel.TabIndex = 18;
-            valorLabel.Text = "Valor a Pagar:";
-            // 
-            // metodoPagamentoIdLabel
-            // 
-            metodoPagamentoIdLabel.AutoSize = true;
-            metodoPagamentoIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            metodoPagamentoIdLabel.Location = new System.Drawing.Point(37, 79);
-            metodoPagamentoIdLabel.Name = "metodoPagamentoIdLabel";
-            metodoPagamentoIdLabel.Size = new System.Drawing.Size(129, 16);
-            metodoPagamentoIdLabel.TabIndex = 20;
-            metodoPagamentoIdLabel.Text = "Metodo Pagamento:";
-            // 
-            // pedidoIdLabel
-            // 
-            pedidoIdLabel.AutoSize = true;
-            pedidoIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pedidoIdLabel.Location = new System.Drawing.Point(328, 53);
-            pedidoIdLabel.Name = "pedidoIdLabel";
-            pedidoIdLabel.Size = new System.Drawing.Size(108, 16);
-            pedidoIdLabel.TabIndex = 22;
-            pedidoIdLabel.Text = "Valor do Pedido:";
-            // 
-            // dataLabel
-            // 
-            dataLabel.AutoSize = true;
-            dataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataLabel.Location = new System.Drawing.Point(328, 80);
-            dataLabel.Name = "dataLabel";
-            dataLabel.Size = new System.Drawing.Size(39, 16);
-            dataLabel.TabIndex = 24;
-            dataLabel.Text = "Data:";
             // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 167);
+            this.btnBack.Location = new System.Drawing.Point(12, 148);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(90, 40);
             this.btnBack.TabIndex = 14;
-            this.btnBack.Text = "Back";
+            this.btnBack.Text = "Voltar";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnConcluir
             // 
             this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConcluir.Location = new System.Drawing.Point(540, 167);
+            this.btnConcluir.Location = new System.Drawing.Point(401, 148);
             this.btnConcluir.Name = "btnConcluir";
             this.btnConcluir.Size = new System.Drawing.Size(90, 40);
             this.btnConcluir.TabIndex = 15;
@@ -118,113 +64,115 @@
             this.btnConcluir.UseVisualStyleBackColor = true;
             this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
             // 
-            // valorTextBox
+            // label1
             // 
-            this.valorTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.valorTextBox.Location = new System.Drawing.Point(167, 50);
-            this.valorTextBox.Name = "valorTextBox";
-            this.valorTextBox.Size = new System.Drawing.Size(144, 22);
-            this.valorTextBox.TabIndex = 19;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Valor:";
             // 
-            // dataDateTimePicker
+            // textBoxvalor
             // 
-            this.dataDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataDateTimePicker.Location = new System.Drawing.Point(449, 77);
-            this.dataDateTimePicker.Name = "dataDateTimePicker";
-            this.dataDateTimePicker.Size = new System.Drawing.Size(144, 22);
-            this.dataDateTimePicker.TabIndex = 25;
-            this.dataDateTimePicker.ValueChanged += new System.EventHandler(this.dataDateTimePicker_ValueChanged);
+            this.textBoxvalor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxvalor.Location = new System.Drawing.Point(146, 28);
+            this.textBoxvalor.Name = "textBoxvalor";
+            this.textBoxvalor.Size = new System.Drawing.Size(100, 22);
+            this.textBoxvalor.TabIndex = 17;
             // 
-            // metodoPagamentoIdcomboBox
+            // label2
             // 
-            this.metodoPagamentoIdcomboBox.DataSource = this.metodoPagamentoSetBindingSource;
-            this.metodoPagamentoIdcomboBox.DisplayMember = "MetoPagamento";
-            this.metodoPagamentoIdcomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metodoPagamentoIdcomboBox.FormattingEnabled = true;
-            this.metodoPagamentoIdcomboBox.Location = new System.Drawing.Point(167, 76);
-            this.metodoPagamentoIdcomboBox.Name = "metodoPagamentoIdcomboBox";
-            this.metodoPagamentoIdcomboBox.Size = new System.Drawing.Size(144, 24);
-            this.metodoPagamentoIdcomboBox.TabIndex = 26;
-            this.metodoPagamentoIdcomboBox.ValueMember = "Id";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(11, 59);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 16);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Metodo Pagamento:";
             // 
-            // pedidoIdcomboBox
+            // label3
             // 
-            this.pedidoIdcomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pedidoIdcomboBox.FormattingEnabled = true;
-            this.pedidoIdcomboBox.Location = new System.Drawing.Point(449, 50);
-            this.pedidoIdcomboBox.Name = "pedidoIdcomboBox";
-            this.pedidoIdcomboBox.Size = new System.Drawing.Size(144, 24);
-            this.pedidoIdcomboBox.TabIndex = 27;
-            this.pedidoIdcomboBox.ValueMember = "Id";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 16);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Pedido:";
             // 
-            // referenciaLabel
+            // label4
             // 
-            referenciaLabel.AutoSize = true;
-            referenciaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            referenciaLabel.Location = new System.Drawing.Point(37, 108);
-            referenciaLabel.Name = "referenciaLabel";
-            referenciaLabel.Size = new System.Drawing.Size(76, 16);
-            referenciaLabel.TabIndex = 27;
-            referenciaLabel.Text = "Referencia:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(255, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 16);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Data:";
             // 
-            // referenciaComboBox
+            // dateTimePicker1
             // 
-            this.referenciaComboBox.DataSource = this.promocaosBindingSource;
-            this.referenciaComboBox.DisplayMember = "Referencia";
-            this.referenciaComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.referenciaComboBox.FormattingEnabled = true;
-            this.referenciaComboBox.Location = new System.Drawing.Point(167, 105);
-            this.referenciaComboBox.Name = "referenciaComboBox";
-            this.referenciaComboBox.Size = new System.Drawing.Size(144, 24);
-            this.referenciaComboBox.TabIndex = 28;
-            this.referenciaComboBox.ValueMember = "IdPromocao";
+            this.dateTimePicker1.Location = new System.Drawing.Point(334, 28);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(157, 20);
+            this.dateTimePicker1.TabIndex = 24;
             // 
-            // restGestDBDataSet1
+            // textBoxpromoçao
             // 
-            this.restGestDBDataSet1.DataSetName = "RestGestDBDataSet";
-            this.restGestDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.textBoxpromoçao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxpromoçao.Location = new System.Drawing.Point(334, 56);
+            this.textBoxpromoçao.Name = "textBoxpromoçao";
+            this.textBoxpromoçao.Size = new System.Drawing.Size(157, 22);
+            this.textBoxpromoçao.TabIndex = 26;
             // 
-            // metodoPagamentoSetBindingSource
+            // label5
             // 
-            this.metodoPagamentoSetBindingSource.DataMember = "MetodoPagamentoSet";
-            this.metodoPagamentoSetBindingSource.DataSource = this.restGestDBDataSet1;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(255, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 16);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Promoção:";
             // 
-            // metodoPagamentoSetTableAdapter1
+            // comboBoxpedido
             // 
-            this.metodoPagamentoSetTableAdapter1.ClearBeforeFill = true;
+            this.comboBoxpedido.FormattingEnabled = true;
+            this.comboBoxpedido.Location = new System.Drawing.Point(146, 87);
+            this.comboBoxpedido.Name = "comboBoxpedido";
+            this.comboBoxpedido.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxpedido.TabIndex = 27;
             // 
-            // promocaosBindingSource
+            // comboBoxmetodo
             // 
-            this.promocaosBindingSource.DataMember = "Promocaos";
-            this.promocaosBindingSource.DataSource = this.restGestDBDataSet1;
-            // 
-            // promocaosTableAdapter
-            // 
-            this.promocaosTableAdapter.ClearBeforeFill = true;
+            this.comboBoxmetodo.FormattingEnabled = true;
+            this.comboBoxmetodo.Location = new System.Drawing.Point(146, 56);
+            this.comboBoxmetodo.Name = "comboBoxmetodo";
+            this.comboBoxmetodo.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxmetodo.TabIndex = 28;
             // 
             // EfetuarPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 234);
-            this.Controls.Add(referenciaLabel);
-            this.Controls.Add(this.referenciaComboBox);
-            this.Controls.Add(this.pedidoIdcomboBox);
-            this.Controls.Add(this.metodoPagamentoIdcomboBox);
-            this.Controls.Add(valorLabel);
-            this.Controls.Add(this.valorTextBox);
-            this.Controls.Add(metodoPagamentoIdLabel);
-            this.Controls.Add(pedidoIdLabel);
-            this.Controls.Add(dataLabel);
-            this.Controls.Add(this.dataDateTimePicker);
+            this.ClientSize = new System.Drawing.Size(503, 200);
+            this.Controls.Add(this.comboBoxmetodo);
+            this.Controls.Add(this.comboBoxpedido);
+            this.Controls.Add(this.textBoxpromoçao);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxvalor);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConcluir);
             this.Controls.Add(this.btnBack);
             this.Name = "EfetuarPagamento";
             this.Text = "Efetuar Pagamento";
             this.Load += new System.EventHandler(this.EfetuarPagamento_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.promocaosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,19 +181,15 @@
         #endregion
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnConcluir;
-        private System.Windows.Forms.TextBox valorTextBox;
-        private System.Windows.Forms.DateTimePicker dataDateTimePicker;
-        private System.Windows.Forms.ComboBox metodoPagamentoIdcomboBox;
-        private System.Windows.Forms.ComboBox pedidoIdcomboBox;
-        private RestGestDBDataSet restGestDBDataSet;
-        private RestGestDBDataSetTableAdapters.MetodoPagamentoSetTableAdapter metodoPagamentoSetTableAdapter;
-        private RestGestDBDataSetTableAdapters.PedidoItemMenuTableAdapter pedidoItemMenuTableAdapter;
-        private RestGestDBDataSetTableAdapters.PedidoSetTableAdapter pedidoSetTableAdapter;
-        private System.Windows.Forms.ComboBox referenciaComboBox;
-        private RestGestDBDataSet restGestDBDataSet1;
-        private System.Windows.Forms.BindingSource metodoPagamentoSetBindingSource;
-        private RestGestDBDataSetTableAdapters.MetodoPagamentoSetTableAdapter metodoPagamentoSetTableAdapter1;
-        private System.Windows.Forms.BindingSource promocaosBindingSource;
-        private RestGestDBDataSetTableAdapters.PromocaosTableAdapter promocaosTableAdapter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxvalor;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBoxpromoçao;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxpedido;
+        private System.Windows.Forms.ComboBox comboBoxmetodo;
     }
 }
