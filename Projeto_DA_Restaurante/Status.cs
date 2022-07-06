@@ -12,50 +12,30 @@ namespace Projeto_DA_Restaurante
 {
     public partial class Status : Form
     {
+        RestauranteContext restauranteContext;
         public Status()
         {
             InitializeComponent();
-        }
-
-        private void estadoSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.estadoSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
+            restauranteContext = new RestauranteContext();
         }
 
         private void State_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restGestDBDataSet.EstadoSet' table. You can move, or remove it, as needed.
-            this.estadoSetTableAdapter1.Fill(this.restGestDBDataSet.EstadoSet);
-            // TODO: This line of code loads data into the 'restauranteDataSet3.EstadoSet' table. You can move, or remove it, as needed.
-            this.estadoSetTableAdapter.Fill(this.restauranteDataSet3.EstadoSet);
-            // TODO: This line of code loads data into the 'restauranteDataSet3.EstadoSet' table. You can move, or remove it, as needed.
-            this.estadoSetTableAdapter.Fill(this.restauranteDataSet3.EstadoSet);
-
+            dataGridView1.DataSource = restauranteContext.EstadoSet.ToList();
         }
 
-        private void estadoSetBindingNavigatorSaveItem_Click_3(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.estadoSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
-        }
-
-        private void criarEditarEstadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CRUD_State cRUD_State = new CRUD_State();
-            cRUD_State.ShowDialog();
-        }
-
-        private void voltarMainPageToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             MainPage mainPage = new MainPage();
             mainPage.ShowDialog();
+        }
+
+        private void CRUD_Estado_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CRUD_State cRUD_State = new CRUD_State();
+            cRUD_State.ShowDialog();
         }
     }
 }

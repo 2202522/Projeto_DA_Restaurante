@@ -12,38 +12,30 @@ namespace Projeto_DA_Restaurante
 {
     public partial class Trabalhadores : Form
     {
+        RestauranteContext restauranteContext;
         public Trabalhadores()
         {
             InitializeComponent();
-        }
-
-        private void pessoaSet_TrabalhadorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.pessoaSet_TrabalhadorBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
+            restauranteContext = new RestauranteContext();
         }
 
         private void Trabalhadores_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.PessoaSet_Trabalhador' table. You can move, or remove it, as needed.
-            this.pessoaSet_TrabalhadorTableAdapter.Fill(this.restauranteDataSet3.PessoaSet_Trabalhador);
-
+            dataGridViewTrabalhadores.DataSource = restauranteContext.PessoaSet.ToList();
         }
 
         private void associarTrabalhadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AssociarTrabalhador associarTrabalhador = new AssociarTrabalhador();
+            CRUD_Morada_Trabalhador associarTrabalhador = new CRUD_Morada_Trabalhador();
             associarTrabalhador.ShowDialog();
         }
 
         private void criarEditarTrabalhadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CRUD_Trabalhadores cRUD_Trabalhadores = new CRUD_Trabalhadores();
-            cRUD_Trabalhadores.ShowDialog();
+            CRUD_Morada_Trabalhador cRUD_Morada_Trabalhador = new CRUD_Morada_Trabalhador();
+            cRUD_Morada_Trabalhador.ShowDialog();
         }
 
         private void voltarToolStripMenuItem_Click(object sender, EventArgs e)

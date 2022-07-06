@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label restaurante_IdLabel;
             System.Windows.Forms.Label itemMenu_IdLabel;
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnConcluir = new System.Windows.Forms.Button();
             this.itemMenu_IdComboBox = new System.Windows.Forms.ComboBox();
             this.itemMenuSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.restGestDBDataSet = new Projeto_DA_Restaurante.RestGestDBDataSet();
@@ -38,160 +40,96 @@
             this.restauranteSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.restauranteSetTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.RestauranteSetTableAdapter();
             this.itemMenuSetTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.ItemMenuSetTableAdapter();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.associarAUmRestauranteUmMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.concluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.voltarItensMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             restaurante_IdLabel = new System.Windows.Forms.Label();
             itemMenu_IdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingSource)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // restaurante_IdLabel
+            // btnBack
             // 
-            restaurante_IdLabel.AutoSize = true;
-            restaurante_IdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            restaurante_IdLabel.Location = new System.Drawing.Point(54, 81);
-            restaurante_IdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            restaurante_IdLabel.Name = "restaurante_IdLabel";
-            restaurante_IdLabel.Size = new System.Drawing.Size(105, 20);
-            restaurante_IdLabel.TabIndex = 19;
-            restaurante_IdLabel.Text = "Restaurante:";
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(12, 140);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(90, 40);
+            this.btnBack.TabIndex = 17;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // itemMenu_IdLabel
+            // btnConcluir
             // 
-            itemMenu_IdLabel.AutoSize = true;
-            itemMenu_IdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            itemMenu_IdLabel.Location = new System.Drawing.Point(54, 113);
-            itemMenu_IdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            itemMenu_IdLabel.Name = "itemMenu_IdLabel";
-            itemMenu_IdLabel.Size = new System.Drawing.Size(92, 20);
-            itemMenu_IdLabel.TabIndex = 21;
-            itemMenu_IdLabel.Text = "Item Menu:";
+            this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConcluir.Location = new System.Drawing.Point(228, 140);
+            this.btnConcluir.Name = "btnConcluir";
+            this.btnConcluir.Size = new System.Drawing.Size(90, 40);
+            this.btnConcluir.TabIndex = 18;
+            this.btnConcluir.Text = "Concluir";
+            this.btnConcluir.UseVisualStyleBackColor = true;
+            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
             // 
-            // itemMenu_IdComboBox
+            // label1
             // 
-            this.itemMenu_IdComboBox.DataSource = this.itemMenuSetBindingSource;
-            this.itemMenu_IdComboBox.DisplayMember = "Nome";
-            this.itemMenu_IdComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.itemMenu_IdComboBox.FormattingEnabled = true;
-            this.itemMenu_IdComboBox.Location = new System.Drawing.Point(192, 112);
-            this.itemMenu_IdComboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.itemMenu_IdComboBox.Name = "itemMenu_IdComboBox";
-            this.itemMenu_IdComboBox.Size = new System.Drawing.Size(160, 24);
-            this.itemMenu_IdComboBox.TabIndex = 22;
-            this.itemMenu_IdComboBox.ValueMember = "Id";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(52, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Restaurante:";
             // 
-            // itemMenuSetBindingSource
+            // label2
             // 
-            this.itemMenuSetBindingSource.DataMember = "ItemMenuSet";
-            this.itemMenuSetBindingSource.DataSource = this.restGestDBDataSet;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(52, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Item Menu:";
             // 
-            // restGestDBDataSet
+            // comboBoxrestaurante
             // 
-            this.restGestDBDataSet.DataSetName = "RestGestDBDataSet";
-            this.restGestDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.comboBoxrestaurante.FormattingEnabled = true;
+            this.comboBoxrestaurante.Location = new System.Drawing.Point(142, 42);
+            this.comboBoxrestaurante.Name = "comboBoxrestaurante";
+            this.comboBoxrestaurante.Size = new System.Drawing.Size(118, 21);
+            this.comboBoxrestaurante.TabIndex = 23;
             // 
-            // restaurante_IdcomboBox
+            // comboBoxItemMenu
             // 
-            this.restaurante_IdcomboBox.DataSource = this.restauranteSetBindingSource;
-            this.restaurante_IdcomboBox.DisplayMember = "Nome";
-            this.restaurante_IdcomboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.restaurante_IdcomboBox.FormattingEnabled = true;
-            this.restaurante_IdcomboBox.Location = new System.Drawing.Point(192, 80);
-            this.restaurante_IdcomboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.restaurante_IdcomboBox.Name = "restaurante_IdcomboBox";
-            this.restaurante_IdcomboBox.Size = new System.Drawing.Size(160, 24);
-            this.restaurante_IdcomboBox.TabIndex = 23;
-            this.restaurante_IdcomboBox.ValueMember = "Id";
-            // 
-            // restauranteSetBindingSource
-            // 
-            this.restauranteSetBindingSource.DataMember = "RestauranteSet";
-            this.restauranteSetBindingSource.DataSource = this.restGestDBDataSet;
-            // 
-            // restauranteSetTableAdapter
-            // 
-            this.restauranteSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // itemMenuSetTableAdapter
-            // 
-            this.itemMenuSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.associarAUmRestauranteUmMenuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(451, 28);
-            this.menuStrip1.TabIndex = 24;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // associarAUmRestauranteUmMenuToolStripMenuItem
-            // 
-            this.associarAUmRestauranteUmMenuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.concluirToolStripMenuItem,
-            this.voltarItensMenuToolStripMenuItem});
-            this.associarAUmRestauranteUmMenuToolStripMenuItem.Name = "associarAUmRestauranteUmMenuToolStripMenuItem";
-            this.associarAUmRestauranteUmMenuToolStripMenuItem.Size = new System.Drawing.Size(263, 24);
-            this.associarAUmRestauranteUmMenuToolStripMenuItem.Text = "Associar a um Restaurante um Menu";
-            // 
-            // concluirToolStripMenuItem
-            // 
-            this.concluirToolStripMenuItem.Name = "concluirToolStripMenuItem";
-            this.concluirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.concluirToolStripMenuItem.Text = "Concluir";
-            this.concluirToolStripMenuItem.Click += new System.EventHandler(this.concluirToolStripMenuItem_Click);
-            // 
-            // voltarItensMenuToolStripMenuItem
-            // 
-            this.voltarItensMenuToolStripMenuItem.Name = "voltarItensMenuToolStripMenuItem";
-            this.voltarItensMenuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.voltarItensMenuToolStripMenuItem.Text = "Voltar Itens Menu";
-            this.voltarItensMenuToolStripMenuItem.Click += new System.EventHandler(this.voltarItensMenuToolStripMenuItem_Click);
+            this.comboBoxItemMenu.FormattingEnabled = true;
+            this.comboBoxItemMenu.Location = new System.Drawing.Point(142, 77);
+            this.comboBoxItemMenu.Name = "comboBoxItemMenu";
+            this.comboBoxItemMenu.Size = new System.Drawing.Size(118, 21);
+            this.comboBoxItemMenu.TabIndex = 24;
             // 
             // Associar_Menu_Restaurante
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(451, 246);
-            this.Controls.Add(this.restaurante_IdcomboBox);
-            this.Controls.Add(restaurante_IdLabel);
-            this.Controls.Add(itemMenu_IdLabel);
-            this.Controls.Add(this.itemMenu_IdComboBox);
-            this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.ClientSize = new System.Drawing.Size(338, 200);
+            this.Controls.Add(this.comboBoxItemMenu);
+            this.Controls.Add(this.comboBoxrestaurante);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnConcluir);
+            this.Controls.Add(this.btnBack);
             this.Name = "Associar_Menu_Restaurante";
             this.Text = "Associar a um Restaurante um Menu";
             this.Load += new System.EventHandler(this.Associar_Menu_Restaurante_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingSource)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox itemMenu_IdComboBox;
-        private System.Windows.Forms.ComboBox restaurante_IdcomboBox;
-        private RestGestDBDataSet restGestDBDataSet;
-        private System.Windows.Forms.BindingSource restauranteSetBindingSource;
-        private RestGestDBDataSetTableAdapters.RestauranteSetTableAdapter restauranteSetTableAdapter;
-        private System.Windows.Forms.BindingSource itemMenuSetBindingSource;
-        private RestGestDBDataSetTableAdapters.ItemMenuSetTableAdapter itemMenuSetTableAdapter;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem associarAUmRestauranteUmMenuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem concluirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem voltarItensMenuToolStripMenuItem;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnConcluir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxrestaurante;
+        private System.Windows.Forms.ComboBox comboBoxItemMenu;
     }
 }

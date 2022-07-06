@@ -14,19 +14,18 @@ namespace Projeto_DA_Restaurante
 {
     public partial class Vendas : Form
     {
+        RestauranteContext restauranteContext;
         public Vendas()
         {
             InitializeComponent();
+            restauranteContext = new RestauranteContext();
         }
 
-        private void btnConsultarVendidos_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnConsultarVendas_Click(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
         }
 
         private void Vendas_Load(object sender, EventArgs e)
@@ -42,25 +41,14 @@ namespace Projeto_DA_Restaurante
             SqlDataAdapter dscmd = new SqlDataAdapter(sqlQuery, sqlCon);
             DataTable dtData = new DataTable();
             dscmd.Fill(dtData);
-            dataGridPedidosClientes.DataSource = dtData;
+            dataGridViewMaisVendidos.DataSource = dtData;
 
             sqlQuery = "  SELECT *  FROM PagamentoSet WHERE[Data] >= DATEADD(day, -7, GETDATE()) AND[Data] <= GETDATE()";
             SqlDataAdapter dscmt = new SqlDataAdapter(sqlQuery, sqlCon);
             DataTable dtDataU = new DataTable();
             dscmt.Fill(dtDataU);
-            dataGridultimos7dias.DataSource = dtDataU;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void voltarMainPageToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainPage mainPage = new MainPage();
-            mainPage.ShowDialog();
+            dataGridViewUltimos.DataSource = dtDataU;
+            sqlCon.Close();
         }
     }
 }

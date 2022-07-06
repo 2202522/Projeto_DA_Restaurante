@@ -28,236 +28,212 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label nomeLabel;
-            System.Windows.Forms.Label fotografiaLabel;
-            System.Windows.Forms.Label ingredientesLabel;
-            System.Windows.Forms.Label precoLabel;
-            System.Windows.Forms.Label ativoLabel;
-            System.Windows.Forms.Label categoriaIdLabel;
-            this.nomeTextBox = new System.Windows.Forms.TextBox();
-            this.ingredientesTextBox = new System.Windows.Forms.TextBox();
-            this.ativoTextBox = new System.Windows.Forms.TextBox();
-            this.precoTextBox = new System.Windows.Forms.TextBox();
-            this.categoriacomboBox = new System.Windows.Forms.ComboBox();
-            this.categoriaSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fotografiaTextBox = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.criarUmItemParaOMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.concluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.voltarMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            nomeLabel = new System.Windows.Forms.Label();
-            fotografiaLabel = new System.Windows.Forms.Label();
-            ingredientesLabel = new System.Windows.Forms.Label();
-            precoLabel = new System.Windows.Forms.Label();
-            ativoLabel = new System.Windows.Forms.Label();
-            categoriaIdLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetBindingSource)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnCocluir = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nometextBox = new System.Windows.Forms.TextBox();
+            this.fotografiatextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.precotextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ingredientestextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.ativotextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxrestaurante = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // nomeLabel
+            // btnBack
             // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(16, 88);
-            nomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(58, 20);
-            nomeLabel.TabIndex = 3;
-            nomeLabel.Text = "Nome:";
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(12, 196);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(90, 40);
+            this.btnBack.TabIndex = 16;
+            this.btnBack.Text = "Voltar";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // fotografiaLabel
+            // btnCocluir
             // 
-            fotografiaLabel.AutoSize = true;
-            fotografiaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fotografiaLabel.Location = new System.Drawing.Point(16, 156);
-            fotografiaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            fotografiaLabel.Name = "fotografiaLabel";
-            fotografiaLabel.Size = new System.Drawing.Size(89, 20);
-            fotografiaLabel.TabIndex = 5;
-            fotografiaLabel.Text = "Fotografia:";
+            this.btnCocluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCocluir.Location = new System.Drawing.Point(347, 196);
+            this.btnCocluir.Name = "btnCocluir";
+            this.btnCocluir.Size = new System.Drawing.Size(90, 40);
+            this.btnCocluir.TabIndex = 17;
+            this.btnCocluir.Text = "Concluir";
+            this.btnCocluir.UseVisualStyleBackColor = true;
+            this.btnCocluir.Click += new System.EventHandler(this.btnCocluir_Click);
             // 
-            // ingredientesLabel
+            // label1
             // 
-            ingredientesLabel.AutoSize = true;
-            ingredientesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ingredientesLabel.Location = new System.Drawing.Point(16, 120);
-            ingredientesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            ingredientesLabel.Name = "ingredientesLabel";
-            ingredientesLabel.Size = new System.Drawing.Size(105, 20);
-            ingredientesLabel.TabIndex = 7;
-            ingredientesLabel.Text = "Ingredientes:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 16);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Nome:";
             // 
-            // precoLabel
+            // nometextBox
             // 
-            precoLabel.AutoSize = true;
-            precoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            precoLabel.Location = new System.Drawing.Point(289, 88);
-            precoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            precoLabel.Name = "precoLabel";
-            precoLabel.Size = new System.Drawing.Size(58, 20);
-            precoLabel.TabIndex = 9;
-            precoLabel.Text = "Preco:";
+            this.nometextBox.Location = new System.Drawing.Point(89, 55);
+            this.nometextBox.Name = "nometextBox";
+            this.nometextBox.Size = new System.Drawing.Size(120, 20);
+            this.nometextBox.TabIndex = 20;
             // 
-            // ativoLabel
+            // fotografiatextBox
             // 
-            ativoLabel.AutoSize = true;
-            ativoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            ativoLabel.Location = new System.Drawing.Point(289, 120);
-            ativoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            ativoLabel.Name = "ativoLabel";
-            ativoLabel.Size = new System.Drawing.Size(51, 20);
-            ativoLabel.TabIndex = 11;
-            ativoLabel.Text = "Ativo:";
+            this.fotografiatextBox.Location = new System.Drawing.Point(89, 81);
+            this.fotografiatextBox.Name = "fotografiatextBox";
+            this.fotografiatextBox.Size = new System.Drawing.Size(120, 20);
+            this.fotografiatextBox.TabIndex = 22;
             // 
-            // categoriaIdLabel
+            // label2
             // 
-            categoriaIdLabel.AutoSize = true;
-            categoriaIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            categoriaIdLabel.Location = new System.Drawing.Point(289, 156);
-            categoriaIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            categoriaIdLabel.Name = "categoriaIdLabel";
-            categoriaIdLabel.Size = new System.Drawing.Size(86, 20);
-            categoriaIdLabel.TabIndex = 13;
-            categoriaIdLabel.Text = "Categoria:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 16);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Fotografia:";
             // 
-            // nomeTextBox
+            // precotextBox
             // 
-            this.nomeTextBox.Location = new System.Drawing.Point(132, 87);
-            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(148, 22);
-            this.nomeTextBox.TabIndex = 18;
+            this.precotextBox.Location = new System.Drawing.Point(89, 107);
+            this.precotextBox.Name = "precotextBox";
+            this.precotextBox.Size = new System.Drawing.Size(120, 20);
+            this.precotextBox.TabIndex = 24;
             // 
-            // ingredientesTextBox
+            // label3
             // 
-            this.ingredientesTextBox.Location = new System.Drawing.Point(132, 119);
-            this.ingredientesTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ingredientesTextBox.Name = "ingredientesTextBox";
-            this.ingredientesTextBox.Size = new System.Drawing.Size(148, 22);
-            this.ingredientesTextBox.TabIndex = 20;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 16);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Preço:";
             // 
-            // ativoTextBox
+            // ingredientestextBox
             // 
-            this.ativoTextBox.Location = new System.Drawing.Point(408, 118);
-            this.ativoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ativoTextBox.Name = "ativoTextBox";
-            this.ativoTextBox.Size = new System.Drawing.Size(148, 22);
-            this.ativoTextBox.TabIndex = 22;
+            this.ingredientestextBox.Location = new System.Drawing.Point(306, 55);
+            this.ingredientestextBox.Name = "ingredientestextBox";
+            this.ingredientestextBox.Size = new System.Drawing.Size(120, 20);
+            this.ingredientestextBox.TabIndex = 26;
             // 
-            // precoTextBox
+            // label4
             // 
-            this.precoTextBox.Location = new System.Drawing.Point(408, 87);
-            this.precoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.precoTextBox.Name = "precoTextBox";
-            this.precoTextBox.Size = new System.Drawing.Size(148, 22);
-            this.precoTextBox.TabIndex = 23;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(223, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 16);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Ingredientes:";
             // 
-            // categoriacomboBox
+            // ativotextBox
             // 
-            this.categoriacomboBox.DataSource = this.categoriaSetBindingSource;
-            this.categoriacomboBox.DisplayMember = "Nome";
-            this.categoriacomboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoriacomboBox.FormattingEnabled = true;
-            this.categoriacomboBox.Location = new System.Drawing.Point(408, 156);
-            this.categoriacomboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.categoriacomboBox.Name = "categoriacomboBox";
-            this.categoriacomboBox.Size = new System.Drawing.Size(147, 24);
-            this.categoriacomboBox.TabIndex = 24;
-            this.categoriacomboBox.ValueMember = "Id";
+            this.ativotextBox.Location = new System.Drawing.Point(306, 81);
+            this.ativotextBox.Name = "ativotextBox";
+            this.ativotextBox.Size = new System.Drawing.Size(120, 20);
+            this.ativotextBox.TabIndex = 28;
             // 
-            // categoriaSetBindingSource
+            // label5
             // 
-            this.categoriaSetBindingSource.DataMember = "CategoriaSet";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(223, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 16);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Ativo:";
             // 
-            // fotografiaTextBox
+            // label6
             // 
-            this.fotografiaTextBox.Location = new System.Drawing.Point(132, 157);
-            this.fotografiaTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.fotografiaTextBox.Name = "fotografiaTextBox";
-            this.fotografiaTextBox.Size = new System.Drawing.Size(148, 22);
-            this.fotografiaTextBox.TabIndex = 25;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(223, 108);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 16);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Categoria:";
             // 
-            // menuStrip1
+            // comboBox1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.criarUmItemParaOMenuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(599, 28);
-            this.menuStrip1.TabIndex = 26;
-            this.menuStrip1.Text = "menuStrip1";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(306, 107);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(120, 21);
+            this.comboBox1.TabIndex = 30;
             // 
-            // criarUmItemParaOMenuToolStripMenuItem
+            // comboBoxrestaurante
             // 
-            this.criarUmItemParaOMenuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.concluirToolStripMenuItem,
-            this.voltarMenuToolStripMenuItem});
-            this.criarUmItemParaOMenuToolStripMenuItem.Name = "criarUmItemParaOMenuToolStripMenuItem";
-            this.criarUmItemParaOMenuToolStripMenuItem.Size = new System.Drawing.Size(201, 24);
-            this.criarUmItemParaOMenuToolStripMenuItem.Text = "Criar um item para o Menu";
+            this.comboBoxrestaurante.FormattingEnabled = true;
+            this.comboBoxrestaurante.Location = new System.Drawing.Point(306, 137);
+            this.comboBoxrestaurante.Name = "comboBoxrestaurante";
+            this.comboBoxrestaurante.Size = new System.Drawing.Size(120, 21);
+            this.comboBoxrestaurante.TabIndex = 32;
             // 
-            // concluirToolStripMenuItem
+            // label7
             // 
-            this.concluirToolStripMenuItem.Name = "concluirToolStripMenuItem";
-            this.concluirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.concluirToolStripMenuItem.Text = "Concluir";
-            this.concluirToolStripMenuItem.Click += new System.EventHandler(this.concluirToolStripMenuItem_Click);
-            // 
-            // voltarMenuToolStripMenuItem
-            // 
-            this.voltarMenuToolStripMenuItem.Name = "voltarMenuToolStripMenuItem";
-            this.voltarMenuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.voltarMenuToolStripMenuItem.Text = "Voltar Menu";
-            this.voltarMenuToolStripMenuItem.Click += new System.EventHandler(this.voltarMenuToolStripMenuItem_Click);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(223, 138);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 16);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Restaurante:";
             // 
             // CRUD_Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(599, 252);
-            this.Controls.Add(this.fotografiaTextBox);
-            this.Controls.Add(this.categoriacomboBox);
-            this.Controls.Add(this.precoTextBox);
-            this.Controls.Add(this.ativoTextBox);
-            this.Controls.Add(this.ingredientesTextBox);
-            this.Controls.Add(this.nomeTextBox);
-            this.Controls.Add(nomeLabel);
-            this.Controls.Add(fotografiaLabel);
-            this.Controls.Add(ingredientesLabel);
-            this.Controls.Add(precoLabel);
-            this.Controls.Add(ativoLabel);
-            this.Controls.Add(categoriaIdLabel);
-            this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.ClientSize = new System.Drawing.Size(452, 254);
+            this.Controls.Add(this.comboBoxrestaurante);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.ativotextBox);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.ingredientestextBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.precotextBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.fotografiatextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.nometextBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnCocluir);
+            this.Controls.Add(this.btnBack);
             this.Name = "CRUD_Menu";
             this.Text = "Criar um item para o Menu";
             this.Load += new System.EventHandler(this.CRUD_Menu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetBindingSource)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox nomeTextBox;
-        private System.Windows.Forms.TextBox ingredientesTextBox;
-        private System.Windows.Forms.TextBox ativoTextBox;
-        private System.Windows.Forms.TextBox precoTextBox;
-        private System.Windows.Forms.ComboBox categoriacomboBox;
-        private RestGestDBDataSet restGestDBDataSet;
-        private System.Windows.Forms.BindingSource categoriaSetBindingSource;
-        private RestGestDBDataSetTableAdapters.CategoriaSetTableAdapter categoriaSetTableAdapter;
-        private System.Windows.Forms.TextBox fotografiaTextBox;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem criarUmItemParaOMenuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem concluirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem voltarMenuToolStripMenuItem;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnCocluir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox nometextBox;
+        private System.Windows.Forms.TextBox fotografiatextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox precotextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox ingredientestextBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox ativotextBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxrestaurante;
+        private System.Windows.Forms.Label label7;
     }
 }

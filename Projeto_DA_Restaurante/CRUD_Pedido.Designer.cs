@@ -28,323 +28,193 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label valorTotalLabel;
-            System.Windows.Forms.Label restauranteIdLabel;
-            System.Windows.Forms.Label clienteIdLabel;
-            System.Windows.Forms.Label trabalhadorIdLabel;
-            System.Windows.Forms.Label estadoIdLabel;
-            this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnConcluir = new System.Windows.Forms.Button();
             this.valorTotalTextBox = new System.Windows.Forms.TextBox();
-            this.restauranteIdComboBox = new System.Windows.Forms.ComboBox();
-            this.restauranteSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.restGestDBDataSet = new Projeto_DA_Restaurante.RestGestDBDataSet();
-            this.clienteIdcomboBox = new System.Windows.Forms.ComboBox();
-            this.pessoaSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.trabalhadorIdcomboBox = new System.Windows.Forms.ComboBox();
-            this.pessoaSetBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.estadoIdcomboBox = new System.Windows.Forms.ComboBox();
-            this.estadoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.restauranteSetTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.RestauranteSetTableAdapter();
-            this.pessoaSetClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoaSet_ClienteTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.PessoaSet_ClienteTableAdapter();
-            this.pessoaSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoaSetTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.PessoaSetTableAdapter();
-            this.fKClienteinheritsPessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.estadoSetTableAdapter = new Projeto_DA_Restaurante.RestGestDBDataSetTableAdapters.EstadoSetTableAdapter();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.cRUDPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.concluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            valorTotalLabel = new System.Windows.Forms.Label();
-            restauranteIdLabel = new System.Windows.Forms.Label();
-            clienteIdLabel = new System.Windows.Forms.Label();
-            trabalhadorIdLabel = new System.Windows.Forms.Label();
-            estadoIdLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estadoSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetClienteBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKClienteinheritsPessoaBindingSource)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxtrabalhador = new System.Windows.Forms.ComboBox();
+            this.comboBoxcliente = new System.Windows.Forms.ComboBox();
+            this.comboBoxrestaurante = new System.Windows.Forms.ComboBox();
+            this.comboBoxestado = new System.Windows.Forms.ComboBox();
+            this.comboBoxItemMenu = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // valorTotalLabel
+            // btnBack
             // 
-            valorTotalLabel.AutoSize = true;
-            valorTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            valorTotalLabel.Location = new System.Drawing.Point(38, 83);
-            valorTotalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            valorTotalLabel.Name = "valorTotalLabel";
-            valorTotalLabel.Size = new System.Drawing.Size(95, 20);
-            valorTotalLabel.TabIndex = 3;
-            valorTotalLabel.Text = "Valor Total:";
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(12, 147);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(90, 40);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Voltar";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // restauranteIdLabel
+            // btnConcluir
             // 
-            restauranteIdLabel.AutoSize = true;
-            restauranteIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            restauranteIdLabel.Location = new System.Drawing.Point(38, 115);
-            restauranteIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            restauranteIdLabel.Name = "restauranteIdLabel";
-            restauranteIdLabel.Size = new System.Drawing.Size(105, 20);
-            restauranteIdLabel.TabIndex = 5;
-            restauranteIdLabel.Text = "Restaurante:";
-            // 
-            // clienteIdLabel
-            // 
-            clienteIdLabel.AutoSize = true;
-            clienteIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            clienteIdLabel.Location = new System.Drawing.Point(38, 147);
-            clienteIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            clienteIdLabel.Name = "clienteIdLabel";
-            clienteIdLabel.Size = new System.Drawing.Size(66, 20);
-            clienteIdLabel.TabIndex = 7;
-            clienteIdLabel.Text = "Cliente:";
-            // 
-            // trabalhadorIdLabel
-            // 
-            trabalhadorIdLabel.AutoSize = true;
-            trabalhadorIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            trabalhadorIdLabel.Location = new System.Drawing.Point(312, 83);
-            trabalhadorIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            trabalhadorIdLabel.Name = "trabalhadorIdLabel";
-            trabalhadorIdLabel.Size = new System.Drawing.Size(103, 20);
-            trabalhadorIdLabel.TabIndex = 9;
-            trabalhadorIdLabel.Text = "Trabalhador:";
-            // 
-            // estadoIdLabel
-            // 
-            estadoIdLabel.AutoSize = true;
-            estadoIdLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            estadoIdLabel.Location = new System.Drawing.Point(312, 115);
-            estadoIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            estadoIdLabel.Name = "estadoIdLabel";
-            estadoIdLabel.Size = new System.Drawing.Size(66, 20);
-            estadoIdLabel.TabIndex = 11;
-            estadoIdLabel.Text = "Estado:";
-            // 
-            // restauranteDataSet3
-            // 
-            this.restauranteDataSet3.DataSetName = "RestauranteDataSet3";
-            this.restauranteDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConcluir.Location = new System.Drawing.Point(348, 147);
+            this.btnConcluir.Name = "btnConcluir";
+            this.btnConcluir.Size = new System.Drawing.Size(90, 40);
+            this.btnConcluir.TabIndex = 14;
+            this.btnConcluir.Text = "Concluir";
+            this.btnConcluir.UseVisualStyleBackColor = true;
+            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
             // 
             // valorTotalTextBox
             // 
-            this.valorTotalTextBox.Location = new System.Drawing.Point(147, 82);
-            this.valorTotalTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.valorTotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valorTotalTextBox.Location = new System.Drawing.Point(114, 32);
             this.valorTotalTextBox.Name = "valorTotalTextBox";
-            this.valorTotalTextBox.Size = new System.Drawing.Size(132, 22);
-            this.valorTotalTextBox.TabIndex = 4;
+            this.valorTotalTextBox.Size = new System.Drawing.Size(100, 22);
+            this.valorTotalTextBox.TabIndex = 15;
             // 
-            // restauranteIdComboBox
+            // label1
             // 
-            this.restauranteIdComboBox.DataSource = this.restauranteSetBindingSource;
-            this.restauranteIdComboBox.DisplayMember = "Nome";
-            this.restauranteIdComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.restauranteIdComboBox.FormattingEnabled = true;
-            this.restauranteIdComboBox.Location = new System.Drawing.Point(147, 114);
-            this.restauranteIdComboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.restauranteIdComboBox.Name = "restauranteIdComboBox";
-            this.restauranteIdComboBox.Size = new System.Drawing.Size(132, 24);
-            this.restauranteIdComboBox.TabIndex = 15;
-            this.restauranteIdComboBox.ValueMember = "Id";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Valor:";
             // 
-            // restauranteSetBindingSource
+            // label2
             // 
-            this.restauranteSetBindingSource.DataMember = "RestauranteSet";
-            this.restauranteSetBindingSource.DataSource = this.restGestDBDataSet;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(23, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 16);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Trabalhador:";
             // 
-            // restGestDBDataSet
+            // label3
             // 
-            this.restGestDBDataSet.DataSetName = "RestGestDBDataSet";
-            this.restGestDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(23, 92);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 16);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Cliente:";
             // 
-            // clienteIdcomboBox
+            // label4
             // 
-            this.clienteIdcomboBox.DataSource = this.pessoaSetBindingSource1;
-            this.clienteIdcomboBox.DisplayMember = "Nome";
-            this.clienteIdcomboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clienteIdcomboBox.FormattingEnabled = true;
-            this.clienteIdcomboBox.Location = new System.Drawing.Point(147, 146);
-            this.clienteIdcomboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.clienteIdcomboBox.Name = "clienteIdcomboBox";
-            this.clienteIdcomboBox.Size = new System.Drawing.Size(132, 24);
-            this.clienteIdcomboBox.TabIndex = 16;
-            this.clienteIdcomboBox.ValueMember = "Id";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(238, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 16);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Restaurante";
             // 
-            // pessoaSetBindingSource1
+            // label5
             // 
-            this.pessoaSetBindingSource1.DataMember = "PessoaSet";
-            this.pessoaSetBindingSource1.DataSource = this.restGestDBDataSet;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(241, 63);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 16);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Estado:";
             // 
-            // trabalhadorIdcomboBox
+            // comboBoxtrabalhador
             // 
-            this.trabalhadorIdcomboBox.DataSource = this.pessoaSetBindingSource2;
-            this.trabalhadorIdcomboBox.DisplayMember = "Nome";
-            this.trabalhadorIdcomboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.trabalhadorIdcomboBox.FormattingEnabled = true;
-            this.trabalhadorIdcomboBox.Location = new System.Drawing.Point(434, 82);
-            this.trabalhadorIdcomboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.trabalhadorIdcomboBox.Name = "trabalhadorIdcomboBox";
-            this.trabalhadorIdcomboBox.Size = new System.Drawing.Size(132, 24);
-            this.trabalhadorIdcomboBox.TabIndex = 17;
-            this.trabalhadorIdcomboBox.ValueMember = "Id";
+            this.comboBoxtrabalhador.FormattingEnabled = true;
+            this.comboBoxtrabalhador.Location = new System.Drawing.Point(114, 62);
+            this.comboBoxtrabalhador.Name = "comboBoxtrabalhador";
+            this.comboBoxtrabalhador.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxtrabalhador.TabIndex = 25;
             // 
-            // pessoaSetBindingSource2
+            // comboBoxcliente
             // 
-            this.pessoaSetBindingSource2.DataMember = "PessoaSet";
-            this.pessoaSetBindingSource2.DataSource = this.restGestDBDataSet;
+            this.comboBoxcliente.FormattingEnabled = true;
+            this.comboBoxcliente.Location = new System.Drawing.Point(114, 90);
+            this.comboBoxcliente.Name = "comboBoxcliente";
+            this.comboBoxcliente.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxcliente.TabIndex = 26;
             // 
-            // estadoIdcomboBox
+            // comboBoxrestaurante
             // 
-            this.estadoIdcomboBox.DataSource = this.estadoSetBindingSource;
-            this.estadoIdcomboBox.DisplayMember = "estado";
-            this.estadoIdcomboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.estadoIdcomboBox.FormattingEnabled = true;
-            this.estadoIdcomboBox.Location = new System.Drawing.Point(434, 114);
-            this.estadoIdcomboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.estadoIdcomboBox.Name = "estadoIdcomboBox";
-            this.estadoIdcomboBox.Size = new System.Drawing.Size(132, 24);
-            this.estadoIdcomboBox.TabIndex = 18;
-            this.estadoIdcomboBox.ValueMember = "Id";
+            this.comboBoxrestaurante.FormattingEnabled = true;
+            this.comboBoxrestaurante.Location = new System.Drawing.Point(324, 34);
+            this.comboBoxrestaurante.Name = "comboBoxrestaurante";
+            this.comboBoxrestaurante.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxrestaurante.TabIndex = 27;
             // 
-            // estadoSetBindingSource
+            // comboBoxestado
             // 
-            this.estadoSetBindingSource.DataMember = "EstadoSet";
-            this.estadoSetBindingSource.DataSource = this.restGestDBDataSet;
+            this.comboBoxestado.FormattingEnabled = true;
+            this.comboBoxestado.Location = new System.Drawing.Point(324, 62);
+            this.comboBoxestado.Name = "comboBoxestado";
+            this.comboBoxestado.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxestado.TabIndex = 28;
             // 
-            // restauranteSetTableAdapter
+            // comboBoxItemMenu
             // 
-            this.restauranteSetTableAdapter.ClearBeforeFill = true;
+            this.comboBoxItemMenu.FormattingEnabled = true;
+            this.comboBoxItemMenu.Location = new System.Drawing.Point(324, 91);
+            this.comboBoxItemMenu.Name = "comboBoxItemMenu";
+            this.comboBoxItemMenu.Size = new System.Drawing.Size(100, 21);
+            this.comboBoxItemMenu.TabIndex = 30;
             // 
-            // pessoaSetClienteBindingSource
+            // label6
             // 
-            this.pessoaSetClienteBindingSource.DataMember = "PessoaSet_Cliente";
-            this.pessoaSetClienteBindingSource.DataSource = this.restGestDBDataSet;
-            // 
-            // pessoaSet_ClienteTableAdapter
-            // 
-            this.pessoaSet_ClienteTableAdapter.ClearBeforeFill = true;
-            // 
-            // pessoaSetBindingSource
-            // 
-            this.pessoaSetBindingSource.DataMember = "PessoaSet";
-            this.pessoaSetBindingSource.DataSource = this.restGestDBDataSet;
-            // 
-            // pessoaSetTableAdapter
-            // 
-            this.pessoaSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // fKClienteinheritsPessoaBindingSource
-            // 
-            this.fKClienteinheritsPessoaBindingSource.DataMember = "FK_Cliente_inherits_Pessoa";
-            this.fKClienteinheritsPessoaBindingSource.DataSource = this.pessoaSetBindingSource;
-            // 
-            // estadoSetTableAdapter
-            // 
-            this.estadoSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cRUDPedidoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(611, 28);
-            this.menuStrip1.TabIndex = 19;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // cRUDPedidoToolStripMenuItem
-            // 
-            this.cRUDPedidoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.concluirToolStripMenuItem,
-            this.voltarToolStripMenuItem});
-            this.cRUDPedidoToolStripMenuItem.Name = "cRUDPedidoToolStripMenuItem";
-            this.cRUDPedidoToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
-            this.cRUDPedidoToolStripMenuItem.Text = "Pedido";
-            // 
-            // concluirToolStripMenuItem
-            // 
-            this.concluirToolStripMenuItem.Name = "concluirToolStripMenuItem";
-            this.concluirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.concluirToolStripMenuItem.Text = "Concluir";
-            this.concluirToolStripMenuItem.Click += new System.EventHandler(this.concluirToolStripMenuItem_Click);
-            // 
-            // voltarToolStripMenuItem
-            // 
-            this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
-            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.voltarToolStripMenuItem.Text = "Voltar Pedidos";
-            this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(241, 92);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 16);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Item Menu:";
             // 
             // CRUD_Pedido
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(611, 255);
-            this.Controls.Add(this.estadoIdcomboBox);
-            this.Controls.Add(this.trabalhadorIdcomboBox);
-            this.Controls.Add(this.clienteIdcomboBox);
-            this.Controls.Add(this.restauranteIdComboBox);
-            this.Controls.Add(valorTotalLabel);
+            this.ClientSize = new System.Drawing.Size(458, 207);
+            this.Controls.Add(this.comboBoxItemMenu);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboBoxestado);
+            this.Controls.Add(this.comboBoxrestaurante);
+            this.Controls.Add(this.comboBoxcliente);
+            this.Controls.Add(this.comboBoxtrabalhador);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.valorTotalTextBox);
-            this.Controls.Add(restauranteIdLabel);
-            this.Controls.Add(clienteIdLabel);
-            this.Controls.Add(trabalhadorIdLabel);
-            this.Controls.Add(estadoIdLabel);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Controls.Add(this.btnConcluir);
+            this.Controls.Add(this.btnBack);
             this.Name = "CRUD_Pedido";
             this.Text = "CRUD_Pedido";
             this.Load += new System.EventHandler(this.CRUD_Pedido_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restGestDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.estadoSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetClienteBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pessoaSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fKClienteinheritsPessoaBindingSource)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private RestauranteDataSet3 restauranteDataSet3;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnConcluir;
         private System.Windows.Forms.TextBox valorTotalTextBox;
-        private System.Windows.Forms.ComboBox restauranteIdComboBox;
-        private System.Windows.Forms.ComboBox clienteIdcomboBox;
-        private System.Windows.Forms.ComboBox trabalhadorIdcomboBox;
-        private System.Windows.Forms.ComboBox estadoIdcomboBox;
-        private RestGestDBDataSet restGestDBDataSet;
-        private System.Windows.Forms.BindingSource restauranteSetBindingSource;
-        private RestGestDBDataSetTableAdapters.RestauranteSetTableAdapter restauranteSetTableAdapter;
-        private System.Windows.Forms.BindingSource pessoaSetClienteBindingSource;
-        private RestGestDBDataSetTableAdapters.PessoaSet_ClienteTableAdapter pessoaSet_ClienteTableAdapter;
-        private System.Windows.Forms.BindingSource pessoaSetBindingSource;
-        private RestGestDBDataSetTableAdapters.PessoaSetTableAdapter pessoaSetTableAdapter;
-        private System.Windows.Forms.BindingSource pessoaSetBindingSource1;
-        private System.Windows.Forms.BindingSource pessoaSetBindingSource2;
-        private System.Windows.Forms.BindingSource fKClienteinheritsPessoaBindingSource;
-        private System.Windows.Forms.BindingSource estadoSetBindingSource;
-        private RestGestDBDataSetTableAdapters.EstadoSetTableAdapter estadoSetTableAdapter;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cRUDPedidoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem concluirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxtrabalhador;
+        private System.Windows.Forms.ComboBox comboBoxcliente;
+        private System.Windows.Forms.ComboBox comboBoxrestaurante;
+        private System.Windows.Forms.ComboBox comboBoxestado;
+        private System.Windows.Forms.ComboBox comboBoxItemMenu;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -12,34 +12,39 @@ namespace Projeto_DA_Restaurante
 {
     public partial class CRUD_Cliente : Form
     {
+        RestauranteContext restauranteContext;
+        List<Morada> moradas;
         public CRUD_Cliente()
         {
             InitializeComponent();
-        }
-
-        private void pessoaSet_ClienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.pessoaSet_ClienteBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
+            restauranteContext = new RestauranteContext();
         }
 
         private void CRUD_Cliente_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restauranteDataSet3.PessoaSet_Cliente' table. You can move, or remove it, as needed.
-            this.pessoaSet_ClienteTableAdapter.Fill(this.restauranteDataSet3.PessoaSet_Cliente);
-
+            ruaComboBox.DataSource = restauranteContext.MoradaSet.ToList();
+            moradas = restauranteContext.MoradaSet.ToList();
+            ruaComboBox.ValueMember = "Id";
+            ruaComboBox.DisplayMember = "Rua";
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void buttonSeguinte_Click(object sender, EventArgs e)
         {
+            //Morada morada = ruaComboBox.SelectedItem as Morada;
+            Cliente cliente = new Cliente();
+            cliente.Nome = textBoxnome.Text;
+            cliente.Telemovel = int.Parse(textBoxtelemovel.Text);
+            cliente.NumContribuiente = int.Parse(textBoxcontribuinte.Text);
+            int index = ruaComboBox.SelectedIndex;
+            cliente.Morada = moradas[index];
+            restauranteContext.PessoaSet.Add(cliente);
+            restauranteContext.SaveChanges();
             this.Hide();
             Utilizadores utilizadores = new Utilizadores();
             utilizadores.ShowDialog();
         }
 
-        private void btnConcluir_Click(object sender, EventArgs e)
+        private void buttonVoltar_Click(object sender, EventArgs e)
         {
             this.Hide();
             Utilizadores utilizadores = new Utilizadores();

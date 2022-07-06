@@ -21,48 +21,31 @@ namespace Projeto_DA_Restaurante
 
         private void CRUD_Morada_Restaurante_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restGestDBDataSet.RestauranteSet' table. You can move, or remove it, as needed.
-            this.restauranteSetTableAdapter.Fill(this.restGestDBDataSet.RestauranteSet);
-            // TODO: This line of code loads data into the 'restGestDBDataSet.MoradaSet' table. You can move, or remove it, as needed.
         }
 
-        private void moradaSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.moradaSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restGestDBDataSet);
-
+            this.Hide();
+            Restaurant restaurant = new Restaurant();
+            restaurant.ShowDialog();
         }
 
-        private void moradaSetBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.moradaSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restGestDBDataSet);
-
-        }
-
-        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCocluir_Click(object sender, EventArgs e)
         {
             Morada morada = new Morada();
-            morada.Rua = ruaTextBox.Text;
-            morada.Cidade = cidadeTextBox.Text;
-            morada.CodPostal = codPostalTextBox.Text;
-            morada.Pais = paisTextBox.Text;
-            morada.Restaurante = (Restaurante)restaurante_IdComboBox.SelectedValue;
+            morada.Rua = textBoxrua.Text;
+            morada.Cidade = textBoxcidade.Text;
+            morada.CodPostal = int.Parse(textBoxcodpostal.Text);
+            morada.Pais = textBoxpais.Text;
+            //morada.Restaurante= (Restaurante)restaurante_IdComboBox.SelectedValue;
             restauranteContext.MoradaSet.Add(morada);
             restauranteContext.SaveChanges();
 
             this.Hide();
-            Restaurant restaurant = new Restaurant();
-            restaurant.ShowDialog();
+            CRUD_Restaurant cRUD_Restaurant = new CRUD_Restaurant();
+            cRUD_Restaurant.ShowDialog();
         }
 
-        private void voltarRestaurantToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Restaurant restaurant = new Restaurant();
-            restaurant.ShowDialog();
-        }
+
     }
 }

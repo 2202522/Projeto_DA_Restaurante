@@ -20,60 +20,52 @@ namespace Projeto_DA_Restaurante
             restauranteContext = new RestauranteContext();
         }
 
-        private void categoriaSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.categoriaSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
-        }
-
         private void Restaurant_Load(object sender, EventArgs e)
         {
-            metodoPagamentoSetDataGridView.DataSource = restauranteContext.MetodoPagamentoSet.ToList();
-            categoriaSetDataGridView.DataSource = restauranteContext.CategoriaSet.ToList();
+            dataGridViewMetodo.DataSource = restauranteContext.MetodoPagamentoSet.ToList();
+            dataGridViewCategorias.DataSource = restauranteContext.CategoriaSet.ToList();
         }
 
-        private void criarEditarRestauranteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CRUD_Restaurant cRUD_Restaurant = new CRUD_Restaurant();
-            cRUD_Restaurant.ShowDialog();
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
         }
 
-        private void criarEditarTrabalhadoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Trabalhadores trabalhadores = new Trabalhadores();
-            trabalhadores.ShowDialog();
-        }
-
-        private void criarEditarItensMenuToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Menu menu = new Menu();
-            menu.ShowDialog();
-        }
-
-        private void criarEditarCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_CRUD_Categoria_Click(object sender, EventArgs e)
         {
             this.Hide();
             CRUD_Categoria cRUD_Categoria = new CRUD_Categoria();
             cRUD_Categoria.ShowDialog();
         }
 
-        private void criarEditarMetodoPagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_CRUD_MetodoPagamento_Click(object sender, EventArgs e)
         {
             this.Hide();
             CRUD_MetodoPagamento cRUD_MetodoPagamento = new CRUD_MetodoPagamento();
             cRUD_MetodoPagamento.ShowDialog();
         }
 
-        private void voltarMainPageToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_CRUD_Restaurante_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MainPage mainPage = new MainPage();
-            mainPage.ShowDialog();
+            CRUD_Morada_Restaurante cRUD_Morada_Restaurante = new CRUD_Morada_Restaurante();
+            cRUD_Morada_Restaurante.ShowDialog();
+        }
+
+        private void btn_CRUD_Trabalhadores_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Trabalhadores trabalhadores = new Trabalhadores();
+            trabalhadores.ShowDialog();                     
+        }
+
+        private void btn_CRUD_Menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu menu = new Menu();
+            menu.ShowDialog();
         }
     }
 }

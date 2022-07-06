@@ -22,11 +22,14 @@ namespace Projeto_DA_Restaurante
 
         private void EfetuarPagamento_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restGestDBDataSet1.Promocaos' table. You can move, or remove it, as needed.
-            this.promocaosTableAdapter.Fill(this.restGestDBDataSet1.Promocaos);
-            // TODO: This line of code loads data into the 'restGestDBDataSet1.MetodoPagamentoSet' table. You can move, or remove it, as needed.
-            this.metodoPagamentoSetTableAdapter1.Fill(this.restGestDBDataSet1.MetodoPagamentoSet);
 
+            comboBoxpedido.DataSource = restauranteContext.PedidoSet.ToList();
+            comboBoxpedido.ValueMember = "Id";
+            comboBoxpedido.DisplayMember = "Referencia";
+
+            comboBoxmetodo.DataSource = restauranteContext.MetodoPagamentoSet.ToList();
+            comboBoxmetodo.ValueMember = "Id";
+            comboBoxmetodo.DisplayMember = "MetoPagamento";
 
             //string constr = @"Data Source=.\SQLEXPRESS;Initial Catalog=Restaurante;Persist Security Info=True;User ID=sa;Password=Restaurante_2022";
             //using (SqlConnection con = new SqlConnection(constr))
@@ -43,13 +46,14 @@ namespace Projeto_DA_Restaurante
             //}
         }
 
-        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnConcluir_Click(object sender, EventArgs e)
         {
             Pagamento pagamento = new Pagamento();
-            pagamento.Valor = Convert.ToDouble(valorTextBox.Text);
-            pagamento.Data = Convert.ToDateTime(dataDateTimePicker.Text);
-            pagamento.PedidoId = Convert.ToInt32(pedidoIdcomboBox.SelectedValue);
-            pagamento.MetodoPagamentoId = Convert.ToInt32(metodoPagamentoIdcomboBox.SelectedValue);
+            pagamento.Valor = Convert.ToDouble(textBoxvalor.Text);
+            pagamento.Data = Convert.ToDateTime(dateTimePicker1.Text);
+            pagamento.PedidoId = Convert.ToInt32(comboBoxpedido.SelectedValue);
+            pagamento.MetodoPagamentoId = Convert.ToInt32(comboBoxmetodo.SelectedValue);
+            pagamento.PromocaoIdPromocao = Convert.ToInt32(textBoxpromoçao.Text);
             restauranteContext.PagamentoSet.Add(pagamento);
             restauranteContext.SaveChanges();
 
@@ -58,11 +62,12 @@ namespace Projeto_DA_Restaurante
             pedido.ShowDialog();
         }
 
-        private void voltarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             Pedidos pedido = new Pedidos();
             pedido.ShowDialog();
         }
+
     }
 }

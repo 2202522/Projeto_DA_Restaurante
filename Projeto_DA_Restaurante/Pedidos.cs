@@ -21,84 +21,40 @@ namespace Projeto_DA_Restaurante
             InitializeComponent();
         }
 
-        private void pedidoSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.pedidoSetBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
-
-        }
-
         private void Pedidos_Load(object sender, EventArgs e)
         {
 
 
-            // TODO: This line of code loads data into the 'restauranteDataSet3.PedidoSet' table. You can move, or remove it, as needed.
-            this.pedidoSetTableAdapter.Fill(this.restauranteDataSet3.PedidoSet);
+            //SqlConnection sqlCon;            
+            //string sqlQuery;
 
-            SqlConnection sqlCon;            
-            string sqlQuery;
+            //string conString = ConfigurationManager.ConnectionStrings["RestauranteContainer"].ConnectionString;
+            //sqlCon = new SqlConnection(conString);
+            //sqlCon.Open();
 
-            string conString = ConfigurationManager.ConnectionStrings["RestauranteContainer"].ConnectionString;
-            sqlCon = new SqlConnection(conString);
-            sqlCon.Open();
-
-            sqlQuery = "SELECT * FROM PedidoSet";
-            SqlDataAdapter dscmd = new SqlDataAdapter(sqlQuery, sqlCon);
-            DataTable dtData = new DataTable();
-            dscmd.Fill(dtData);
-            pedidoSetDataGridView.DataSource = dtData;
+            //sqlQuery = "SELECT * FROM PedidoSet";
+            //SqlDataAdapter dscmd = new SqlDataAdapter(sqlQuery, sqlCon);
+            //DataTable dtData = new DataTable();
+            //dscmd.Fill(dtData);
+            //DataGridViewPedidos.DataSource = dtData;
 
         }
 
-        private void querryPedidoToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.pedidoSetTableAdapter.QuerryPedido(this.restauranteDataSet3.PedidoSet);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.pedidoSetTableAdapter.FillBy1(this.restauranteDataSet3.PedidoSet);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void efetuarPagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EfetuarPagamento efetuarPagamento = new EfetuarPagamento();
-            efetuarPagamento.ShowDialog();
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
         }
 
-        private void associarPratoAUmPedidoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Prato prato = new Prato();
-            prato.ShowDialog();
-        }
-
-        private void criarEditarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CRUD_Pedido_Click(object sender, EventArgs e)
         {
             this.Hide();
             CRUD_Pedido cRUD_Pedido = new CRUD_Pedido();
             cRUD_Pedido.ShowDialog();
         }
 
-        private void exportarPDFToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Exportar_Click(object sender, EventArgs e)
         {
             //if (pedidoSetDataGridView.Rows.Count > 0)
             //{
@@ -168,11 +124,18 @@ namespace Projeto_DA_Restaurante
             //}
         }
 
-        private void voltarMainPageToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnPagamento_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MainPage mainPage = new MainPage();
-            mainPage.ShowDialog();
+            EfetuarPagamento efetuarPagamento = new EfetuarPagamento();
+            efetuarPagamento.ShowDialog();
+        }
+
+        private void btnAdicionarPrato_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Prato prato = new Prato();
+            prato.ShowDialog();
         }
     }
 }

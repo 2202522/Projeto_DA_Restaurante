@@ -21,8 +21,7 @@ namespace Projeto_DA_Restaurante
 
         private void Promocoes_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'restGestDBDataSet.Promocaos' table. You can move, or remove it, as needed.
-            this.promocaosTableAdapter.Fill(this.restGestDBDataSet.Promocaos);
+
             dataGridViewPromocoes.DataSource = restauranteContext.Promocaos.ToList();
         }
 

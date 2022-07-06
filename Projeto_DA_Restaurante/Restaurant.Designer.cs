@@ -28,298 +28,201 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.categoriaSetDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriaSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.restauranteDataSet3 = new Projeto_DA_Restaurante.RestauranteDataSet3();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dataGridViewCategorias = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.metodoPagamentoSetDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metodoPagamentoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoriaSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.CategoriaSetTableAdapter();
-            this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            this.metodoPagamentoSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.MetodoPagamentoSetTableAdapter();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.restaurantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.criarEditarRestauranteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.criarEditarTrabalhadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.criarEditarItensMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.criarEditarCategoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.criarEditarMetodoPagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.voltarMainPageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataGridViewMetodo = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_CRUD_Restaurante = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btn_CRUD_Trabalhadores = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btn_CRUD_Menu = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btn_CRUD_Categoria = new System.Windows.Forms.Button();
+            this.btn_CRUD_MetodoPagamento = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetBindingSource)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMetodo)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.categoriaSetDataGridView);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(13, 58);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Controls.Add(this.dataGridViewCategorias);
+            this.groupBox1.Location = new System.Drawing.Point(20, 104);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(453, 224);
+            this.groupBox1.Size = new System.Drawing.Size(257, 246);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Categoria";
             // 
-            // categoriaSetDataGridView
+            // dataGridViewCategorias
             // 
-            this.categoriaSetDataGridView.AllowUserToAddRows = false;
-            this.categoriaSetDataGridView.AllowUserToDeleteRows = false;
-            this.categoriaSetDataGridView.AutoGenerateColumns = false;
-            this.categoriaSetDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.categoriaSetDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.categoriaSetDataGridView.DataSource = this.categoriaSetBindingSource;
-            this.categoriaSetDataGridView.Location = new System.Drawing.Point(8, 23);
-            this.categoriaSetDataGridView.Margin = new System.Windows.Forms.Padding(4);
-            this.categoriaSetDataGridView.Name = "categoriaSetDataGridView";
-            this.categoriaSetDataGridView.ReadOnly = true;
-            this.categoriaSetDataGridView.RowHeadersWidth = 51;
-            this.categoriaSetDataGridView.Size = new System.Drawing.Size(433, 177);
-            this.categoriaSetDataGridView.TabIndex = 0;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nome";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Ativo";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Ativo";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // categoriaSetBindingSource
-            // 
-            this.categoriaSetBindingSource.DataMember = "CategoriaSet";
-            this.categoriaSetBindingSource.DataSource = this.restauranteDataSet3;
-            // 
-            // restauranteDataSet3
-            // 
-            this.restauranteDataSet3.DataSetName = "RestauranteDataSet3";
-            this.restauranteDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCategorias.Location = new System.Drawing.Point(6, 19);
+            this.dataGridViewCategorias.Name = "dataGridViewCategorias";
+            this.dataGridViewCategorias.Size = new System.Drawing.Size(245, 221);
+            this.dataGridViewCategorias.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.metodoPagamentoSetDataGridView);
-            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox2.Location = new System.Drawing.Point(13, 316);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Controls.Add(this.dataGridViewMetodo);
+            this.groupBox2.Location = new System.Drawing.Point(292, 104);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(453, 224);
+            this.groupBox2.Size = new System.Drawing.Size(255, 246);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Metodo de Pagamento";
             // 
-            // metodoPagamentoSetDataGridView
+            // dataGridViewMetodo
             // 
-            this.metodoPagamentoSetDataGridView.AllowUserToAddRows = false;
-            this.metodoPagamentoSetDataGridView.AllowUserToDeleteRows = false;
-            this.metodoPagamentoSetDataGridView.AutoGenerateColumns = false;
-            this.metodoPagamentoSetDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.metodoPagamentoSetDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.metodoPagamentoSetDataGridView.DataSource = this.metodoPagamentoSetBindingSource;
-            this.metodoPagamentoSetDataGridView.Location = new System.Drawing.Point(8, 23);
-            this.metodoPagamentoSetDataGridView.Margin = new System.Windows.Forms.Padding(4);
-            this.metodoPagamentoSetDataGridView.Name = "metodoPagamentoSetDataGridView";
-            this.metodoPagamentoSetDataGridView.ReadOnly = true;
-            this.metodoPagamentoSetDataGridView.RowHeadersWidth = 51;
-            this.metodoPagamentoSetDataGridView.Size = new System.Drawing.Size(433, 180);
-            this.metodoPagamentoSetDataGridView.TabIndex = 0;
+            this.dataGridViewMetodo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMetodo.Location = new System.Drawing.Point(6, 19);
+            this.dataGridViewMetodo.Name = "dataGridViewMetodo";
+            this.dataGridViewMetodo.Size = new System.Drawing.Size(243, 221);
+            this.dataGridViewMetodo.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn4
+            // groupBox3
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "MetoPagamento";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Metodo Pagamento";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 125;
+            this.groupBox3.Controls.Add(this.btn_CRUD_Restaurante);
+            this.groupBox3.Location = new System.Drawing.Point(20, 23);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(175, 75);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Restaurante";
             // 
-            // dataGridViewTextBoxColumn5
+            // btn_CRUD_Restaurante
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Ativo";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Ativo";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 125;
+            this.btn_CRUD_Restaurante.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CRUD_Restaurante.Location = new System.Drawing.Point(29, 24);
+            this.btn_CRUD_Restaurante.Name = "btn_CRUD_Restaurante";
+            this.btn_CRUD_Restaurante.Size = new System.Drawing.Size(110, 34);
+            this.btn_CRUD_Restaurante.TabIndex = 9;
+            this.btn_CRUD_Restaurante.Text = "Criar/Editar Restaurante";
+            this.btn_CRUD_Restaurante.UseVisualStyleBackColor = true;
+            this.btn_CRUD_Restaurante.Click += new System.EventHandler(this.btn_CRUD_Restaurante_Click);
             // 
-            // metodoPagamentoSetBindingSource
+            // groupBox4
             // 
-            this.metodoPagamentoSetBindingSource.DataMember = "MetodoPagamentoSet";
-            this.metodoPagamentoSetBindingSource.DataSource = this.restauranteDataSet3;
+            this.groupBox4.Controls.Add(this.btn_CRUD_Trabalhadores);
+            this.groupBox4.Location = new System.Drawing.Point(195, 23);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(177, 75);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Trabalhadores";
             // 
-            // categoriaSetTableAdapter
+            // btn_CRUD_Trabalhadores
             // 
-            this.categoriaSetTableAdapter.ClearBeforeFill = true;
+            this.btn_CRUD_Trabalhadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CRUD_Trabalhadores.Location = new System.Drawing.Point(35, 24);
+            this.btn_CRUD_Trabalhadores.Name = "btn_CRUD_Trabalhadores";
+            this.btn_CRUD_Trabalhadores.Size = new System.Drawing.Size(110, 34);
+            this.btn_CRUD_Trabalhadores.TabIndex = 10;
+            this.btn_CRUD_Trabalhadores.Text = "Criar/Editar Trabalhadores";
+            this.btn_CRUD_Trabalhadores.UseVisualStyleBackColor = true;
+            this.btn_CRUD_Trabalhadores.Click += new System.EventHandler(this.btn_CRUD_Trabalhadores_Click);
             // 
-            // tableAdapterManager
+            // groupBox5
             // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoriaSetTableAdapter = this.categoriaSetTableAdapter;
-            this.tableAdapterManager.EstadoSetTableAdapter = null;
-            this.tableAdapterManager.ItemMenuSetTableAdapter = null;
-            this.tableAdapterManager.MetodoPagamentoSetTableAdapter = this.metodoPagamentoSetTableAdapter;
-            this.tableAdapterManager.MoradaSetTableAdapter = null;
-            this.tableAdapterManager.PagamentoSetTableAdapter = null;
-            this.tableAdapterManager.PedidoItemMenuTableAdapter = null;
-            this.tableAdapterManager.PedidoSetTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
-            this.tableAdapterManager.PessoaSetTableAdapter = null;
-            this.tableAdapterManager.RestauranteItemMenuTableAdapter = null;
-            this.tableAdapterManager.RestauranteSetTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.groupBox5.Controls.Add(this.btn_CRUD_Menu);
+            this.groupBox5.Location = new System.Drawing.Point(372, 23);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(175, 75);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Itens Menus";
             // 
-            // metodoPagamentoSetTableAdapter
+            // btn_CRUD_Menu
             // 
-            this.metodoPagamentoSetTableAdapter.ClearBeforeFill = true;
+            this.btn_CRUD_Menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CRUD_Menu.Location = new System.Drawing.Point(34, 24);
+            this.btn_CRUD_Menu.Name = "btn_CRUD_Menu";
+            this.btn_CRUD_Menu.Size = new System.Drawing.Size(110, 34);
+            this.btn_CRUD_Menu.TabIndex = 11;
+            this.btn_CRUD_Menu.Text = "Criar/Editar Itens Menu";
+            this.btn_CRUD_Menu.UseVisualStyleBackColor = true;
+            this.btn_CRUD_Menu.Click += new System.EventHandler(this.btn_CRUD_Menu_Click);
             // 
-            // menuStrip1
+            // btnBack
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.restaurantToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(500, 28);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(12, 397);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(90, 40);
+            this.btnBack.TabIndex = 6;
+            this.btnBack.Text = "Voltar";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // restaurantToolStripMenuItem
+            // btn_CRUD_Categoria
             // 
-            this.restaurantToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.criarEditarRestauranteToolStripMenuItem,
-            this.criarEditarTrabalhadoresToolStripMenuItem,
-            this.criarEditarItensMenuToolStripMenuItem,
-            this.criarEditarCategoriaToolStripMenuItem,
-            this.criarEditarMetodoPagamentoToolStripMenuItem,
-            this.voltarMainPageToolStripMenuItem});
-            this.restaurantToolStripMenuItem.Name = "restaurantToolStripMenuItem";
-            this.restaurantToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
-            this.restaurantToolStripMenuItem.Text = "Restaurante";
+            this.btn_CRUD_Categoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CRUD_Categoria.Location = new System.Drawing.Point(167, 356);
+            this.btn_CRUD_Categoria.Name = "btn_CRUD_Categoria";
+            this.btn_CRUD_Categoria.Size = new System.Drawing.Size(110, 34);
+            this.btn_CRUD_Categoria.TabIndex = 7;
+            this.btn_CRUD_Categoria.Text = "Criar/Editar Categoria";
+            this.btn_CRUD_Categoria.UseVisualStyleBackColor = true;
+            this.btn_CRUD_Categoria.Click += new System.EventHandler(this.btn_CRUD_Categoria_Click);
             // 
-            // criarEditarRestauranteToolStripMenuItem
+            // btn_CRUD_MetodoPagamento
             // 
-            this.criarEditarRestauranteToolStripMenuItem.Name = "criarEditarRestauranteToolStripMenuItem";
-            this.criarEditarRestauranteToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
-            this.criarEditarRestauranteToolStripMenuItem.Text = "Criar/Editar Restaurante";
-            this.criarEditarRestauranteToolStripMenuItem.Click += new System.EventHandler(this.criarEditarRestauranteToolStripMenuItem_Click);
-            // 
-            // criarEditarTrabalhadoresToolStripMenuItem
-            // 
-            this.criarEditarTrabalhadoresToolStripMenuItem.Name = "criarEditarTrabalhadoresToolStripMenuItem";
-            this.criarEditarTrabalhadoresToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
-            this.criarEditarTrabalhadoresToolStripMenuItem.Text = "Criar/Editar Trabalhadores";
-            this.criarEditarTrabalhadoresToolStripMenuItem.Click += new System.EventHandler(this.criarEditarTrabalhadoresToolStripMenuItem_Click);
-            // 
-            // criarEditarItensMenuToolStripMenuItem
-            // 
-            this.criarEditarItensMenuToolStripMenuItem.Name = "criarEditarItensMenuToolStripMenuItem";
-            this.criarEditarItensMenuToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
-            this.criarEditarItensMenuToolStripMenuItem.Text = "Criar/Editar Itens Menu";
-            this.criarEditarItensMenuToolStripMenuItem.Click += new System.EventHandler(this.criarEditarItensMenuToolStripMenuItem_Click);
-            // 
-            // criarEditarCategoriaToolStripMenuItem
-            // 
-            this.criarEditarCategoriaToolStripMenuItem.Name = "criarEditarCategoriaToolStripMenuItem";
-            this.criarEditarCategoriaToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
-            this.criarEditarCategoriaToolStripMenuItem.Text = "Criar/Editar Categoria";
-            this.criarEditarCategoriaToolStripMenuItem.Click += new System.EventHandler(this.criarEditarCategoriaToolStripMenuItem_Click);
-            // 
-            // criarEditarMetodoPagamentoToolStripMenuItem
-            // 
-            this.criarEditarMetodoPagamentoToolStripMenuItem.Name = "criarEditarMetodoPagamentoToolStripMenuItem";
-            this.criarEditarMetodoPagamentoToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
-            this.criarEditarMetodoPagamentoToolStripMenuItem.Text = "Criar/Editar Metodo Pagamento";
-            this.criarEditarMetodoPagamentoToolStripMenuItem.Click += new System.EventHandler(this.criarEditarMetodoPagamentoToolStripMenuItem_Click);
-            // 
-            // voltarMainPageToolStripMenuItem
-            // 
-            this.voltarMainPageToolStripMenuItem.Name = "voltarMainPageToolStripMenuItem";
-            this.voltarMainPageToolStripMenuItem.Size = new System.Drawing.Size(304, 26);
-            this.voltarMainPageToolStripMenuItem.Text = "Voltar Main Page";
-            this.voltarMainPageToolStripMenuItem.Click += new System.EventHandler(this.voltarMainPageToolStripMenuItem_Click);
+            this.btn_CRUD_MetodoPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CRUD_MetodoPagamento.Location = new System.Drawing.Point(437, 356);
+            this.btn_CRUD_MetodoPagamento.Name = "btn_CRUD_MetodoPagamento";
+            this.btn_CRUD_MetodoPagamento.Size = new System.Drawing.Size(110, 34);
+            this.btn_CRUD_MetodoPagamento.TabIndex = 8;
+            this.btn_CRUD_MetodoPagamento.Text = "Criar/Editar Metodo Pagamento";
+            this.btn_CRUD_MetodoPagamento.UseVisualStyleBackColor = true;
+            this.btn_CRUD_MetodoPagamento.Click += new System.EventHandler(this.btn_CRUD_MetodoPagamento_Click);
             // 
             // Restaurant
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(500, 553);
+            this.ClientSize = new System.Drawing.Size(576, 449);
+            this.Controls.Add(this.btn_CRUD_MetodoPagamento);
+            this.Controls.Add(this.btn_CRUD_Categoria);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Restaurant";
             this.Text = "Restaurant";
             this.Load += new System.EventHandler(this.Restaurant_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriaSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metodoPagamentoSetBindingSource)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMetodo)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private RestauranteDataSet3 restauranteDataSet3;
-        private System.Windows.Forms.BindingSource categoriaSetBindingSource;
-        private RestauranteDataSet3TableAdapters.CategoriaSetTableAdapter categoriaSetTableAdapter;
-        private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView categoriaSetDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private RestauranteDataSet3TableAdapters.MetodoPagamentoSetTableAdapter metodoPagamentoSetTableAdapter;
-        private System.Windows.Forms.BindingSource metodoPagamentoSetBindingSource;
-        private System.Windows.Forms.DataGridView metodoPagamentoSetDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem restaurantToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem criarEditarRestauranteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem criarEditarTrabalhadoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem criarEditarItensMenuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem criarEditarCategoriaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem criarEditarMetodoPagamentoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem voltarMainPageToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btn_CRUD_Categoria;
+        private System.Windows.Forms.Button btn_CRUD_MetodoPagamento;
+        private System.Windows.Forms.Button btn_CRUD_Restaurante;
+        private System.Windows.Forms.Button btn_CRUD_Trabalhadores;
+        private System.Windows.Forms.Button btn_CRUD_Menu;
+        private System.Windows.Forms.DataGridView dataGridViewCategorias;
+        private System.Windows.Forms.DataGridView dataGridViewMetodo;
     }
 }
