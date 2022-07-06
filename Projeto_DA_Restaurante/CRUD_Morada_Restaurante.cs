@@ -26,29 +26,6 @@ namespace Projeto_DA_Restaurante
             // TODO: This line of code loads data into the 'restGestDBDataSet.MoradaSet' table. You can move, or remove it, as needed.
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Restaurant restaurant = new Restaurant();
-            restaurant.ShowDialog();
-        }
-
-        private void btnCocluir_Click(object sender, EventArgs e)
-        {
-            Morada morada = new Morada();
-            morada.Rua = ruaTextBox.Text;
-            morada.Cidade = cidadeTextBox.Text;
-            morada.CodPostal = codPostalTextBox.Text;
-            morada.Pais = paisTextBox.Text;
-            morada.Restaurante= (Restaurante)restaurante_IdComboBox.SelectedValue;
-            restauranteContext.MoradaSet.Add(morada);
-            restauranteContext.SaveChanges();
-
-            this.Hide();
-            Restaurant restaurant = new Restaurant();
-            restaurant.ShowDialog();
-        }
-
         private void moradaSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -63,6 +40,29 @@ namespace Projeto_DA_Restaurante
             this.moradaSetBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.restGestDBDataSet);
 
+        }
+
+        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Morada morada = new Morada();
+            morada.Rua = ruaTextBox.Text;
+            morada.Cidade = cidadeTextBox.Text;
+            morada.CodPostal = codPostalTextBox.Text;
+            morada.Pais = paisTextBox.Text;
+            morada.Restaurante = (Restaurante)restaurante_IdComboBox.SelectedValue;
+            restauranteContext.MoradaSet.Add(morada);
+            restauranteContext.SaveChanges();
+
+            this.Hide();
+            Restaurant restaurant = new Restaurant();
+            restaurant.ShowDialog();
+        }
+
+        private void voltarRestaurantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Restaurant restaurant = new Restaurant();
+            restaurant.ShowDialog();
         }
     }
 }

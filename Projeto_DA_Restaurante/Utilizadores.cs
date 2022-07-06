@@ -28,35 +28,25 @@ namespace Projeto_DA_Restaurante
 
         }
 
-        private void btnEditarClientes_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CRUD_Utilizador cRUD_Utilizador = new CRUD_Utilizador();
-            cRUD_Utilizador.ShowDialog();
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainPage mainPage = new MainPage();
-            mainPage.ShowDialog();
-        }
-
-        private void pessoaSetBindingNavigator_RefreshItems(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCliente_Click(object sender, EventArgs e)
+        private void criarEditarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             CRUD_Cliente cRUD_Cliente = new CRUD_Cliente();
             cRUD_Cliente.ShowDialog();
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void criarEditarUtilizadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            CRUD_Utilizador cRUD_Utilizador = new CRUD_Utilizador();
+            cRUD_Utilizador.ShowDialog();
+        }
 
+        private void voltarHomePageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
         }
     }
 }

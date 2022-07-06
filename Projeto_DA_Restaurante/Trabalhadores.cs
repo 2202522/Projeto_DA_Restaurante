@@ -32,25 +32,25 @@ namespace Projeto_DA_Restaurante
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Restaurant restaurant = new Restaurant();
-            restaurant.ShowDialog();
-        }
-
-        private void btn_Associar_Click(object sender, EventArgs e)
+        private void associarTrabalhadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             AssociarTrabalhador associarTrabalhador = new AssociarTrabalhador();
             associarTrabalhador.ShowDialog();
         }
 
-        private void btn_CRUD_Trabalhadores_Click(object sender, EventArgs e)
+        private void criarEditarTrabalhadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             CRUD_Trabalhadores cRUD_Trabalhadores = new CRUD_Trabalhadores();
             cRUD_Trabalhadores.ShowDialog();
+        }
+
+        private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Restaurant restaurant = new Restaurant();
+            restaurant.ShowDialog();
         }
     }
 }

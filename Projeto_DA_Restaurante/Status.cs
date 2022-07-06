@@ -36,36 +36,26 @@ namespace Projeto_DA_Restaurante
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainPage mainPage = new MainPage();
-            mainPage.ShowDialog();
-        }
-
-        private void CRUD_Estado_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CRUD_State cRUD_State = new CRUD_State();
-            cRUD_State.ShowDialog();
-        }
-
-        private void estadoSetBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void estadoSetBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
         private void estadoSetBindingNavigatorSaveItem_Click_3(object sender, EventArgs e)
         {
             this.Validate();
             this.estadoSetBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.restauranteDataSet3);
 
+        }
+
+        private void criarEditarEstadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CRUD_State cRUD_State = new CRUD_State();
+            cRUD_State.ShowDialog();
+        }
+
+        private void voltarMainPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
         }
     }
 }

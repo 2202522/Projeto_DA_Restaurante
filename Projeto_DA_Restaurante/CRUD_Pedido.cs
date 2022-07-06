@@ -33,14 +33,7 @@ namespace Projeto_DA_Restaurante
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Pedidos pedido = new Pedidos();
-            pedido.ShowDialog();
-        }
-
-        private void btnConcluir_Click(object sender, EventArgs e)
+        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Pedido pedidos = new Pedido();
             pedidos.ValorTotal = Convert.ToDouble(valorTotalTextBox.Text);
@@ -56,5 +49,11 @@ namespace Projeto_DA_Restaurante
             pedido.ShowDialog();
         }
 
+        private void voltarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Pedidos pedido = new Pedidos();
+            pedido.ShowDialog();
+        }
     }
 }

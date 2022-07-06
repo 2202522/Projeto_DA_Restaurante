@@ -27,27 +27,6 @@ namespace Projeto_DA_Restaurante
             this.itemMenuSetTableAdapter.Fill(this.restGestDBDataSet.ItemMenuSet);
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Restaurant restaurant = new Restaurant();
-            restaurant.ShowDialog();
-        }
-
-        private void btn_CRUD_Itens_Menu_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CRUD_Menu cRUD_Menu = new CRUD_Menu();
-            cRUD_Menu.ShowDialog();
-        }
-
-        private void btn_Associar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Associar_Menu_Restaurante associar_Menu_Restaurante = new Associar_Menu_Restaurante();
-            associar_Menu_Restaurante.ShowDialog();
-        }
-
         private void itemMenuSetBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
         {
             this.Validate();
@@ -62,6 +41,27 @@ namespace Projeto_DA_Restaurante
             this.itemMenuSetBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.restGestDBDataSet);
 
+        }
+
+        private void associarRestauranteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Associar_Menu_Restaurante associar_Menu_Restaurante = new Associar_Menu_Restaurante();
+            associar_Menu_Restaurante.ShowDialog();
+        }
+
+        private void criarEditarItensMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CRUD_Menu cRUD_Menu = new CRUD_Menu();
+            cRUD_Menu.ShowDialog();
+        }
+
+        private void voltarRestaurantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Restaurant restaurant = new Restaurant();
+            restaurant.ShowDialog();
         }
     }
 }

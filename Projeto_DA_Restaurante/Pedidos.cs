@@ -51,21 +51,54 @@ namespace Projeto_DA_Restaurante
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void querryPedidoToolStripButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MainPage mainPage = new MainPage();
-            mainPage.ShowDialog();
+            try
+            {
+                this.pedidoSetTableAdapter.QuerryPedido(this.restauranteDataSet3.PedidoSet);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
 
-        private void CRUD_Pedido_Click(object sender, EventArgs e)
+        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.pedidoSetTableAdapter.FillBy1(this.restauranteDataSet3.PedidoSet);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void efetuarPagamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            EfetuarPagamento efetuarPagamento = new EfetuarPagamento();
+            efetuarPagamento.ShowDialog();
+        }
+
+        private void associarPratoAUmPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Prato prato = new Prato();
+            prato.ShowDialog();
+        }
+
+        private void criarEditarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             CRUD_Pedido cRUD_Pedido = new CRUD_Pedido();
             cRUD_Pedido.ShowDialog();
         }
 
-        private void Exportar_Click(object sender, EventArgs e)
+        private void exportarPDFToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //if (pedidoSetDataGridView.Rows.Count > 0)
             //{
@@ -135,44 +168,11 @@ namespace Projeto_DA_Restaurante
             //}
         }
 
-        private void btnPagamento_Click(object sender, EventArgs e)
+        private void voltarMainPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            EfetuarPagamento efetuarPagamento = new EfetuarPagamento();
-            efetuarPagamento.ShowDialog();
-        }
-
-        private void btnAdicionarPrato_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Prato prato = new Prato();
-            prato.ShowDialog();
-        }
-
-        private void querryPedidoToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.pedidoSetTableAdapter.QuerryPedido(this.restauranteDataSet3.PedidoSet);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillBy1ToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.pedidoSetTableAdapter.FillBy1(this.restauranteDataSet3.PedidoSet);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
         }
     }
 }

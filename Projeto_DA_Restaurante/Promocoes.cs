@@ -19,13 +19,6 @@ namespace Projeto_DA_Restaurante
             restauranteContext = new RestauranteContext();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainPage mainPage = new MainPage();
-            mainPage.ShowDialog();
-        }
-
         private void Promocoes_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'restGestDBDataSet.Promocaos' table. You can move, or remove it, as needed.
@@ -33,11 +26,18 @@ namespace Projeto_DA_Restaurante
             dataGridViewPromocoes.DataSource = restauranteContext.Promocaos.ToList();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void criarCodigosDePromoçãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             CRUD_Promocoes cRUD_Promocoes = new CRUD_Promocoes();
             cRUD_Promocoes.ShowDialog();
+        }
+
+        private void voltarMainPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
         }
     }
 }

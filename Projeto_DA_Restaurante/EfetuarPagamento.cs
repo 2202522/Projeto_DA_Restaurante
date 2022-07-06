@@ -43,7 +43,7 @@ namespace Projeto_DA_Restaurante
             //}
         }
 
-        private void btnConcluir_Click(object sender, EventArgs e)
+        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Pagamento pagamento = new Pagamento();
             pagamento.Valor = Convert.ToDouble(valorTextBox.Text);
@@ -58,22 +58,11 @@ namespace Projeto_DA_Restaurante
             pedido.ShowDialog();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void voltarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Pedidos pedido = new Pedidos();
             pedido.ShowDialog();
         }
-
-        private void metodoPagamentoIdComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

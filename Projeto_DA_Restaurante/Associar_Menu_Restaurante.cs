@@ -31,14 +31,7 @@ namespace Projeto_DA_Restaurante
             this.itemMenuSetTableAdapter.Fill(this.restGestDBDataSet.ItemMenuSet);
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Menu menu = new Menu();
-            menu.Show();
-        }
-
-        private void btnConcluir_Click(object sender, EventArgs e)
+        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Associar_Menu_Restaurante itemMenu = new Associar_Menu_Restaurante();
             //itemMenu.resta = Convert.ToInt32(restaurante_IdcomboBox.SelectedValue);
@@ -51,6 +44,11 @@ namespace Projeto_DA_Restaurante
             menu.Show();
         }
 
-
+        private void voltarItensMenuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Menu menu = new Menu();
+            menu.Show();
+        }
     }
 }

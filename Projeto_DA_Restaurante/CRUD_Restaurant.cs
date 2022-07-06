@@ -36,7 +36,7 @@ namespace Projeto_DA_Restaurante
             //}
         }
 
-        private void btnConcluir_Click(object sender, EventArgs e)
+        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Restaurante restaurante = new Restaurante();
             restaurante.Nome = nomeTextBox.Text;
@@ -48,19 +48,14 @@ namespace Projeto_DA_Restaurante
             cRUD_Morada_Restaurante.ShowDialog();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void voltarRestaurantToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Restaurant restaurant = new Restaurant();
             restaurant.ShowDialog();
         }
 
-        private void restaurante_idComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nomeTextBox_TextChanged(object sender, EventArgs e)
+        private void cRUDRestaurantToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

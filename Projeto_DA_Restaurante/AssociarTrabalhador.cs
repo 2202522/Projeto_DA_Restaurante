@@ -20,26 +20,6 @@ namespace Projeto_DA_Restaurante
             restauranteContext = new RestauranteContext();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Trabalhadores trabalhadores = new Trabalhadores();
-            trabalhadores.ShowDialog();
-        }
-
-        private void btnConcluir_Click(object sender, EventArgs e)
-        {
-            Pessoa trabalhador = new Pessoa();
-            //itemMenu.Fotografia = fotografiaTextBox.Text;
-            //itemMenu.Preco = Convert.ToDouble(precoTextBox.Text);
-            //itemMenu.Ingredientes = ingredientesTextBox.Text;
-            //itemMenu.Ativo = ativoTextBox.Text; //alterar para bolean
-            //itemMenu.CategoriaId = Convert.ToInt32(categoriacomboBox.SelectedValue);
-            this.Hide();
-            Trabalhadores trabalhadores = new Trabalhadores();
-            trabalhadores.ShowDialog();
-        }
-
         private void pessoaSet_TrabalhadorBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -67,6 +47,26 @@ namespace Projeto_DA_Restaurante
             // TODO: This line of code loads data into the 'restGestDBDataSet.PessoaSet_Trabalhador' table. You can move, or remove it, as needed.
             this.pessoaSet_TrabalhadorTableAdapter.Fill(this.restGestDBDataSet.PessoaSet_Trabalhador);
 
+        }
+
+        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Pessoa trabalhador = new Pessoa();
+            //itemMenu.Fotografia = fotografiaTextBox.Text;
+            //itemMenu.Preco = Convert.ToDouble(precoTextBox.Text);
+            //itemMenu.Ingredientes = ingredientesTextBox.Text;
+            //itemMenu.Ativo = ativoTextBox.Text; //alterar para bolean
+            //itemMenu.CategoriaId = Convert.ToInt32(categoriacomboBox.SelectedValue);
+            this.Hide();
+            Trabalhadores trabalhadores = new Trabalhadores();
+            trabalhadores.ShowDialog();
+        }
+
+        private void voltarTrabalhadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Trabalhadores trabalhadores = new Trabalhadores();
+            trabalhadores.ShowDialog();
         }
     }
 }

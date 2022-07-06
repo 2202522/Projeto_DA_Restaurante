@@ -34,56 +34,46 @@ namespace Projeto_DA_Restaurante
             categoriaSetDataGridView.DataSource = restauranteContext.CategoriaSet.ToList();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainPage mainPage = new MainPage();
-            mainPage.ShowDialog();
-        }
-
-        private void btn_CRUD_Categoria_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CRUD_Categoria cRUD_Categoria = new CRUD_Categoria();
-            cRUD_Categoria.ShowDialog();
-        }
-
-        private void btn_CRUD_MetodoPagamento_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CRUD_MetodoPagamento cRUD_MetodoPagamento = new CRUD_MetodoPagamento();
-            cRUD_MetodoPagamento.ShowDialog();
-        }
-
-        private void btn_CRUD_Restaurante_Click(object sender, EventArgs e)
+        private void criarEditarRestauranteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             CRUD_Restaurant cRUD_Restaurant = new CRUD_Restaurant();
             cRUD_Restaurant.ShowDialog();
         }
 
-        private void btn_CRUD_Trabalhadores_Click(object sender, EventArgs e)
+        private void criarEditarTrabalhadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Trabalhadores trabalhadores = new Trabalhadores();
-            trabalhadores.ShowDialog();                     
+            trabalhadores.ShowDialog();
         }
 
-        private void btn_CRUD_Menu_Click(object sender, EventArgs e)
+        private void criarEditarItensMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Menu menu = new Menu();
             menu.ShowDialog();
         }
 
-        private void categoriaSetDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void criarEditarCategoriaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            CRUD_Categoria cRUD_Categoria = new CRUD_Categoria();
+            cRUD_Categoria.ShowDialog();
         }
 
-        private void metodoPagamentoSetDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void criarEditarMetodoPagamentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            CRUD_MetodoPagamento cRUD_MetodoPagamento = new CRUD_MetodoPagamento();
+            cRUD_MetodoPagamento.ShowDialog();
+        }
 
+        private void voltarMainPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
         }
     }
 }

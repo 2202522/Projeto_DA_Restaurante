@@ -33,14 +33,17 @@
             this.categoriaSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriaSetTableAdapter = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.CategoriaSetTableAdapter();
             this.tableAdapterManager = new Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.btnConcluir = new System.Windows.Forms.Button();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.ativoTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cRUDCategoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.concluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarRestaurantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaSetBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // restauranteDataSet3
@@ -75,49 +78,30 @@
             this.tableAdapterManager.RestauranteSetTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Projeto_DA_Restaurante.RestauranteDataSet3TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // btnBack
-            // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 140);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(90, 40);
-            this.btnBack.TabIndex = 7;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnConcluir
-            // 
-            this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConcluir.Location = new System.Drawing.Point(228, 140);
-            this.btnConcluir.Name = "btnConcluir";
-            this.btnConcluir.Size = new System.Drawing.Size(90, 40);
-            this.btnConcluir.TabIndex = 8;
-            this.btnConcluir.Text = "Concluir";
-            this.btnConcluir.UseVisualStyleBackColor = true;
-            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
-            // 
             // nomeTextBox
             // 
-            this.nomeTextBox.Location = new System.Drawing.Point(130, 42);
+            this.nomeTextBox.Location = new System.Drawing.Point(166, 77);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(188, 20);
+            this.nomeTextBox.Size = new System.Drawing.Size(249, 22);
             this.nomeTextBox.TabIndex = 9;
             // 
             // ativoTextBox
             // 
-            this.ativoTextBox.Location = new System.Drawing.Point(130, 77);
+            this.ativoTextBox.Location = new System.Drawing.Point(166, 120);
+            this.ativoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ativoTextBox.Name = "ativoTextBox";
-            this.ativoTextBox.Size = new System.Drawing.Size(188, 20);
+            this.ativoTextBox.Size = new System.Drawing.Size(249, 22);
             this.ativoTextBox.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 78);
+            this.label2.Location = new System.Drawing.Point(16, 121);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 15;
             this.label2.Text = "Ativo:";
             // 
@@ -125,28 +109,68 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 43);
+            this.label1.Location = new System.Drawing.Point(16, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 16);
+            this.label1.Size = new System.Drawing.Size(135, 20);
             this.label1.TabIndex = 14;
             this.label1.Text = "Nome Categoria:";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cRUDCategoriaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(440, 28);
+            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // cRUDCategoriaToolStripMenuItem
+            // 
+            this.cRUDCategoriaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.concluirToolStripMenuItem,
+            this.voltarRestaurantToolStripMenuItem});
+            this.cRUDCategoriaToolStripMenuItem.Name = "cRUDCategoriaToolStripMenuItem";
+            this.cRUDCategoriaToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.cRUDCategoriaToolStripMenuItem.Text = "Categoria";
+            this.cRUDCategoriaToolStripMenuItem.Click += new System.EventHandler(this.cRUDCategoriaToolStripMenuItem_Click);
+            // 
+            // concluirToolStripMenuItem
+            // 
+            this.concluirToolStripMenuItem.Name = "concluirToolStripMenuItem";
+            this.concluirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.concluirToolStripMenuItem.Text = "Concluir";
+            this.concluirToolStripMenuItem.Click += new System.EventHandler(this.concluirToolStripMenuItem_Click);
+            // 
+            // voltarRestaurantToolStripMenuItem
+            // 
+            this.voltarRestaurantToolStripMenuItem.Name = "voltarRestaurantToolStripMenuItem";
+            this.voltarRestaurantToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.voltarRestaurantToolStripMenuItem.Text = "Voltar Restaurant";
+            this.voltarRestaurantToolStripMenuItem.Click += new System.EventHandler(this.voltarRestaurantToolStripMenuItem_Click);
+            // 
             // CRUD_Categoria
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 192);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(440, 236);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ativoTextBox);
             this.Controls.Add(this.nomeTextBox);
-            this.Controls.Add(this.btnConcluir);
-            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CRUD_Categoria";
             this.Text = "CRUD_Categoria";
-            this.Load += new System.EventHandler(this.CRUD_Categoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaSetBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,11 +182,13 @@
         private System.Windows.Forms.BindingSource categoriaSetBindingSource;
         private RestauranteDataSet3TableAdapters.CategoriaSetTableAdapter categoriaSetTableAdapter;
         private RestauranteDataSet3TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnConcluir;
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.TextBox ativoTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cRUDCategoriaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem concluirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voltarRestaurantToolStripMenuItem;
     }
 }

@@ -38,13 +38,16 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_CRUD_Trabalhadores = new System.Windows.Forms.Button();
-            this.btn_Associar = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.trabalhadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.associarTrabalhadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.criarEditarTrabalhadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // restauranteDataSet3
@@ -90,85 +93,107 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
             this.pessoaSet_TrabalhadorDataGridView.DataSource = this.pessoaSet_TrabalhadorBindingSource;
-            this.pessoaSet_TrabalhadorDataGridView.Location = new System.Drawing.Point(6, 19);
+            this.pessoaSet_TrabalhadorDataGridView.Location = new System.Drawing.Point(8, 23);
+            this.pessoaSet_TrabalhadorDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.pessoaSet_TrabalhadorDataGridView.Name = "pessoaSet_TrabalhadorDataGridView";
             this.pessoaSet_TrabalhadorDataGridView.ReadOnly = true;
-            this.pessoaSet_TrabalhadorDataGridView.Size = new System.Drawing.Size(343, 220);
+            this.pessoaSet_TrabalhadorDataGridView.RowHeadersWidth = 51;
+            this.pessoaSet_TrabalhadorDataGridView.Size = new System.Drawing.Size(457, 271);
             this.pessoaSet_TrabalhadorDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Salario";
             this.dataGridViewTextBoxColumn1.HeaderText = "Salario";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Posicao";
             this.dataGridViewTextBoxColumn2.HeaderText = "Posicao";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "RestauranteId";
             this.dataGridViewTextBoxColumn3.HeaderText = "RestauranteId";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pessoaSet_TrabalhadorDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(12, 28);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(13, 76);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(355, 246);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(473, 303);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Trabalhadores";
             // 
-            // btn_CRUD_Trabalhadores
+            // menuStrip1
             // 
-            this.btn_CRUD_Trabalhadores.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CRUD_Trabalhadores.Location = new System.Drawing.Point(275, 280);
-            this.btn_CRUD_Trabalhadores.Name = "btn_CRUD_Trabalhadores";
-            this.btn_CRUD_Trabalhadores.Size = new System.Drawing.Size(92, 34);
-            this.btn_CRUD_Trabalhadores.TabIndex = 11;
-            this.btn_CRUD_Trabalhadores.Text = "Criar/Editar Trabalhadores";
-            this.btn_CRUD_Trabalhadores.UseVisualStyleBackColor = true;
-            this.btn_CRUD_Trabalhadores.Click += new System.EventHandler(this.btn_CRUD_Trabalhadores_Click);
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.trabalhadoresToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(520, 28);
+            this.menuStrip1.TabIndex = 14;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btn_Associar
+            // trabalhadoresToolStripMenuItem
             // 
-            this.btn_Associar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Associar.Location = new System.Drawing.Point(177, 280);
-            this.btn_Associar.Name = "btn_Associar";
-            this.btn_Associar.Size = new System.Drawing.Size(92, 34);
-            this.btn_Associar.TabIndex = 12;
-            this.btn_Associar.Text = "Associar Trabalhadores";
-            this.btn_Associar.UseVisualStyleBackColor = true;
-            this.btn_Associar.Click += new System.EventHandler(this.btn_Associar_Click);
+            this.trabalhadoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.associarTrabalhadoresToolStripMenuItem,
+            this.criarEditarTrabalhadoresToolStripMenuItem,
+            this.voltarToolStripMenuItem});
+            this.trabalhadoresToolStripMenuItem.Name = "trabalhadoresToolStripMenuItem";
+            this.trabalhadoresToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.trabalhadoresToolStripMenuItem.Text = "Trabalhadores";
             // 
-            // btnBack
+            // associarTrabalhadoresToolStripMenuItem
             // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 326);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(90, 40);
-            this.btnBack.TabIndex = 13;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.associarTrabalhadoresToolStripMenuItem.Name = "associarTrabalhadoresToolStripMenuItem";
+            this.associarTrabalhadoresToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.associarTrabalhadoresToolStripMenuItem.Text = "Associar Trabalhadores";
+            this.associarTrabalhadoresToolStripMenuItem.Click += new System.EventHandler(this.associarTrabalhadoresToolStripMenuItem_Click);
+            // 
+            // criarEditarTrabalhadoresToolStripMenuItem
+            // 
+            this.criarEditarTrabalhadoresToolStripMenuItem.Name = "criarEditarTrabalhadoresToolStripMenuItem";
+            this.criarEditarTrabalhadoresToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.criarEditarTrabalhadoresToolStripMenuItem.Text = "Criar/Editar Trabalhadores";
+            this.criarEditarTrabalhadoresToolStripMenuItem.Click += new System.EventHandler(this.criarEditarTrabalhadoresToolStripMenuItem_Click);
+            // 
+            // voltarToolStripMenuItem
+            // 
+            this.voltarToolStripMenuItem.Name = "voltarToolStripMenuItem";
+            this.voltarToolStripMenuItem.Size = new System.Drawing.Size(266, 26);
+            this.voltarToolStripMenuItem.Text = "Voltar Restaurant";
+            this.voltarToolStripMenuItem.Click += new System.EventHandler(this.voltarToolStripMenuItem_Click);
             // 
             // Trabalhadores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 378);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btn_Associar);
-            this.Controls.Add(this.btn_CRUD_Trabalhadores);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(520, 418);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Trabalhadores";
             this.Text = "Trabalhadores";
             this.Load += new System.EventHandler(this.Trabalhadores_Load);
@@ -176,7 +201,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaSet_TrabalhadorDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -191,8 +219,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_CRUD_Trabalhadores;
-        private System.Windows.Forms.Button btn_Associar;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem trabalhadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem associarTrabalhadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem criarEditarTrabalhadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voltarToolStripMenuItem;
     }
 }

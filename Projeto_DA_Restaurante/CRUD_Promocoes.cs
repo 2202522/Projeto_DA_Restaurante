@@ -19,27 +19,22 @@ namespace Projeto_DA_Restaurante
             restauranteContext = new RestauranteContext();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Promocao promocao = new Promocao();
+            promocao.PercentagemPromocao = Convert.ToDouble(percentagemPromocaoTextBox.Text);
+            promocao.Referencia = referenciaTextBox.Text;
+
+            restauranteContext.Promocaos.Add(promocao);
+            restauranteContext.SaveChanges();
+
             this.Hide();
             Promocoes promocoes = new Promocoes();
             promocoes.ShowDialog();
         }
 
-        private void CRUD_Promocoes_Load(object sender, EventArgs e)
+        private void voltarPromocoesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void concluirbutton_Click(object sender, EventArgs e)
-        {
-            Promocao promocao = new Promocao();
-            promocao.PercentagemPromocao= Convert.ToDouble(percentagemPromocaoTextBox.Text);
-            promocao.Referencia= referenciaTextBox.Text;
-
-            restauranteContext.Promocaos.Add(promocao);
-            restauranteContext.SaveChanges();
-
             this.Hide();
             Promocoes promocoes = new Promocoes();
             promocoes.ShowDialog();

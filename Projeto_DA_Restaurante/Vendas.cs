@@ -19,13 +19,6 @@ namespace Projeto_DA_Restaurante
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainPage mainPage = new MainPage();
-            mainPage.ShowDialog();
-        }
-
         private void btnConsultarVendidos_Click(object sender, EventArgs e)
         {
 
@@ -61,6 +54,13 @@ namespace Projeto_DA_Restaurante
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void voltarMainPageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainPage mainPage = new MainPage();
+            mainPage.ShowDialog();
         }
     }
 }

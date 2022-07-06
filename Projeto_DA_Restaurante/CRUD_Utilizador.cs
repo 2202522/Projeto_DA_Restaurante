@@ -19,12 +19,7 @@ namespace Projeto_DA_Restaurante
             restauranteContext = new RestauranteContext();
         }        
 
-        private void CRUD_Cliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSeguinte_Click(object sender, EventArgs e)
+        private void seguinteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Pessoa pessoa = new Pessoa();
             pessoa.Nome = nomeTextBox.Text;
@@ -37,7 +32,7 @@ namespace Projeto_DA_Restaurante
             cRUD_Morada.ShowDialog();
         }
 
-        private void voltarbutton_Click(object sender, EventArgs e)
+        private void voltarUtilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Utilizadores utilizadores = new Utilizadores();

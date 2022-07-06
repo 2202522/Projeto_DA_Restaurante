@@ -29,17 +29,10 @@ namespace Projeto_DA_Restaurante
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Menu menu = new Menu();
-            menu.ShowDialog();
-        }
-
-        private void btnCocluir_Click(object sender, EventArgs e)
+        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ItemMenu itemMenu = new ItemMenu();
-            itemMenu.Nome = nomeTextBox.Text;            
+            itemMenu.Nome = nomeTextBox.Text;
             itemMenu.Fotografia = fotografiaTextBox.Text;
             itemMenu.Preco = Convert.ToDouble(precoTextBox.Text);
             itemMenu.Ingredientes = ingredientesTextBox.Text;
@@ -53,19 +46,11 @@ namespace Projeto_DA_Restaurante
             menu.ShowDialog();
         }
 
-        private void fotografiaTextBox_TextChanged(object sender, EventArgs e)
+        private void voltarMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void categoriacomboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void categoriaSetBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            Menu menu = new Menu();
+            menu.ShowDialog();
         }
     }
 }

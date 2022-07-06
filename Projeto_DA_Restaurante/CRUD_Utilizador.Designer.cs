@@ -30,21 +30,25 @@
         {
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label telemovelLabel;
-            this.btnSeguinte = new System.Windows.Forms.Button();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.telemovelTextBox = new System.Windows.Forms.TextBox();
-            this.voltarbutton = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cRUDClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.seguinteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarUtilizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             nomeLabel = new System.Windows.Forms.Label();
             telemovelLabel = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // nomeLabel
             // 
             nomeLabel.AutoSize = true;
             nomeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(78, 44);
+            nomeLabel.Location = new System.Drawing.Point(108, 83);
+            nomeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(47, 16);
+            nomeLabel.Size = new System.Drawing.Size(58, 20);
             nomeLabel.TabIndex = 25;
             nomeLabel.Text = "Nome:";
             // 
@@ -52,72 +56,94 @@
             // 
             telemovelLabel.AutoSize = true;
             telemovelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            telemovelLabel.Location = new System.Drawing.Point(78, 70);
+            telemovelLabel.Location = new System.Drawing.Point(108, 115);
+            telemovelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             telemovelLabel.Name = "telemovelLabel";
-            telemovelLabel.Size = new System.Drawing.Size(75, 16);
+            telemovelLabel.Size = new System.Drawing.Size(90, 20);
             telemovelLabel.TabIndex = 27;
             telemovelLabel.Text = "Telemovel:";
-            // 
-            // btnSeguinte
-            // 
-            this.btnSeguinte.Location = new System.Drawing.Point(295, 142);
-            this.btnSeguinte.Name = "btnSeguinte";
-            this.btnSeguinte.Size = new System.Drawing.Size(82, 38);
-            this.btnSeguinte.TabIndex = 22;
-            this.btnSeguinte.Text = "Seguite";
-            this.btnSeguinte.UseVisualStyleBackColor = true;
-            this.btnSeguinte.Click += new System.EventHandler(this.btnSeguinte_Click);
             // 
             // nomeTextBox
             // 
             this.nomeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTextBox.Location = new System.Drawing.Point(156, 41);
+            this.nomeTextBox.Location = new System.Drawing.Point(212, 79);
+            this.nomeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(100, 22);
+            this.nomeTextBox.Size = new System.Drawing.Size(132, 26);
             this.nomeTextBox.TabIndex = 26;
             // 
             // telemovelTextBox
             // 
             this.telemovelTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telemovelTextBox.Location = new System.Drawing.Point(156, 67);
+            this.telemovelTextBox.Location = new System.Drawing.Point(212, 111);
+            this.telemovelTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.telemovelTextBox.Name = "telemovelTextBox";
-            this.telemovelTextBox.Size = new System.Drawing.Size(100, 22);
+            this.telemovelTextBox.Size = new System.Drawing.Size(132, 26);
             this.telemovelTextBox.TabIndex = 28;
             // 
-            // voltarbutton
+            // menuStrip1
             // 
-            this.voltarbutton.Location = new System.Drawing.Point(12, 142);
-            this.voltarbutton.Name = "voltarbutton";
-            this.voltarbutton.Size = new System.Drawing.Size(82, 38);
-            this.voltarbutton.TabIndex = 31;
-            this.voltarbutton.Text = "Voltar";
-            this.voltarbutton.UseVisualStyleBackColor = true;
-            this.voltarbutton.Click += new System.EventHandler(this.voltarbutton_Click);
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cRUDClienteToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(519, 28);
+            this.menuStrip1.TabIndex = 32;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // cRUDClienteToolStripMenuItem
+            // 
+            this.cRUDClienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.seguinteToolStripMenuItem,
+            this.voltarUtilizadoresToolStripMenuItem});
+            this.cRUDClienteToolStripMenuItem.Name = "cRUDClienteToolStripMenuItem";
+            this.cRUDClienteToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.cRUDClienteToolStripMenuItem.Text = "Cliente";
+            // 
+            // seguinteToolStripMenuItem
+            // 
+            this.seguinteToolStripMenuItem.Name = "seguinteToolStripMenuItem";
+            this.seguinteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.seguinteToolStripMenuItem.Text = "Seguinte";
+            this.seguinteToolStripMenuItem.Click += new System.EventHandler(this.seguinteToolStripMenuItem_Click);
+            // 
+            // voltarUtilizadoresToolStripMenuItem
+            // 
+            this.voltarUtilizadoresToolStripMenuItem.Name = "voltarUtilizadoresToolStripMenuItem";
+            this.voltarUtilizadoresToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.voltarUtilizadoresToolStripMenuItem.Text = "Voltar Utilizadores";
+            this.voltarUtilizadoresToolStripMenuItem.Click += new System.EventHandler(this.voltarUtilizadoresToolStripMenuItem_Click);
             // 
             // CRUD_Utilizador
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 192);
-            this.Controls.Add(this.voltarbutton);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(519, 236);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox);
             this.Controls.Add(telemovelLabel);
             this.Controls.Add(this.telemovelTextBox);
-            this.Controls.Add(this.btnSeguinte);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CRUD_Utilizador";
             this.Text = "CRUD_Cliente";
-            this.Load += new System.EventHandler(this.CRUD_Cliente_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSeguinte;
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.TextBox telemovelTextBox;
-        private System.Windows.Forms.Button voltarbutton;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cRUDClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem seguinteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voltarUtilizadoresToolStripMenuItem;
     }
 }

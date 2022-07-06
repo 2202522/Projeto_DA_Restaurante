@@ -41,7 +41,7 @@ namespace Projeto_DA_Restaurante
             //}
         }
 
-        private void btnConcluir_Click(object sender, EventArgs e)
+        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Pedi itemMenu = new ItemMenu();
             //itemMenu.Nome = nomeTextBox.Text;
@@ -55,17 +55,11 @@ namespace Projeto_DA_Restaurante
             pedido.ShowDialog();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void voltarPedidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             Pedidos pedido = new Pedidos();
             pedido.ShowDialog();
-        }
-
-
-        private void itemMenu_IdComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -30,61 +30,82 @@
         {
             System.Windows.Forms.Label estadoLabel;
             this.estadoTextBox = new System.Windows.Forms.TextBox();
-            this.btnConcluir = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cRUDStateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.concluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltarStateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             estadoLabel = new System.Windows.Forms.Label();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // estadoLabel
             // 
             estadoLabel.AutoSize = true;
-            estadoLabel.Location = new System.Drawing.Point(59, 68);
+            estadoLabel.Location = new System.Drawing.Point(79, 84);
+            estadoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             estadoLabel.Name = "estadoLabel";
-            estadoLabel.Size = new System.Drawing.Size(43, 13);
+            estadoLabel.Size = new System.Drawing.Size(53, 16);
             estadoLabel.TabIndex = 3;
             estadoLabel.Text = "Estado:";
             // 
             // estadoTextBox
             // 
-            this.estadoTextBox.Location = new System.Drawing.Point(107, 65);
+            this.estadoTextBox.Location = new System.Drawing.Point(143, 80);
+            this.estadoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.estadoTextBox.Name = "estadoTextBox";
-            this.estadoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.estadoTextBox.Size = new System.Drawing.Size(132, 22);
             this.estadoTextBox.TabIndex = 4;
             // 
-            // btnConcluir
+            // menuStrip1
             // 
-            this.btnConcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConcluir.Location = new System.Drawing.Point(228, 140);
-            this.btnConcluir.Name = "btnConcluir";
-            this.btnConcluir.Size = new System.Drawing.Size(90, 40);
-            this.btnConcluir.TabIndex = 9;
-            this.btnConcluir.Text = "Concluir";
-            this.btnConcluir.UseVisualStyleBackColor = true;
-            this.btnConcluir.Click += new System.EventHandler(this.btnConcluir_Click);
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cRUDStateToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(424, 28);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // btnBack
+            // cRUDStateToolStripMenuItem
             // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 140);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(90, 40);
-            this.btnBack.TabIndex = 10;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.cRUDStateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.concluirToolStripMenuItem,
+            this.voltarStateToolStripMenuItem});
+            this.cRUDStateToolStripMenuItem.Name = "cRUDStateToolStripMenuItem";
+            this.cRUDStateToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
+            this.cRUDStateToolStripMenuItem.Text = "State";
+            // 
+            // concluirToolStripMenuItem
+            // 
+            this.concluirToolStripMenuItem.Name = "concluirToolStripMenuItem";
+            this.concluirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.concluirToolStripMenuItem.Text = "Concluir";
+            this.concluirToolStripMenuItem.Click += new System.EventHandler(this.concluirToolStripMenuItem_Click);
+            // 
+            // voltarStateToolStripMenuItem
+            // 
+            this.voltarStateToolStripMenuItem.Name = "voltarStateToolStripMenuItem";
+            this.voltarStateToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.voltarStateToolStripMenuItem.Text = "Voltar State";
+            this.voltarStateToolStripMenuItem.Click += new System.EventHandler(this.voltarStateToolStripMenuItem_Click);
             // 
             // CRUD_State
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 192);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnConcluir);
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ClientSize = new System.Drawing.Size(424, 175);
             this.Controls.Add(estadoLabel);
             this.Controls.Add(this.estadoTextBox);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CRUD_State";
             this.Text = "CRUD_State";
-            this.Load += new System.EventHandler(this.CRUD_State_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,7 +113,9 @@
 
         #endregion
         private System.Windows.Forms.TextBox estadoTextBox;
-        private System.Windows.Forms.Button btnConcluir;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cRUDStateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem concluirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voltarStateToolStripMenuItem;
     }
 }

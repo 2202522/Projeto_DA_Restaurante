@@ -20,19 +20,7 @@ namespace Projeto_DA_Restaurante
             restauranteContext = new RestauranteContext();
         }
 
-        private void CRUD_MetodoPagamento_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Restaurant restaurant = new Restaurant();
-            restaurant.ShowDialog();
-        }
-
-        private void btnConcluir_Click(object sender, EventArgs e)
+        private void concluirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MetodoPagamento metodoPagamento = new MetodoPagamento();
             metodoPagamento.MetoPagamento = metoPagamentoTextBox.Text;
@@ -40,6 +28,13 @@ namespace Projeto_DA_Restaurante
             restauranteContext.MetodoPagamentoSet.Add(metodoPagamento);
             restauranteContext.SaveChanges();
 
+            this.Hide();
+            Restaurant restaurant = new Restaurant();
+            restaurant.ShowDialog();
+        }
+
+        private void voltarRestaurantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             this.Hide();
             Restaurant restaurant = new Restaurant();
             restaurant.ShowDialog();
